@@ -103,6 +103,15 @@
     font-size:1.08rem; color:var(--gray); max-width:480px; margin-bottom:32px;
   }
   .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+  .approach-link{
+    display:inline-block; margin-top:22px; font-size:0.9rem; font-weight:600;
+    color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px;
+  }
+  .approach-link:hover{color:var(--navy);}
+  .hero-location{
+    margin-top:14px; font-size:0.82rem; color:var(--gray);
+    font-family:var(--mono);
+  }
 
   /* ledger balance illustration */
   .balance-card{
@@ -151,6 +160,24 @@
     font-size:clamp(1.7rem, 3vw, 2.2rem); margin-bottom:14px;
   }
   .section-head p{color:var(--gray); font-size:1.02rem;}
+
+  /* ---------- Approach / Perfis ---------- */
+  .approach{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .profile-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .profile-card{
+    background:var(--white); border:1px solid var(--gray-line); border-radius:6px;
+    padding:28px; border-top:3px solid var(--blue-light);
+    transition:transform 0.2s, box-shadow 0.2s;
+  }
+  .profile-card:hover{transform:translateY(-3px); box-shadow:0 16px 32px -20px rgba(11,42,77,0.25);}
+  .profile-card .tag{
+    font-family:var(--mono); font-size:0.7rem; color:var(--blue);
+    letter-spacing:0.08em; margin-bottom:14px; display:block; text-transform:uppercase;
+  }
+  .profile-card h3{
+    font-family:var(--serif); font-weight:600; font-size:1.08rem; color:var(--navy); margin-bottom:10px;
+  }
+  .profile-card p{font-size:0.92rem; color:var(--gray);}
 
   /* ---------- Services ---------- */
   .services{background:var(--white); border-bottom:1px solid var(--gray-line);}
@@ -257,6 +284,7 @@
   @media (max-width: 880px){
     .hero-inner, .about-inner{grid-template-columns:1fr; gap:40px;}
     .service-grid{grid-template-columns:repeat(2,1fr);}
+    .profile-grid{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}
     nav.main-nav{
       position:fixed; top:65px; left:0; right:0; background:var(--white);
@@ -307,34 +335,65 @@
     <div>
       <p class="eyebrow">Contabilidade · Controladoria · Advisory</p>
       <h1>Clareza financeira que sustenta cada decisão.</h1>
-      <p class="lead">Contabilidade, controladoria e planejamento tributário para empresas que precisam de números confiáveis — e de alguém que os traduz em decisão.</p>
+      <p class="lead">Contabilidade, controladoria e consultoria empresarial para empresas que precisam de números confiáveis — e de alguém que os transforme em decisões.</p>
       <div class="hero-ctas">
         <a class="cta-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Falar no WhatsApp</a>
         <a class="cta-btn ghost" href="#servicos">Ver serviços</a>
       </div>
+      <a class="approach-link" href="#abordagem">Conheça nossa abordagem →</a>
+      <p class="hero-location">Atendimento presencial em São Luís/MA e remoto em todo o Brasil.</p>
     </div>
     <div class="balance-card reveal">
       <div class="bc-head">
-        <span>Balanço · exercício</span>
-        <span>Em equilíbrio</span>
+        <span>Visão empresarial</span>
+        <span>Status · empresa</span>
       </div>
       <div class="bc-cols">
         <div class="bc-col">
-          <h4>Ativo</h4>
-          <div class="row"><span>Controles internos</span><span>OK</span></div>
+          <h4>Financeiro</h4>
           <div class="row"><span>Fluxo de caixa</span><span>OK</span></div>
-          <div class="row"><span>Conformidade fiscal</span><span>OK</span></div>
+          <div class="row"><span>Margem</span><span>OK</span></div>
+          <div class="row"><span>Capital de giro</span><span>OK</span></div>
+          <div class="row"><span>Resultado</span><span>OK</span></div>
         </div>
         <div class="bc-col">
-          <h4>Passivo + PL</h4>
+          <h4>Gestão</h4>
+          <div class="row"><span>Controles internos</span><span>OK</span></div>
           <div class="row"><span>Riscos mapeados</span><span>OK</span></div>
-          <div class="row"><span>Obrigações em dia</span><span>OK</span></div>
+          <div class="row"><span>Indicadores</span><span>OK</span></div>
           <div class="row"><span>Decisão orientada</span><span>OK</span></div>
         </div>
       </div>
       <div class="bc-total">
-        <span>Total</span>
+        <span>Empresa sob controle</span>
         <span class="fulcrum" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="abordagem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Para quem somos</p>
+      <h2>Contabilidade para empresas que querem ter controle.</h2>
+      <p>Atendemos empresários que precisam de mais do que obrigações acessórias — precisam entender resultado, caixa, impostos e os números que sustentam suas decisões.</p>
+    </div>
+    <div class="profile-grid">
+      <div class="profile-card reveal">
+        <span class="tag">Perfil 1</span>
+        <h3>Empresas em crescimento</h3>
+        <p>Estrutura contábil e financeira para acompanhar a expansão sem perder o controle no caminho.</p>
+      </div>
+      <div class="profile-card reveal">
+        <span class="tag">Perfil 2</span>
+        <h3>Empresas que precisam de controle</h3>
+        <p>DRE gerencial, indicadores, orçamento e fluxo de caixa organizados para dar visibilidade real da operação.</p>
+      </div>
+      <div class="profile-card reveal">
+        <span class="tag">Perfil 3</span>
+        <h3>Empresas que precisam de estratégia</h3>
+        <p>Planejamento tributário, controladoria e consultoria financeira para decisões de médio e longo prazo.</p>
       </div>
     </div>
   </div>
