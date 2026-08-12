@@ -271,6 +271,7 @@
     box-shadow:0 10px 24px -6px rgba(0,0,0,0.35);
     opacity:0; transform:translateY(12px) scale(0.9); pointer-events:none;
     transition:opacity 0.25s ease, transform 0.25s ease;
+    will-change:opacity, transform;
   }
   .wa-float.show{opacity:1; transform:translateY(0) scale(1); pointer-events:auto;}
   .wa-float:hover{transform:scale(1.06);}
@@ -546,13 +547,14 @@
 
   const waFloat = document.querySelector('.wa-float');
   const heroEl = document.querySelector('.hero');
-  if (waFloat && heroEl && 'IntersectionObserver' in window) {
-    const waIO = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        waFloat.classList.toggle('show', !e.isIntersecting);
-      });
-    }, { threshold: 0 });
-    waIO.observe(heroEl);
+  if (waFloat && heroEl) {
+    const updateWaVisibility = () => {
+      const heroBottom = heroEl.getBoundingClientRect().bottom;
+      waFloat.classList.toggle('show', heroBottom <= 0);
+    };
+    updateWaVisibility();
+    window.addEventListener('scroll', updateWaVisibility, { passive: true });
+    window.addEventListener('resize', updateWaVisibility);
   } else if (waFloat) {
     waFloat.classList.add('show');
   }
