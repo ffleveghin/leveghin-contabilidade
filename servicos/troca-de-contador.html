@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Troca de Contador | Leveghin Contabilidade</title>
+<meta name="description" content="Migração para a LEVEGHIN sem dor de cabeça, com revisão do histórico recente.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M10 6 L10 30 L28 30' stroke='%23123A66' stroke-width='4.5' fill='none'/%3E%3Cpath d='M16 12 L16 34 L34 34' stroke='%232E6FB0' stroke-width='4.5' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/servico.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M10 6 L10 30 L28 30" stroke="#123A66" stroke-width="4.5" fill="none"/>
+        <path d="M16 12 L16 34 L34 34" stroke="#2E6FB0" stroke-width="4.5" fill="none"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-word">LEVEGHIN</span>
+        <span class="logo-sub">Contabilidade</span>
+      </div>
+    </a>
+    <div class="header-actions">
+      <a class="back-link" href="../index.html">← Voltar ao site</a>
+      <a class="cta-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Transição</p>
+    <h1>Troca de Contador</h1>
+    <p class="lead">Migração para a LEVEGHIN sem dor de cabeça, com revisão do histórico recente.</p>
+  </div>
+</section>
+
+<section class="service-content">
+  <div class="wrap content-grid">
+    <div class="info-block">
+      <h2>O que é</h2>
+      <p>Assumimos a contabilidade da sua empresa sem interrupção nas obrigações fiscais. Solicitamos o histórico ao contador anterior, revisamos pendências e organizamos a nova rotina de acompanhamento — para você trocar de contador sem se preocupar com o que pode ter ficado no caminho.</p>
+      <h2>O que está incluso</h2>
+      <ul>
+        <li>Solicitação de documentos e histórico ao contador anterior</li>
+        <li>Revisão de pendências e obrigações em aberto</li>
+        <li>Transição sem interrupção nas obrigações fiscais</li>
+        <li>Nova rotina de acompanhamento contínuo</li>
+      </ul>
+      <div class="info-note">As informações acima têm caráter geral. Cada empresa tem particularidades — fale com a LEVEGHIN para uma orientação específica ao seu caso.</div>
+    </div>
+
+    <div class="form-card">
+      <h3>Falar com um especialista</h3>
+      <p class="form-sub">Preencha os dados abaixo e retornamos pelo canal que você preferir.</p>
+      <form id="leadForm">
+        <div class="field">
+          <label for="nome">Nome*</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">E-mail*</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+          </div>
+          <div class="field">
+            <label for="telefone">Telefone*</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-000" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="estado">Estado*</label>
+            <select id="estado" name="estado" required>
+              <option value="" selected disabled>Selecione</option>
+              <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+              <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+              <option>GO</option><option selected>MA</option><option>MT</option><option>MS</option>
+              <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+              <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+              <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+              <option>SP</option><option>SE</option><option>TO</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cidade">Cidade*</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="servico">Qual serviço deseja?*</label>
+          <select id="servico" name="servico" required>
+            <option>Assessoria Contábil</option>
+            <option>Assessoria Fiscal</option>
+            <option>Folha de Pagamento</option>
+            <option>Abertura de Empresa</option>
+            <option>Migrar de MEI para ME</option>
+            <option selected>Troca de Contador</option>
+            <option>Imposto de Renda Pessoa Física</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="negocio">Qual é o tipo do seu negócio?*</label>
+          <select id="negocio" name="negocio" required>
+            <option value="" selected disabled>Selecione</option>
+            <option>Serviço</option>
+            <option>Comércio</option>
+            <option>Comércio e Serviço</option>
+            <option>Indústria</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Como prefere que entremos em contato com você?*</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="contato" value="WhatsApp" checked> WhatsApp</label>
+            <label class="radio-option"><input type="radio" name="contato" value="E-mail"> E-mail</label>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">FALAR COM ESPECIALISTA</button>
+        <div class="form-success" id="formSuccess">Prontinho! Vamos abrir o WhatsApp ou seu e-mail com os dados preenchidos.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="related">
+  <div class="wrap">
+    <h3>Outros serviços</h3>
+    <div class="related-list">
+      <a href="assessoria-contabil.html">Assessoria Contábil</a>
+      <a href="assessoria-fiscal.html">Assessoria Fiscal</a>
+      <a href="folha-de-pagamento.html">Folha de Pagamento</a>
+      <a href="abertura-de-empresa.html">Abertura de Empresa</a>
+      <a href="migrar-mei-para-me.html">Migrar de MEI para ME</a>
+      <a href="troca-de-contador.html" class="current">Troca de Contador</a>
+      <a href="irpf.html">Imposto de Renda Pessoa Física</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap footer-inner">
+    <span class="logo-word">LEVEGHIN CONTABILIDADE</span>
+    <span>&copy; <span id="year"></span> Leveghin Contabilidade &middot; CRC/MA 012345/O-0 &middot; São Luís, MA</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5598981380905" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.3 14.4c-.28-.14-1.64-.81-1.9-.9-.25-.1-.43-.14-.62.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-1.62-.8-2.68-1.44-3.76-3.26-.28-.49.28-.45.8-1.5.1-.2.05-.37-.04-.5-.1-.14-.9-2.18-1.05-2.5-.15-.32-.3-.28-.42-.28-.11 0-.24 0-.37 0-.13 0-.34.05-.52.24-.18.2-.7.68-.7 1.66 0 .98.7 1.92.8 2.06.1.14 1.4 2.14 3.4 2.92 2 .78 2 .52 2.36.49.36-.04 1.16-.47 1.32-.93.17-.46.17-.85.12-.93-.05-.09-.18-.14-.46-.28z" fill="#fff"/>
+    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.09-1.34C8.55 21.49 10.24 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.15c-1.56 0-3.05-.4-4.35-1.16l-.31-.18-3.24.85.87-3.16-.2-.32A8.15 8.15 0 0 1 3.85 12 8.15 8.15 0 0 1 12 3.85 8.15 8.15 0 0 1 20.15 12 8.15 8.15 0 0 1 12 20.15z" fill="#fff"/>
+  </svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const form = document.getElementById('leadForm');
+  const successBox = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const estado = document.getElementById('estado').value;
+    const cidade = document.getElementById('cidade').value.trim();
+    const servico = document.getElementById('servico').value;
+    const negocio = document.getElementById('negocio').value;
+    const contato = form.querySelector('input[name="contato"]:checked').value;
+
+    const linhas = [
+      'Solicitação de proposta - Leveghin Contabilidade',
+      'Nome: ' + nome,
+      'E-mail: ' + email,
+      'Telefone: ' + telefone,
+      'Cidade/Estado: ' + cidade + ' / ' + estado,
+      'Serviço desejado: ' + servico,
+      'Tipo de negócio: ' + negocio,
+      'Contato preferido: ' + contato
+    ];
+    const mensagem = linhas.join('\n');
+
+    successBox.classList.add('show');
+
+    if (contato === 'WhatsApp') {
+      const url = 'https://wa.me/5598981380905?text=' + encodeURIComponent(mensagem);
+      window.open(url, '_blank');
+    } else {
+      const subject = encodeURIComponent('Solicitação de proposta - ' + servico);
+      const body = encodeURIComponent(mensagem);
+      window.location.href = 'mailto:contato@leveghincontabilidade.com.br?subject=' + subject + '&body=' + body;
+    }
+  });
+</script>
+</body>
+</html>
