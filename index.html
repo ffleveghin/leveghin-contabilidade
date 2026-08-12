@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leveghin Contabilidade | Contabilidade · Controladoria · Advisory</title>
-<meta name="description" content="Leveghin Contabilidade — Contabilidade, Controladoria, Orçamento, Tributação, Auditoria, FP&A e Advisory em São Luís, MA.">
+<title>Leveghin Contabilidade | Contabilidade · Controladoria · Consultoria</title>
+<meta name="description" content="Leveghin Contabilidade — Contabilidade, Controladoria, Orçamento, Tributação, Auditoria, FP&A e Consultoria em São Luís, MA.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M10 6 L10 30 L28 30' stroke='%23123A66' stroke-width='4.5' fill='none'/%3E%3Cpath d='M16 12 L16 34 L34 34' stroke='%232E6FB0' stroke-width='4.5' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -269,9 +269,12 @@
     background:#1F8A4C; color:#fff; width:56px; height:56px; border-radius:50%;
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 10px 24px -6px rgba(0,0,0,0.35);
-    transition:transform 0.2s;
+    opacity:0; transform:translateY(12px) scale(0.9); pointer-events:none;
+    transition:opacity 0.25s ease, transform 0.25s ease;
   }
+  .wa-float.show{opacity:1; transform:translateY(0) scale(1); pointer-events:auto;}
   .wa-float:hover{transform:scale(1.06);}
+  .wa-float.show:hover{transform:scale(1.06);}
 
   /* ---------- Scroll reveal ---------- */
   .reveal{opacity:0; transform:translateY(16px); transition:opacity 0.6s ease, transform 0.6s ease;}
@@ -294,7 +297,7 @@
     nav.main-nav.open{display:flex;}
     nav.main-nav ul{flex-direction:column; align-items:flex-start; gap:16px;}
     .nav-toggle{display:block;}
-    .header-inner .cta-btn.ghost{display:none;}
+    .header-inner > .cta-btn.ghost{display:none;}
   }
   @media (max-width: 560px){
     .service-grid{grid-template-columns:1fr;}
@@ -333,7 +336,7 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <p class="eyebrow">Contabilidade · Controladoria · Advisory</p>
+      <p class="eyebrow">Contabilidade · Controladoria · Consultoria</p>
       <h1>Clareza financeira que sustenta cada decisão.</h1>
       <p class="lead">Contabilidade, controladoria e consultoria empresarial para empresas que precisam de números confiáveis — e de alguém que os transforme em decisões.</p>
       <div class="hero-ctas">
@@ -439,7 +442,7 @@
       </div>
       <div class="service-card reveal">
         <span class="tag">Estratégia</span>
-        <h3>Advisory</h3>
+        <h3>Consultoria</h3>
         <p>Consultoria financeira estratégica para crescimento sustentável, com visão de longo prazo.</p>
       </div>
     </div>
@@ -539,6 +542,19 @@
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   } else {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  const waFloat = document.querySelector('.wa-float');
+  const heroEl = document.querySelector('.hero');
+  if (waFloat && heroEl && 'IntersectionObserver' in window) {
+    const waIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        waFloat.classList.toggle('show', !e.isIntersecting);
+      });
+    }, { threshold: 0 });
+    waIO.observe(heroEl);
+  } else if (waFloat) {
+    waFloat.classList.add('show');
   }
 </script>
 </body>
