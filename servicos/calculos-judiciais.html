@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cálculos Judiciais | Leveghin Contabilidade</title>
 <meta name="description" content="Cálculos trabalhistas e cíveis com precisão técnica e laudos que sustentam o processo, da Leveghin Contabilidade.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M10 6 L10 30 L28 30' stroke='%23123A66' stroke-width='4.5' fill='none'/%3E%3Cpath d='M16 12 L16 34 L34 34' stroke='%232E6FB0' stroke-width='4.5' fill='none'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='4' y1='8' x2='36' y2='36' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23123A66'/%3E%3Cstop offset='1' stop-color='%236FA8DC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M9 5 L9 29 L27 29' stroke='%23123A66' stroke-width='3' fill='none' opacity='0.55'/%3E%3Crect x='12.2' y='8.2' width='3.2' height='3.2' fill='%232E6FB0'/%3E%3Cpath d='M16 13 L16 35 L35 35' stroke='url(%23g)' stroke-width='6' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,19 +16,47 @@
 <header class="site">
   <div class="header-inner">
     <a class="logo" href="../index.html">
-      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M10 6 L10 30 L28 30" stroke="#123A66" stroke-width="4.5" fill="none"/>
-        <path d="M16 12 L16 34 L34 34" stroke="#2E6FB0" stroke-width="4.5" fill="none"/>
+      <svg width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradHeader" x1="4" y1="8" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#123A66"/>
+            <stop offset="1" stop-color="#6FA8DC"/>
+          </linearGradient>
+        </defs>
+        <path d="M9 5 L9 29 L27 29" stroke="#123A66" stroke-width="3" fill="none" stroke-linecap="square" opacity="0.55"/>
+        <rect x="12.2" y="8.2" width="3.2" height="3.2" fill="#2E6FB0"/>
+        <path d="M16 13 L16 35 L35 35" stroke="url(#logoGradHeader)" stroke-width="6" fill="none" stroke-linecap="square"/>
       </svg>
       <div class="logo-text">
         <span class="logo-word">LEVEGHIN</span>
         <span class="logo-sub">Contabilidade</span>
       </div>
     </a>
-    <div class="header-actions">
-      <a class="back-link" href="../index.html">← Voltar ao site</a>
-      <a class="cta-btn" href="abertura-de-empresa.html">Abra sua Empresa</a>
-    </div>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li class="has-dropdown">
+          <button class="nav-drop-toggle" id="servicosDropToggle" aria-expanded="false">Serviços <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="dropdown-panel" id="servicosDropPanel">
+            <span class="dropdown-title">Serviços de contabilidade</span>
+            <a href="abertura-de-empresa.html">Abertura de Empresa</a>
+            <a href="assessoria-contabil.html">Assessoria Contábil</a>
+            <a href="assessoria-fiscal.html">Assessoria Fiscal</a>
+            <a href="folha-de-pagamento.html">Folha de Pagamento</a>
+            <a href="irpf.html">Imposto de Renda Pessoa Física</a>
+            <a href="migrar-mei-para-me.html">Migrar de MEI para ME</a>
+            <a href="troca-de-contador.html">Troca de Contador</a>
+          </div>
+        </li>
+        <li><a href="calculos-judiciais.html">Cálculos Judiciais</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="../index.html#sobre">Sobre</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
+        <li><a class="cta-btn ghost" href="abertura-de-empresa.html">Abra sua Empresa</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -49,7 +77,7 @@
         </div>
         <h3>Cálculos Trabalhistas</h3>
         <p>Apuração de verbas rescisórias, horas extras, adicionais e demais parcelas de processos trabalhistas, com memória de cálculo detalhada e relatórios que facilitam a análise das partes e do juízo.</p>
-        <a href="#form-judiciais" class="plan-btn" data-calculo="Cálculos Trabalhistas">Contratar</a>
+        <a href="#" class="plan-btn wa-calc-btn" data-calculo="Cálculos Trabalhistas">Contratar</a>
       </div>
 
       <div class="judicial-card">
@@ -58,80 +86,8 @@
         </div>
         <h3>Cálculos Cíveis</h3>
         <p>Apuração de danos morais e materiais, lucros cessantes, revisão de cláusulas contratuais e atualização monetária, com clareza metodológica do início ao fim do processo.</p>
-        <a href="#form-judiciais" class="plan-btn" data-calculo="Cálculos Cíveis">Contratar</a>
+        <a href="#" class="plan-btn wa-calc-btn" data-calculo="Cálculos Cíveis">Contratar</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="service-content" id="form-judiciais" style="padding-top:0;">
-  <div class="wrap content-grid">
-    <div class="form-card">
-      <h3>Falar com um especialista</h3>
-      <p class="form-sub">Preencha os dados abaixo e retornamos pelo canal que você preferir.</p>
-      <form id="leadForm">
-        <div class="field">
-          <label for="nome">Nome*</label>
-          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="email">E-mail*</label>
-            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
-          </div>
-          <div class="field">
-            <label for="telefone">Telefone*</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-000" required>
-          </div>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="estado">Estado*</label>
-            <select id="estado" name="estado" required>
-              <option value="" selected disabled>Selecione</option>
-              <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
-              <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-              <option>GO</option><option selected>MA</option><option>MT</option><option>MS</option>
-              <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
-              <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-              <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
-              <option>SP</option><option>SE</option><option>TO</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="cidade">Cidade*</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="calculo">Qual cálculo deseja?*</label>
-          <select id="calculo" name="calculo" required>
-            <option value="" disabled>Selecione</option>
-            <option>Cálculos Cíveis</option>
-            <option>Cálculos Trabalhistas</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="negocio">Qual é o tipo do seu negócio?*</label>
-          <select id="negocio" name="negocio" required>
-            <option value="" selected disabled>Selecione</option>
-            <option>Comércio</option>
-            <option>Comércio e Serviço</option>
-            <option>Indústria</option>
-            <option>Pessoa Física</option>
-            <option>Serviço</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Como prefere que entremos em contato com você?*</label>
-          <div class="radio-group">
-            <label class="radio-option"><input type="radio" name="contato" value="WhatsApp" checked> WhatsApp</label>
-            <label class="radio-option"><input type="radio" name="contato" value="E-mail"> E-mail</label>
-          </div>
-        </div>
-        <button type="submit" class="submit-btn">FALAR COM ESPECIALISTA</button>
-        <div class="form-success" id="formSuccess">Prontinho! Vamos abrir o WhatsApp ou seu e-mail com os dados preenchidos.</div>
-      </form>
     </div>
   </div>
 </section>
@@ -139,7 +95,7 @@
 <footer class="site">
   <div class="wrap footer-inner">
     <span class="logo-word">LEVEGHIN CONTABILIDADE</span>
-    <span>&copy; <span id="year"></span> Leveghin Contabilidade &middot; CRC/MA 012345/O-0 &middot; São Luís, MA</span>
+    <span>&copy; <span id="year"></span> Leveghin Contabilidade &middot; CRC/MA 012172/O-9 &middot; São Luís, MA</span>
   </div>
 </footer>
 
@@ -150,55 +106,17 @@
   </svg>
 </a>
 
+<script src="../assets/nav.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  document.querySelectorAll('.plan-btn[data-calculo]').forEach(btn => {
+  document.querySelectorAll('.wa-calc-btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
+      e.preventDefault();
       const calc = this.getAttribute('data-calculo');
-      const select = document.getElementById('calculo');
-      if (select) {
-        Array.from(select.options).forEach(opt => { if (opt.text === calc) select.value = calc; });
-      }
+      const mensagem = 'Olá! Quero contratar ' + calc + ' com a Leveghin Contabilidade.\nOrigem: Página de Cálculos Judiciais';
+      window.open('https://wa.me/5598981380905?text=' + encodeURIComponent(mensagem), '_blank');
     });
-  });
-
-  const form = document.getElementById('leadForm');
-  const successBox = document.getElementById('formSuccess');
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const telefone = document.getElementById('telefone').value.trim();
-    const estado = document.getElementById('estado').value;
-    const cidade = document.getElementById('cidade').value.trim();
-    const calculo = document.getElementById('calculo').value;
-    const negocio = document.getElementById('negocio').value;
-    const contato = form.querySelector('input[name="contato"]:checked').value;
-
-    const linhas = [
-      'Solicitação de proposta - Leveghin Contabilidade',
-      'Origem: Página de Cálculos Judiciais',
-      'Nome: ' + nome,
-      'E-mail: ' + email,
-      'Telefone: ' + telefone,
-      'Cidade/Estado: ' + cidade + ' / ' + estado,
-      'Cálculo desejado: ' + calculo,
-      'Tipo de negócio: ' + negocio,
-      'Contato preferido: ' + contato
-    ];
-    const mensagem = linhas.join('\n');
-
-    successBox.classList.add('show');
-
-    if (contato === 'WhatsApp') {
-      const url = 'https://wa.me/5598981380905?text=' + encodeURIComponent(mensagem);
-      window.open(url, '_blank');
-    } else {
-      const subject = encodeURIComponent('Solicitação de proposta - ' + calculo);
-      const body = encodeURIComponent(mensagem);
-      window.location.href = 'mailto:contato@leveghincontabilidade.com.br?subject=' + subject + '&body=' + body;
-    }
   });
 </script>
 </body>

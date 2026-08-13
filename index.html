@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leveghin Contabilidade | Contabilidade · Controladoria · Consultoria</title>
 <meta name="description" content="Leveghin Contabilidade — Contabilidade, Controladoria, Orçamento, Tributação, Auditoria, FP&A e Consultoria em São Luís, MA.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M10 6 L10 30 L28 30' stroke='%23123A66' stroke-width='4.5' fill='none'/%3E%3Cpath d='M16 12 L16 34 L34 34' stroke='%232E6FB0' stroke-width='4.5' fill='none'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='4' y1='8' x2='36' y2='36' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23123A66'/%3E%3Cstop offset='1' stop-color='%236FA8DC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M9 5 L9 29 L27 29' stroke='%23123A66' stroke-width='3' fill='none' opacity='0.55'/%3E%3Crect x='12.2' y='8.2' width='3.2' height='3.2' fill='%232E6FB0'/%3E%3Cpath d='M16 13 L16 35 L35 35' stroke='url(%23g)' stroke-width='6' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -126,7 +126,7 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    padding:88px 0 96px;
+    padding:48px 0 96px;
     background:linear-gradient(180deg, var(--bg) 0%, #EEF2F7 100%);
     border-bottom:1px solid var(--gray-line);
   }
@@ -241,6 +241,8 @@
   .marquee-track{
     display:flex; gap:14px; width:max-content;
     animation:marqueeLeft 32s linear infinite;
+    will-change:transform; -webkit-backface-visibility:hidden; backface-visibility:hidden;
+    transform:translateZ(0);
   }
   .marquee-track.track-reverse{animation-name:marqueeRight;}
   .marquee-row:hover .marquee-track{animation-play-state:paused;}
@@ -254,7 +256,7 @@
   .provider-chip .ic{font-size:1.05rem;}
   @media (prefers-reduced-motion:reduce){
     .marquee-track{animation:none;}
-    .marquee-row{overflow-x:hidden;}
+    .marquee-row{overflow-x:auto; -webkit-overflow-scrolling:touch;}
   }
 
   /* ---------- Services ---------- */
@@ -265,7 +267,7 @@
   }
   .service-card{
     background:var(--white); padding:32px 28px; position:relative;
-    transition:background 0.2s;
+    transition:background 0.2s; display:block;
   }
   .service-card:hover{background:#F6F9FC;}
   .service-card .tag{
@@ -276,6 +278,11 @@
     font-family:var(--serif); font-weight:600; font-size:1.12rem; color:var(--navy); margin-bottom:10px;
   }
   .service-card p{font-size:0.92rem; color:var(--gray);}
+  .service-card .card-arrow{
+    display:inline-block; margin-top:14px; font-size:0.84rem; font-weight:600;
+    color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px;
+  }
+  a.service-card:hover .card-arrow{color:var(--navy);}
 
   /* ---------- About ---------- */
   .about-inner{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:start;}
@@ -399,9 +406,16 @@
 <header class="site">
   <div class="header-inner">
     <div class="logo">
-      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M10 6 L10 30 L28 30" stroke="#123A66" stroke-width="4.5" fill="none"/>
-        <path d="M16 12 L16 34 L34 34" stroke="#2E6FB0" stroke-width="4.5" fill="none"/>
+      <svg width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradHeader" x1="4" y1="8" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#123A66"/>
+            <stop offset="1" stop-color="#6FA8DC"/>
+          </linearGradient>
+        </defs>
+        <path d="M9 5 L9 29 L27 29" stroke="#123A66" stroke-width="3" fill="none" stroke-linecap="square" opacity="0.55"/>
+        <rect x="12.2" y="8.2" width="3.2" height="3.2" fill="#2E6FB0"/>
+        <path d="M16 13 L16 35 L35 35" stroke="url(#logoGradHeader)" stroke-width="6" fill="none" stroke-linecap="square"/>
       </svg>
       <div class="logo-text">
         <span class="logo-word">LEVEGHIN</span>
@@ -543,16 +557,53 @@
 <section class="services" id="servicos">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">O que eu faço</p>
-      <h2>Sete frentes, uma mesma exigência: números em que se pode confiar.</h2>
+      <p class="eyebrow">O que fazemos</p>
+      <h2>Frentes de atuação, com a mesma exigência: números em que se pode confiar.</h2>
       <p>Cada serviço pode ser contratado isoladamente ou combinado num acompanhamento contínuo — conforme o estágio e a complexidade da sua empresa.</p>
     </div>
     <div class="service-grid">
-      <div class="service-card reveal">
+      <a class="service-card reveal" href="servicos/abertura-de-empresa.html">
+        <span class="tag">Constituição</span>
+        <h3>Abertura de Empresa</h3>
+        <p>Todo o processo de constituição da sua empresa, do enquadramento ao registro nos órgãos competentes.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/assessoria-contabil.html">
         <span class="tag">Escrituração</span>
-        <h3>Contabilidade</h3>
-        <p>Escrituração contábil e fiscal completa, com informações precisas para decisões de gestão e obrigações em dia.</p>
-      </div>
+        <h3>Assessoria Contábil</h3>
+        <p>Escrituração contábil completa do seu negócio, com informações confiáveis para decisões de gestão e obrigações em dia.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/assessoria-fiscal.html">
+        <span class="tag">Compliance fiscal</span>
+        <h3>Assessoria Fiscal</h3>
+        <p>Planejamento e revisão do regime tributário para reduzir riscos e carga fiscal dentro da legalidade.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/folha-de-pagamento.html">
+        <span class="tag">Departamento pessoal</span>
+        <h3>Folha de Pagamento</h3>
+        <p>Processamento completo da folha, com encargos, benefícios e obrigações trabalhistas em dia.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/irpf.html">
+        <span class="tag">IRPF</span>
+        <h3>Imposto de Renda Pessoa Física</h3>
+        <p>Declaração do IRPF com revisão de deduções, bens e rendimentos, buscando a opção mais vantajosa dentro da lei.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/migrar-mei-para-me.html">
+        <span class="tag">Transição</span>
+        <h3>Migrar de MEI para ME</h3>
+        <p>Apoio na transição de MEI para Microempresa, com toda a regularização societária e fiscal.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/troca-de-contador.html">
+        <span class="tag">Transição</span>
+        <h3>Troca de Contador</h3>
+        <p>Migração para a LEVEGHIN sem dor de cabeça, com revisão do histórico recente.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
       <div class="service-card reveal">
         <span class="tag">Gestão</span>
         <h3>Controladoria</h3>
@@ -590,11 +641,18 @@
 <section class="about" id="sobre">
   <div class="wrap about-inner">
     <div class="monogram reveal">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M10 6 L10 30 L28 30" stroke="#6FA8DC" stroke-width="4.5" fill="none"/>
-        <path d="M16 12 L16 34 L34 34" stroke="#FFFFFF" stroke-width="4.5" fill="none"/>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGradMonogram" x1="4" y1="8" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#123A66"/>
+            <stop offset="1" stop-color="#6FA8DC"/>
+          </linearGradient>
+        </defs>
+        <path d="M9 5 L9 29 L27 29" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square" opacity="0.7"/>
+        <rect x="12.2" y="8.2" width="3.2" height="3.2" fill="#6FA8DC"/>
+        <path d="M16 13 L16 35 L35 35" stroke="url(#logoGradMonogram)" stroke-width="6" fill="none" stroke-linecap="square"/>
       </svg>
-      <div class="cred">Fadrick F. Leveghin · Contador<br>CRC/MA 012345/O-0</div>
+      <div class="cred">Fadrick F. Leveghin · Contador<br>CRC/MA 012172/O-9</div>
     </div>
     <div class="about-text reveal">
       <p class="eyebrow">Sobre mim</p>
@@ -603,7 +661,7 @@
       <p>Sediado em São Luís, Maranhão, atendo empresas em todo o Brasil, com foco em reduzir a distância entre "ter os números" e "entender o que eles significam".</p>
       <p class="muted">* Texto de apresentação em rascunho — me diga o que ajustar ou complementar (formação, experiências específicas, cases) para deixá-lo mais fiel à sua trajetória.</p>
       <ul class="credentials">
-        <li>CRC/MA 012345/O-0</li>
+        <li>CRC/MA 012172/O-9</li>
         <li>Controladoria &amp; FP&amp;A</li>
         <li>Auditoria &amp; Tributação</li>
         <li>São Luís · MA</li>
@@ -648,7 +706,7 @@
 <footer class="site">
   <div class="wrap footer-inner">
     <span class="logo-word">LEVEGHIN CONTABILIDADE</span>
-    <span>© <span id="year"></span> Leveghin Contabilidade · CRC/MA 012345/O-0 · São Luís, MA</span>
+    <span>© <span id="year"></span> Leveghin Contabilidade · CRC/MA 012172/O-9 · São Luís, MA</span>
   </div>
 </footer>
 
