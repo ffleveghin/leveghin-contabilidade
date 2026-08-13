@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Folha de Pagamento | Leveghin Contabilidade</title>
-<meta name="description" content="Processamento completo da folha, com encargos, benefícios e obrigações trabalhistas em dia.">
+<title>Planos | Leveghin Contabilidade</title>
+<meta name="description" content="Conheça os planos de contabilidade da Leveghin: Básico, Intermediário e Completo.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M10 6 L10 30 L28 30' stroke='%23123A66' stroke-width='4.5' fill='none'/%3E%3Cpath d='M16 12 L16 34 L34 34' stroke='%232E6FB0' stroke-width='4.5' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/servico.css">
+<link rel="stylesheet" href="assets/servico.css">
 </head>
 <body>
 
 <header class="site">
   <div class="header-inner">
-    <a class="logo" href="../index.html">
+    <a class="logo" href="index.html">
       <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M10 6 L10 30 L28 30" stroke="#123A66" stroke-width="4.5" fill="none"/>
         <path d="M16 12 L16 34 L34 34" stroke="#2E6FB0" stroke-width="4.5" fill="none"/>
@@ -26,35 +26,68 @@
       </div>
     </a>
     <div class="header-actions">
-      <a class="back-link" href="../index.html">← Voltar ao site</a>
-      <a class="cta-btn" href="abertura-de-empresa.html">Abra sua Empresa</a>
+      <a class="back-link" href="index.html">← Voltar ao site</a>
+      <a class="cta-btn" href="servicos/abertura-de-empresa.html">Abra sua Empresa</a>
     </div>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <p class="eyebrow">Departamento pessoal</p>
-    <h1>Folha de Pagamento</h1>
-    <p class="lead">Processamento completo da folha, com encargos, benefícios e obrigações trabalhistas em dia.</p>
+    <p class="eyebrow">Planos</p>
+    <h1>Conheça nossos planos</h1>
+    <p class="lead">Escolha o plano que acompanha o estágio da sua empresa. Todos incluem contabilidade completa — a diferença está na profundidade de controles e análises que você recebe junto.</p>
   </div>
 </section>
 
 <section class="service-content">
-  <div class="wrap content-grid">
-    <div class="info-block">
-      <h2>O que é</h2>
-      <p>Assumimos o processamento da folha de pagamento da sua empresa — cálculo de salários, encargos e benefícios — mantendo tudo em dia com o eSocial e a legislação trabalhista. Menos risco de multa, menos tempo da sua equipe gasto com burocracia.</p>
-      <h2>O que está incluso</h2>
-      <ul>
-        <li>Cálculo de salários, 13º e férias</li>
-        <li>Encargos trabalhistas (INSS, FGTS, IRRF)</li>
-        <li>Admissões, rescisões e eSocial</li>
-        <li>Guias e obrigações mensais em dia</li>
-      </ul>
-      <div class="info-note">As informações acima têm caráter geral. Cada empresa tem particularidades — fale com a LEVEGHIN Contabilidade para uma orientação específica ao seu caso.</div>
+  <div class="wrap" style="max-width:1140px;">
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Básico</div>
+        <div class="plan-price"><span class="value">R$ 349,99</span> <span class="period">/mês</span></div>
+        <ul class="plan-features">
+          <li>Contabilidade Digital</li>
+          <li>Abertura do CNPJ</li>
+          <li>Contabilidade Completa</li>
+          <li>Fiscal</li>
+          <li>Folha de Pagamento</li>
+          <li>Emissão de Nota Fiscal</li>
+          <li>Emissão de Balanço e DRE</li>
+        </ul>
+        <a href="#form-planos" class="plan-btn" data-plano="Básico">Quero este plano</a>
+      </div>
+
+      <div class="plan-card featured">
+        <div class="plan-name">Intermediário</div>
+        <div class="plan-price"><span class="value">R$ 449,99</span> <span class="period">/mês</span></div>
+        <ul class="plan-features">
+          <li>Tudo do Plano Básico</li>
+          <li>Declaração de Imposto de Renda dos Sócios</li>
+          <li>Orçamento Empresarial</li>
+          <li>Controles Internos</li>
+        </ul>
+        <a href="#form-planos" class="plan-btn" data-plano="Intermediário">Quero este plano</a>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Completo</div>
+        <div class="plan-price"><span class="value">R$ 699,99</span> <span class="period">/mês</span></div>
+        <ul class="plan-features">
+          <li>Tudo do Plano Intermediário</li>
+          <li>Certificado Digital A1 — Parceiro</li>
+          <li>Emissão das Demonstrações Financeiras</li>
+        </ul>
+        <a href="#form-planos" class="plan-btn" data-plano="Completo">Quero este plano</a>
+      </div>
     </div>
 
+    <div class="plans-note">Valores apresentados acima são referentes a empresas enquadradas no Simples Nacional. Para outros regimes, consulte a Leveghin Contabilidade.</div>
+  </div>
+</section>
+
+<section class="service-content" id="form-planos" style="padding-top:0;">
+  <div class="wrap content-grid">
     <div class="form-card">
       <h3>Falar com um especialista</h3>
       <p class="form-sub">Preencha os dados abaixo e retornamos pelo canal que você preferir.</p>
@@ -93,15 +126,13 @@
           </div>
         </div>
         <div class="field">
-          <label for="servico">Qual serviço deseja?*</label>
-          <select id="servico" name="servico" required>
-            <option>Abertura de Empresa</option>
-            <option>Assessoria Contábil</option>
-            <option>Assessoria Fiscal</option>
-            <option selected>Folha de Pagamento</option>
-            <option>Imposto de Renda Pessoa Física</option>
-            <option>Migrar de MEI para ME</option>
-            <option>Troca de Contador</option>
+          <label for="plano">Qual plano te interessa?*</label>
+          <select id="plano" name="plano" required>
+            <option value="" disabled>Selecione</option>
+            <option>Básico</option>
+            <option>Intermediário</option>
+            <option>Completo</option>
+            <option>Ainda não sei, quero conversar</option>
           </select>
         </div>
         <div class="field">
@@ -129,21 +160,6 @@
   </div>
 </section>
 
-<section class="related">
-  <div class="wrap">
-    <h3>Outros serviços</h3>
-    <div class="related-list">
-      <a href="abertura-de-empresa.html">Abertura de Empresa</a>
-      <a href="assessoria-contabil.html">Assessoria Contábil</a>
-      <a href="assessoria-fiscal.html">Assessoria Fiscal</a>
-      <a href="folha-de-pagamento.html" class="current">Folha de Pagamento</a>
-      <a href="irpf.html">Imposto de Renda Pessoa Física</a>
-      <a href="migrar-mei-para-me.html">Migrar de MEI para ME</a>
-      <a href="troca-de-contador.html">Troca de Contador</a>
-    </div>
-  </div>
-</section>
-
 <footer class="site">
   <div class="wrap footer-inner">
     <span class="logo-word">LEVEGHIN CONTABILIDADE</span>
@@ -161,6 +177,16 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  document.querySelectorAll('.plan-btn[data-plano]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const plano = this.getAttribute('data-plano');
+      const select = document.getElementById('plano');
+      if (select) {
+        Array.from(select.options).forEach(opt => { if (opt.text === plano) select.value = plano; });
+      }
+    });
+  });
+
   const form = document.getElementById('leadForm');
   const successBox = document.getElementById('formSuccess');
   form.addEventListener('submit', function(e) {
@@ -170,18 +196,18 @@
     const telefone = document.getElementById('telefone').value.trim();
     const estado = document.getElementById('estado').value;
     const cidade = document.getElementById('cidade').value.trim();
-    const servico = document.getElementById('servico').value;
+    const plano = document.getElementById('plano').value;
     const negocio = document.getElementById('negocio').value;
     const contato = form.querySelector('input[name="contato"]:checked').value;
 
     const linhas = [
       'Solicitação de proposta - Leveghin Contabilidade',
-      'Origem: Página de Folha de Pagamento',
+      'Origem: Página de Planos',
       'Nome: ' + nome,
       'E-mail: ' + email,
       'Telefone: ' + telefone,
       'Cidade/Estado: ' + cidade + ' / ' + estado,
-      'Serviço desejado: ' + servico,
+      'Plano de interesse: ' + plano,
       'Tipo de negócio: ' + negocio,
       'Contato preferido: ' + contato
     ];
@@ -193,7 +219,7 @@
       const url = 'https://wa.me/5598981380905?text=' + encodeURIComponent(mensagem);
       window.open(url, '_blank');
     } else {
-      const subject = encodeURIComponent('Solicitação de proposta - ' + servico);
+      const subject = encodeURIComponent('Solicitação de proposta - Plano ' + plano);
       const body = encodeURIComponent(mensagem);
       window.location.href = 'mailto:contato@leveghincontabilidade.com.br?subject=' + subject + '&body=' + body;
     }

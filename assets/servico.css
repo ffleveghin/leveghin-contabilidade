@@ -146,6 +146,63 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
 }
 .wa-float:hover{transform:scale(1.08);}
 
+/* ---------- Pricing plans ---------- */
+.plans-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin:40px 0 32px;}
+.plan-card{
+  background:var(--white); border:1px solid var(--gray-line); border-radius:8px;
+  padding:32px 28px; display:flex; flex-direction:column;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.plan-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px -24px rgba(11,42,77,0.25);}
+.plan-card.featured{border-color:var(--blue); box-shadow:0 20px 40px -24px rgba(11,42,77,0.3); position:relative;}
+.plan-card.featured::before{
+  content:'Mais escolhido'; position:absolute; top:-13px; left:28px;
+  background:var(--blue); color:#fff; font-family:var(--mono); font-size:0.66rem;
+  letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:20px;
+}
+.plan-name{font-family:var(--serif); font-weight:600; font-size:1.25rem; color:var(--navy); margin-bottom:6px;}
+.plan-price{margin-bottom:20px;}
+.plan-price .value{font-family:var(--serif); font-weight:600; font-size:2rem; color:var(--navy);}
+.plan-price .period{font-size:0.86rem; color:var(--gray);}
+.plan-features{flex:1; margin-bottom:24px;}
+.plan-features li{
+  position:relative; padding-left:24px; margin-bottom:12px; font-size:0.92rem; color:var(--ink);
+  text-align:left;
+}
+.plan-features li::before{
+  content:'✓'; position:absolute; left:0; top:0; color:var(--blue); font-weight:700; font-size:0.9rem;
+}
+.plan-btn{
+  display:block; text-align:center; padding:13px; border-radius:4px;
+  background:var(--navy); color:#fff; font-weight:600; font-size:0.9rem;
+  border:1px solid var(--navy); transition:background 0.2s;
+}
+.plan-btn:hover{background:var(--blue);}
+.plans-note{
+  margin-top:8px; padding:16px 18px; background:var(--bg); border:1px solid var(--gray-line);
+  border-left:3px solid var(--blue-light); border-radius:4px; font-size:0.88rem; color:var(--gray);
+  text-align:justify; text-justify:inter-word;
+}
+
+/* ---------- Judicial calc cards ---------- */
+.judicial-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; margin:40px 0;}
+.judicial-card{
+  background:var(--white); border:1px solid var(--gray-line); border-radius:8px;
+  padding:30px; display:flex; flex-direction:column;
+}
+.judicial-card .jc-icon{
+  width:40px; height:40px; border-radius:50%; background:#EAF0F7;
+  display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+}
+.judicial-card h3{font-family:var(--serif); font-weight:600; font-size:1.15rem; color:var(--navy); margin-bottom:10px;}
+.judicial-card p{color:var(--gray); font-size:0.94rem; flex:1; margin-bottom:20px; text-align:justify; text-justify:inter-word;}
+.judicial-card .plan-btn{align-self:flex-start; padding:11px 24px;}
+
+@media (max-width: 880px){
+  .plans-grid{grid-template-columns:1fr;}
+  .judicial-grid{grid-template-columns:1fr;}
+}
+
 @media (max-width: 880px){
   .back-link{display:none;}
 }
