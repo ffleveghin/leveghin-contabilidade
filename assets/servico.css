@@ -51,6 +51,8 @@ header.site{
 .cta-btn:hover{background:var(--blue);}
 .cta-btn.ghost{background:transparent; color:var(--navy); border:1px solid var(--navy);}
 .cta-btn.ghost:hover{background:var(--navy); color:var(--white);}
+.cta-btn.highlight{background:var(--blue); color:var(--white); border:1px solid var(--blue);}
+.cta-btn.highlight:hover{background:var(--navy); border-color:var(--navy);}
 
 /* nav */
 nav.main-nav ul{display:flex; gap:28px; align-items:center;}
