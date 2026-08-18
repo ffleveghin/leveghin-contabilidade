@@ -305,7 +305,11 @@
     border-radius:8px; display:flex; align-items:center; justify-content:center;
     position:relative; overflow:hidden;
   }
-  .monogram svg{width:46%;}
+  .monogram-photo{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+    display:block; transition:transform 0.4s ease;
+  }
+  .monogram:hover .monogram-photo{transform:scale(1.03);}
   .monogram .cred{
     position:absolute; bottom:0; left:0; right:0; padding:18px 22px;
     background:rgba(11,42,77,0.92); border-top:1px solid rgba(255,255,255,0.15);
@@ -658,19 +662,7 @@
 <section class="about" id="sobre">
   <div class="wrap about-inner">
     <div class="monogram reveal">
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="logoGradMonogram" x1="17" y1="10" x2="30" y2="27" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#E9EEF3"/>
-            <stop offset="0.55" stop-color="#B7CEE3"/>
-            <stop offset="1" stop-color="#6FA8DC"/>
-          </linearGradient>
-        </defs>
-        <polygon points="10,5 15,5 15,30 24,30 24,35 10,35" fill="#F4F7FA" stroke="#0B2A4D" stroke-width="0.6" stroke-linejoin="round"/>
-        <rect x="17" y="5" width="4" height="4" fill="#6FA8DC"/>
-        <polygon points="17,10 21,10 21,22 30,22 30,27 17,27" fill="url(#logoGradMonogram)"/>
-        <rect x="30" y="21" width="4.2" height="7" fill="#6FA8DC"/>
-      </svg>
+      <img src="assets/fadrick-leveghin.jpg" alt="Fadrick F. Leveghin, contador da Leveghin Contabilidade" class="monogram-photo">
       <div class="cred">Fadrick F. Leveghin · Contador<br>CRC/MA 012172/O-9</div>
     </div>
     <div class="about-text reveal">
