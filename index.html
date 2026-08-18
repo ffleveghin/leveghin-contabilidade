@@ -105,6 +105,7 @@
     border-radius:0;
   }
   .dropdown-panel a:last-child{border-bottom:none;}
+  .dropdown-divider{height:1px; background:var(--gray-line); margin:6px 0;}
   .dropdown-panel a:hover{color:var(--blue); border-bottom-color:var(--gray-line);}
   .cta-btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -155,14 +156,8 @@
   }
 
   /* hero photo */
-  .hero-photo-wrap{position:relative; border-radius:12px; overflow:hidden; box-shadow:0 32px 56px -28px rgba(11,42,77,0.35);}
-  .hero-photo{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3.1; display:block;}
-  .hero-photo-badge{
-    position:absolute; top:20px; right:20px; background:rgba(11,42,77,0.85);
-    color:#fff; padding:12px 16px; border-radius:6px; backdrop-filter:blur(4px);
-    display:flex; flex-direction:column; font-family:var(--serif); font-weight:600;
-    font-size:0.92rem; line-height:1.35; text-align:right;
-  }
+  .hero-photo-wrap{position:relative; border-radius:12px; overflow:hidden; box-shadow:0 32px 56px -28px rgba(11,42,77,0.35); max-width:420px; margin:0 auto;}
+  .hero-photo{width:100%; height:100%; object-fit:cover; aspect-ratio:3/4; object-position:center 15%; display:block;}
 
   /* ---------- Section shell ---------- */
   section{padding:88px 0;}
@@ -415,10 +410,11 @@
             <a href="servicos/assessoria-contabil.html">Assessoria Contábil</a>
             <a href="servicos/assessoria-fiscal.html">Assessoria Fiscal</a>
             <a href="servicos/folha-de-pagamento.html">Folha de Pagamento</a>
-            <a href="servicos/irpf.html">Imposto de Renda Pessoa Física</a>
             <a href="servicos/migrar-mei-para-me.html">Migrar de MEI para ME</a>
             <a href="servicos/troca-de-contador.html">Troca de Contador</a>
             <a href="servicos/calculos-judiciais.html">Cálculos Judiciais</a>
+            <div class="dropdown-divider"></div>
+            <a href="servicos/irpf.html">Imposto de Renda Pessoa Física</a>
           </div>
         </li>
         <li><a href="servicos/planos.html">Planos</a></li>
@@ -448,10 +444,6 @@
     </div>
     <div class="hero-photo-wrap reveal">
       <img src="assets/fadrick-leveghin.jpg" alt="Fadrick F. Leveghin, contador da Leveghin Contabilidade" class="hero-photo">
-      <div class="hero-photo-badge">
-        <span>Números claros,</span>
-        <span>decisões seguras.</span>
-      </div>
     </div>
   </div>
 </section>

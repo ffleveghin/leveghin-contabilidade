@@ -91,6 +91,7 @@ nav.main-nav a:hover{border-color:var(--blue-light);}
   font-size:0.9rem; color:var(--ink); padding:8px 4px; border-bottom:1px solid var(--gray-line); border-radius:0;
 }
 .dropdown-panel a:last-child{border-bottom:none;}
+.dropdown-divider{height:1px; background:var(--gray-line); margin:6px 0;}
 .dropdown-panel a:hover{color:var(--blue); border-bottom-color:var(--gray-line);}
 .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
 .nav-toggle span{display:block; width:24px; height:2px; background:var(--navy); margin:5px 0;}
