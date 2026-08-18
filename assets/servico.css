@@ -248,6 +248,43 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   .judicial-grid{grid-template-columns:1fr;}
 }
 
+/* ---------- Blog / Conteúdo ---------- */
+.articles-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin:40px 0;}
+.article-card{
+  background:var(--white); border:1px solid var(--gray-line); border-radius:8px;
+  overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s;
+}
+.article-card:hover{transform:translateY(-3px); box-shadow:0 20px 40px -24px rgba(11,42,77,0.25);}
+.article-card .ac-cover{
+  height:140px; background:linear-gradient(135deg, var(--navy), var(--blue));
+  display:flex; align-items:center; justify-content:center;
+}
+.article-card .ac-body{padding:24px; display:flex; flex-direction:column; flex:1;}
+.article-card .tag{
+  font-family:var(--mono); font-size:0.7rem; color:var(--blue); letter-spacing:0.08em;
+  text-transform:uppercase; margin-bottom:12px; display:block;
+}
+.article-card h3{font-family:var(--serif); font-weight:600; font-size:1.08rem; color:var(--navy); margin-bottom:10px; line-height:1.35;}
+.article-card p{color:var(--gray); font-size:0.92rem; flex:1; margin-bottom:16px; text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;}
+.article-card .ac-link{font-size:0.86rem; font-weight:600; color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px; align-self:flex-start;}
+.article-card .ac-link:hover{color:var(--navy);}
+.article-meta{font-family:var(--mono); font-size:0.72rem; color:var(--gray); letter-spacing:0.04em; margin-bottom:8px; display:block;}
+
+.article-page-body{max-width:720px; margin:0 auto;}
+.article-page-body h2{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.3rem; margin:28px 0 12px;}
+.article-page-body h2:first-child{margin-top:0;}
+.article-page-body p{margin-bottom:16px;}
+.article-page-body ul{margin:0 0 20px;}
+.article-page-body li{position:relative; padding-left:22px; margin-bottom:10px;}
+.article-page-body li::before{
+  content:''; position:absolute; left:0; top:9px; width:8px; height:8px;
+  background:var(--blue-light); border-radius:50%;
+}
+
+@media (max-width: 880px){
+  .articles-grid{grid-template-columns:1fr;}
+}
+
 @media (max-width: 880px){
   .content-grid{grid-template-columns:1fr;}
   nav.main-nav{

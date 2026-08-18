@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leveghin Contabilidade | Contabilidade · Controladoria · Consultoria</title>
-<meta name="description" content="Leveghin Contabilidade — Contabilidade, Controladoria, Orçamento, Tributação, Auditoria, FP&A e Consultoria em São Luís, MA.">
+<title>Leveghin Contabilidade | Contabilidade para Pequenas Empresas</title>
+<meta name="description" content="Leveghin Contabilidade — contabilidade simples e estratégica para pequenas empresas optantes pelo Simples Nacional, em São Luís, MA e todo o Brasil.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='17' y1='10' x2='30' y2='27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23CBD3DA'/%3E%3Cstop offset='0.55' stop-color='%238FADC9'/%3E%3Cstop offset='1' stop-color='%233A72AD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpolygon points='10,5 15,5 15,30 24,30 24,35 10,35' fill='%230B1B2E'/%3E%3Crect x='17' y='5' width='4' height='4' fill='%232F7FE0'/%3E%3Cpolygon points='17,10 21,10 21,22 30,22 30,27 17,27' fill='url(%23g)'/%3E%3Crect x='30' y='21' width='4.2' height='7' fill='%232F7FE0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,52 +149,19 @@
     font-size:1.08rem; color:var(--gray); max-width:480px; margin-bottom:32px;
   }
   .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
-  .approach-link{
-    display:inline-block; margin-top:22px; font-size:0.9rem; font-weight:600;
-    color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px;
-  }
-  .approach-link:hover{color:var(--navy);}
   .hero-location{
-    margin-top:14px; font-size:0.82rem; color:var(--gray);
+    margin-top:22px; font-size:0.82rem; color:var(--gray);
     font-family:var(--mono);
   }
 
-  /* ledger balance illustration */
-  .balance-card{
-    background:var(--white); border:1px solid var(--gray-line);
-    border-radius:8px; padding:32px; box-shadow:0 24px 48px -24px rgba(11,42,77,0.18);
-  }
-  .balance-card .bc-head{
-    display:flex; justify-content:space-between; align-items:baseline;
-    font-family:var(--mono); font-size:0.72rem; color:var(--gray); letter-spacing:0.08em;
-    text-transform:uppercase; margin-bottom:18px; border-bottom:1px solid var(--gray-line); padding-bottom:14px;
-  }
-  .bc-cols{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  .bc-col h4{
-    font-family:var(--mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
-    color:var(--navy); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--blue-light);
-  }
-  .bc-col .row{
-    display:flex; justify-content:space-between; font-size:0.86rem; color:var(--ink);
-    padding:7px 0; border-bottom:1px dashed var(--gray-line);
-  }
-  .bc-col .row span:last-child{font-family:var(--mono); color:var(--gray);}
-  .bc-total{
-    display:flex; justify-content:space-between; align-items:center;
-    margin-top:20px; padding-top:16px; border-top:2px solid var(--navy);
-    font-weight:600; color:var(--navy);
-  }
-  .bc-total .fulcrum{
-    width:14px; height:14px; border-radius:50%; background:var(--blue);
-    animation:tilt 3.5s ease-in-out infinite;
-  }
-  @keyframes tilt{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-3px);}
-  }
-  @media (prefers-reduced-motion:reduce){
-    .bc-total .fulcrum{animation:none;}
-    html{scroll-behavior:auto;}
+  /* hero photo */
+  .hero-photo-wrap{position:relative; border-radius:12px; overflow:hidden; box-shadow:0 32px 56px -28px rgba(11,42,77,0.35);}
+  .hero-photo{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3.1; display:block;}
+  .hero-photo-badge{
+    position:absolute; top:20px; right:20px; background:rgba(11,42,77,0.85);
+    color:#fff; padding:12px 16px; border-radius:6px; backdrop-filter:blur(4px);
+    display:flex; flex-direction:column; font-family:var(--serif); font-weight:600;
+    font-size:0.92rem; line-height:1.35; text-align:right;
   }
 
   /* ---------- Section shell ---------- */
@@ -207,59 +174,36 @@
   }
   .section-head p{color:var(--gray); font-size:1.02rem;}
 
-  /* ---------- Approach / Perfis ---------- */
-  .approach{background:var(--bg); border-bottom:1px solid var(--gray-line);}
-  .profile-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-  .profile-card{
-    background:var(--white); border:1px solid var(--gray-line); border-radius:6px;
-    padding:28px; border-top:3px solid var(--blue-light);
-    transition:transform 0.2s, box-shadow 0.2s;
-  }
-  .profile-card:hover{transform:translateY(-3px); box-shadow:0 16px 32px -20px rgba(11,42,77,0.25);}
-  .profile-card .tag{
-    font-family:var(--mono); font-size:0.7rem; color:var(--blue);
-    letter-spacing:0.08em; margin-bottom:14px; display:block; text-transform:uppercase;
-  }
-  .profile-card h3{
-    font-family:var(--serif); font-weight:600; font-size:1.08rem; color:var(--navy); margin-bottom:10px;
-  }
-  .profile-card p{font-size:0.92rem; color:var(--gray);}
-
-  /* ---------- Providers marquee ---------- */
-  .providers-head{margin:56px 0 28px; text-align:center;}
-  .providers-head .eyebrow{justify-content:center;}
-  .providers-head h2{
+  /* ---------- Foco em pequenas empresas ---------- */
+  .focus{background:var(--white); border-bottom:1px solid var(--gray-line); padding:80px 0;}
+  .focus-inner{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;}
+  .focus-text h2{
     font-family:var(--serif); font-weight:600; color:var(--navy);
-    font-size:clamp(1.3rem, 2.4vw, 1.7rem);
+    font-size:clamp(1.6rem, 3vw, 2.1rem); margin-bottom:16px;
   }
-  .marquee-wrap{display:flex; flex-direction:column; gap:16px; max-width:100%; overflow:hidden;}
-  .marquee-row{
-    overflow:hidden; width:100%; max-width:100%;
-    -webkit-mask-image:linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
-    mask-image:linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
-    scrollbar-width:none; -ms-overflow-style:none; touch-action:pan-y;
+  .focus-text p{color:var(--gray); margin-bottom:28px; max-width:520px;}
+  .focus-icons{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .focus-icon{display:flex; align-items:flex-start; gap:12px; font-size:0.92rem; color:var(--navy); font-weight:500;}
+  .focus-icon svg{flex-shrink:0; margin-top:1px;}
+
+  .focus-graphic{
+    background:var(--navy); border-radius:12px; padding:28px;
+    box-shadow:0 32px 56px -28px rgba(11,42,77,0.4);
   }
-  .marquee-row::-webkit-scrollbar{display:none; height:0; width:0;}
-  .marquee-track{
-    display:flex; gap:14px; width:max-content;
-    animation:marqueeLeft 32s linear infinite;
-    will-change:transform; -webkit-backface-visibility:hidden; backface-visibility:hidden;
-    transform:translateZ(0);
+  .fg-head{
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:var(--mono); font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:#B9C7DA; margin-bottom:20px;
   }
-  .marquee-track.track-reverse{animation-name:marqueeRight;}
-  .marquee-row:hover .marquee-track{animation-play-state:paused;}
-  @keyframes marqueeLeft{from{transform:translateX(0);} to{transform:translateX(-50%);}}
-  @keyframes marqueeRight{from{transform:translateX(-50%);} to{transform:translateX(0);}}
-  .provider-chip{
-    flex:0 0 auto; display:inline-flex; align-items:center; gap:10px;
-    background:var(--white); border:1px solid var(--gray-line); border-radius:40px;
-    padding:12px 22px; white-space:nowrap; font-size:0.9rem; font-weight:500; color:var(--navy);
-  }
-  .provider-chip .ic{font-size:1.05rem;}
-  @media (prefers-reduced-motion:reduce){
-    .marquee-track{animation:none;}
-    .marquee-row{overflow-x:auto; -webkit-overflow-scrolling:touch;}
-  }
+  .fg-dot{width:8px; height:8px; border-radius:50%; background:#4ADE80;}
+  .fg-row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;}
+  .fg-block{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; padding:16px;}
+  .fg-label{display:block; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.05em; color:#8FA5C0; margin-bottom:8px; text-transform:uppercase;}
+  .fg-value{display:block; font-family:var(--serif); font-weight:600; font-size:1.3rem; color:#fff;}
+  .fg-value.fg-highlight{color:#6FA8DC;}
+  .fg-chart{display:flex; align-items:flex-end; gap:8px; height:90px; margin-bottom:14px;}
+  .fg-bar{flex:1; background:linear-gradient(180deg, #6FA8DC, #2E6FB0); border-radius:3px 3px 0 0;}
+  .fg-caption{font-family:var(--mono); font-size:0.7rem; color:#8FA5C0; letter-spacing:0.05em;}
 
   /* ---------- Services ---------- */
   .services{background:var(--white); border-bottom:1px solid var(--gray-line);}
@@ -322,12 +266,18 @@
   .about-text p{color:var(--ink); margin-bottom:16px; max-width:560px;}
   .about-text p.muted{color:var(--gray); font-size:0.92rem;}
   .credentials{
-    display:flex; flex-wrap:wrap; gap:12px; margin-top:24px;
+    display:flex; flex-direction:column; gap:12px; margin-top:24px;
   }
   .credentials li{
-    font-family:var(--mono); font-size:0.78rem; color:var(--navy);
-    background:#EAF0F7; border:1px solid var(--gray-line);
-    padding:7px 14px; border-radius:20px;
+    position:relative; padding-left:28px; font-size:0.95rem; color:var(--ink); font-weight:500;
+  }
+  .credentials li::before{
+    content:''; position:absolute; left:0; top:1px; width:18px; height:18px; border-radius:50%;
+    background:var(--blue); box-shadow:0 0 0 1px var(--blue);
+  }
+  .credentials li::after{
+    content:''; position:absolute; left:5px; top:5px; width:8px; height:5px;
+    border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg);
   }
 
   /* ---------- Contact ---------- */
@@ -359,12 +309,20 @@
   .contact-cta p{font-family:var(--serif); font-size:1.2rem; max-width:440px;}
 
   /* ---------- Footer ---------- */
-  footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
-  .footer-inner{
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
-    font-size:0.82rem;
+  footer.site{background:#081F38; color:#8FA5C0; padding:56px 0 0;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:40px;}
+  .footer-brand .logo-word{color:#DCE7F3; font-size:1.3rem;}
+  .footer-brand .logo-sub{color:#6F8AA8;}
+  .footer-brand p{margin-top:16px; font-size:0.88rem; line-height:1.6; max-width:280px;}
+  .footer-col h4{
+    color:#DCE7F3; font-family:var(--serif); font-weight:600; font-size:0.95rem; margin-bottom:16px;
   }
-  .footer-inner .logo-word{color:#DCE7F3;}
+  .footer-col{display:flex; flex-direction:column; gap:10px;}
+  .footer-col a, .footer-col span{font-size:0.88rem; color:#8FA5C0;}
+  .footer-col a:hover{color:#DCE7F3;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1); padding:20px 0; font-size:0.8rem;
+  }
 
   /* ---------- WhatsApp floating ---------- */
   .wa-float{
@@ -385,10 +343,11 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width: 880px){
-    .hero-inner, .about-inner{grid-template-columns:1fr; gap:40px;}
+    .hero-inner, .about-inner, .focus-inner, .cta-final-inner{grid-template-columns:1fr; gap:40px;}
     .service-grid{grid-template-columns:repeat(2,1fr);}
-    .profile-grid{grid-template-columns:1fr;}
+    .focus-icons{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr; gap:32px;}
     nav.main-nav{
       position:fixed; top:65px; left:0; right:0; background:var(--white);
       border-bottom:1px solid var(--gray-line); padding:20px 32px;
@@ -447,6 +406,7 @@
     </button>
     <nav class="main-nav" id="mainNav">
       <ul>
+        <li><a href="index.html">Início</a></li>
         <li class="has-dropdown">
           <button class="nav-drop-toggle" id="servicosDropToggle" aria-expanded="false">Serviços <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="dropdown-panel" id="servicosDropPanel">
@@ -458,13 +418,17 @@
             <a href="servicos/irpf.html">Imposto de Renda Pessoa Física</a>
             <a href="servicos/migrar-mei-para-me.html">Migrar de MEI para ME</a>
             <a href="servicos/troca-de-contador.html">Troca de Contador</a>
+            <a href="servicos/calculos-judiciais.html">Cálculos Judiciais</a>
           </div>
         </li>
-        <li><a href="servicos/calculos-judiciais.html">Cálculos Judiciais</a></li>
         <li><a href="servicos/planos.html">Planos</a></li>
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="servicos/conteudo.html">Conteúdo</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a class="cta-btn highlight" href="servicos/abertura-de-empresa.html">Abra sua Empresa</a></li>
+        <li><a class="cta-btn highlight" href="https://wa.me/5598981380905" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="margin-right:2px;"><path d="M17.3 14.4c-.28-.14-1.64-.81-1.9-.9-.25-.1-.43-.14-.62.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-1.62-.8-2.68-1.44-3.76-3.26-.28-.49.28-.45.8-1.5.1-.2.05-.37-.04-.5-.1-.14-.9-2.18-1.05-2.5-.15-.32-.3-.28-.42-.28-.11 0-.24 0-.37 0-.13 0-.34.05-.52.24-.18.2-.7.68-.7 1.66 0 .98.7 1.92.8 2.06.1.14 1.4 2.14 3.4 2.92 2 .78 2 .52 2.36.49.36-.04 1.16-.47 1.32-.93.17-.46.17-.85.12-.93-.05-.09-.18-.14-.46-.28z" fill="#fff"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.09-1.34C8.55 21.49 10.24 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.15c-1.56 0-3.05-.4-4.35-1.16l-.31-.18-3.24.85.87-3.16-.2-.32A8.15 8.15 0 0 1 3.85 12 8.15 8.15 0 0 1 12 3.85 8.15 8.15 0 0 1 20.15 12 8.15 8.15 0 0 1 12 20.15z" fill="#fff"/></svg>
+          Falar com Especialista
+        </a></li>
       </ul>
     </nav>
   </div>
@@ -473,101 +437,72 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <p class="eyebrow">Contabilidade · Controladoria · Consultoria</p>
-      <h1>Clareza financeira que sustenta cada decisão.</h1>
-      <p class="lead">Contabilidade, controladoria e consultoria empresarial para empresas que precisam de números confiáveis — e de alguém que os transforme em decisões.</p>
+      <p class="eyebrow">Contabilidade para pequenas empresas</p>
+      <h1>Contabilidade simples e estratégica para pequenas empresas.</h1>
+      <p class="lead">Ajudamos você a pagar menos impostos dentro da lei, manter sua empresa regularizada e tomar decisões com segurança — sem burocracia e sem termos difíceis.</p>
       <div class="hero-ctas">
-        <a class="cta-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="cta-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Falar com Especialista</a>
         <a class="cta-btn ghost" href="#servicos">Ver serviços</a>
       </div>
-      <a class="approach-link" href="#abordagem">Conheça nossa abordagem →</a>
       <p class="hero-location">Atendimento presencial em São Luís/MA e remoto em todo o Brasil.</p>
     </div>
-    <div class="balance-card reveal">
-      <div class="bc-head">
-        <span>Visão empresarial</span>
-        <span>Status · empresa</span>
-      </div>
-      <div class="bc-cols">
-        <div class="bc-col">
-          <h4>Financeiro</h4>
-          <div class="row"><span>Fluxo de caixa</span><span>OK</span></div>
-          <div class="row"><span>Margem</span><span>OK</span></div>
-          <div class="row"><span>Capital de giro</span><span>OK</span></div>
-          <div class="row"><span>Resultado</span><span>OK</span></div>
-        </div>
-        <div class="bc-col">
-          <h4>Gestão</h4>
-          <div class="row"><span>Controles internos</span><span>OK</span></div>
-          <div class="row"><span>Riscos mapeados</span><span>OK</span></div>
-          <div class="row"><span>Indicadores</span><span>OK</span></div>
-          <div class="row"><span>Decisão orientada</span><span>OK</span></div>
-        </div>
-      </div>
-      <div class="bc-total">
-        <span>Empresa sob controle</span>
-        <span class="fulcrum" aria-hidden="true"></span>
+    <div class="hero-photo-wrap reveal">
+      <img src="assets/fadrick-leveghin.jpg" alt="Fadrick F. Leveghin, contador da Leveghin Contabilidade" class="hero-photo">
+      <div class="hero-photo-badge">
+        <span>Números claros,</span>
+        <span>decisões seguras.</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="approach" id="abordagem">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Para quem somos</p>
-      <h2>Contabilidade para empresas que querem ter controle.</h2>
-      <p>Atendemos empresários que precisam de mais do que obrigações acessórias — precisam entender resultado, caixa, impostos e os números que sustentam suas decisões.</p>
-    </div>
-    <div class="profile-grid">
-      <div class="profile-card reveal">
-        <span class="tag">Perfil 1</span>
-        <h3>Empresas em crescimento</h3>
-        <p>Estrutura contábil e financeira para acompanhar a expansão sem perder o controle no caminho.</p>
+<section class="focus" id="abordagem">
+  <div class="wrap focus-inner">
+    <div class="focus-graphic reveal">
+      <div class="fg-head">
+        <span>Simples Nacional</span>
+        <span class="fg-dot"></span>
       </div>
-      <div class="profile-card reveal">
-        <span class="tag">Perfil 2</span>
-        <h3>Empresas que precisam de controle</h3>
-        <p>DRE gerencial, indicadores, orçamento e fluxo de caixa organizados para dar visibilidade real da operação.</p>
-      </div>
-      <div class="profile-card reveal">
-        <span class="tag">Perfil 3</span>
-        <h3>Empresas que precisam de estratégia</h3>
-        <p>Planejamento tributário, controladoria e consultoria financeira para decisões de médio e longo prazo.</p>
-      </div>
-    </div>
-
-    <div class="providers-head reveal">
-      <p class="eyebrow">Para quem é a LEVEGHIN Contabilidade</p>
-      <h2>Feita também para quem presta serviço por conta própria.</h2>
-    </div>
-    <div class="marquee-wrap reveal">
-      <div class="marquee-row">
-        <div class="marquee-track">
-          <span class="provider-chip"><span class="ic">⚖️</span>Advogados</span>
-          <span class="provider-chip"><span class="ic">🩺</span>Médicos</span>
-          <span class="provider-chip"><span class="ic">🦷</span>Dentistas</span>
-          <span class="provider-chip"><span class="ic">📐</span>Arquitetos e Engenheiros</span>
-          <span class="provider-chip"><span class="ic">🏠</span>Corretores de Imóveis</span>
-          <span class="provider-chip"><span class="ic">⚖️</span>Advogados</span>
-          <span class="provider-chip"><span class="ic">🩺</span>Médicos</span>
-          <span class="provider-chip"><span class="ic">🦷</span>Dentistas</span>
-          <span class="provider-chip"><span class="ic">📐</span>Arquitetos e Engenheiros</span>
-          <span class="provider-chip"><span class="ic">🏠</span>Corretores de Imóveis</span>
+      <div class="fg-row">
+        <div class="fg-block">
+          <span class="fg-label">Receita bruta</span>
+          <span class="fg-value">R$ 28.750,00</span>
+        </div>
+        <div class="fg-block">
+          <span class="fg-label">Impostos (DAS)</span>
+          <span class="fg-value fg-highlight">R$ 1.286,38</span>
         </div>
       </div>
-      <div class="marquee-row">
-        <div class="marquee-track track-reverse">
-          <span class="provider-chip"><span class="ic">💻</span>Profissionais de TI</span>
-          <span class="provider-chip"><span class="ic">🛡️</span>Corretores de Seguros</span>
-          <span class="provider-chip"><span class="ic">🎯</span>Consultores e Coaches</span>
-          <span class="provider-chip"><span class="ic">🏋️</span>Personal Trainers</span>
-          <span class="provider-chip"><span class="ic">🧠</span>Terapeutas e Psicólogos</span>
-          <span class="provider-chip"><span class="ic">💻</span>Profissionais de TI</span>
-          <span class="provider-chip"><span class="ic">🛡️</span>Corretores de Seguros</span>
-          <span class="provider-chip"><span class="ic">🎯</span>Consultores e Coaches</span>
-          <span class="provider-chip"><span class="ic">🏋️</span>Personal Trainers</span>
-          <span class="provider-chip"><span class="ic">🧠</span>Terapeutas e Psicólogos</span>
+      <div class="fg-chart" aria-hidden="true">
+        <div class="fg-bar" style="height:38%"></div>
+        <div class="fg-bar" style="height:62%"></div>
+        <div class="fg-bar" style="height:45%"></div>
+        <div class="fg-bar" style="height:80%"></div>
+        <div class="fg-bar" style="height:56%"></div>
+        <div class="fg-bar" style="height:70%"></div>
+      </div>
+      <span class="fg-caption">Apuração mensal</span>
+    </div>
+    <div class="focus-text reveal">
+      <p class="eyebrow">Foco em pequenas empresas</p>
+      <h2>Soluções contábeis para quem quer crescer com tranquilidade.</h2>
+      <p>Atendemos empresas de pequeno porte optantes pelo Simples Nacional que buscam organização, economia e segurança para focar no que realmente importa: fazer o negócio crescer.</p>
+      <div class="focus-icons">
+        <div class="focus-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="#2E6FB0" stroke-width="1.6"/><path d="M9 8h6M9 12h6M9 16h3" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Menos impostos de forma legal</span>
+        </div>
+        <div class="focus-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z" stroke="#2E6FB0" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Empresa regular e protegida</span>
+        </div>
+        <div class="focus-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 19h16M7 15l3-4 3 2 4-6" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Informações que apoiam decisões</span>
+        </div>
+        <div class="focus-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#2E6FB0" stroke-width="1.6"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Atendimento próximo e ágil</span>
         </div>
       </div>
     </div>
@@ -667,15 +602,15 @@
     </div>
     <div class="about-text reveal">
       <p class="eyebrow">Sobre mim</p>
-      <h2>Contador com base em Controladoria e FP&amp;A corporativo.</h2>
-      <p>Atuo com contabilidade, controladoria e planejamento financeiro para empresas com estruturas societárias complexas — múltiplas filiais, consolidação intercompany e rotinas de reporting recorrente. Meu trabalho combina rigor técnico com ferramentas próprias de análise, construídas para dar agilidade ao fechamento e à tomada de decisão.</p>
-      <p>Sediado em São Luís, Maranhão, atendo empresas em todo o Brasil, com foco em reduzir a distância entre "ter os números" e "entender o que eles significam".</p>
-      <p class="muted">* Texto de apresentação em rascunho — me diga o que ajustar ou complementar (formação, experiências específicas, cases) para deixá-lo mais fiel à sua trajetória.</p>
+      <h2>Fadrick F. Leveghin — Contador</h2>
+      <p>Ajudo pequenas empresas a terem uma contabilidade simples, econômica e estratégica. Meu compromisso é cuidar dos números para que você tenha mais tempo, segurança e lucro no seu negócio.</p>
+      <p>Sediado em São Luís, Maranhão, atendo empresas em todo o Brasil, sempre buscando reduzir a distância entre "ter os números" e "entender o que eles significam".</p>
       <ul class="credentials">
+        <li>Ciências Contábeis</li>
+        <li>Pós-graduação em Auditoria</li>
+        <li>MBA em Tributação Empresarial</li>
+        <li>MBA em Controladoria, Auditoria e Finanças</li>
         <li>CRC/MA 012172/O-9</li>
-        <li>Controladoria &amp; FP&amp;A</li>
-        <li>Auditoria &amp; Tributação</li>
-        <li>São Luís · MA</li>
       </ul>
     </div>
   </div>
@@ -684,9 +619,9 @@
 <section class="contact" id="contato">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Fale comigo</p>
-      <h2>Vamos entender o cenário da sua empresa.</h2>
-      <p>Responda pelo canal que preferir — retorno normalmente no mesmo dia útil.</p>
+      <p class="eyebrow">Vamos conversar?</p>
+      <h2>Entenda o cenário da sua empresa e descubra oportunidades para pagar menos impostos.</h2>
+      <p>Uma conversa rápida pode gerar economia e mais tranquilidade para você e seu negócio.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card reveal">
@@ -708,15 +643,52 @@
       </div>
     </div>
     <div class="contact-cta reveal">
-      <p>Pronto para ter controle real sobre os números do seu negócio?</p>
-      <a class="cta-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener" style="background:var(--blue); border-color:var(--blue);">Falar no WhatsApp</a>
+      <p>Pronto para simplificar a contabilidade do seu negócio?</p>
+      <a class="cta-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener" style="background:var(--blue); border-color:var(--blue);">Falar com Especialista</a>
     </div>
   </div>
 </section>
 
 <footer class="site">
-  <div class="wrap footer-inner">
-    <span class="logo-word">LEVEGHIN CONTABILIDADE</span>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <svg width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGradFooter" x1="17" y1="10" x2="30" y2="27" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#E9EEF3"/>
+              <stop offset="0.55" stop-color="#B7CEE3"/>
+              <stop offset="1" stop-color="#6FA8DC"/>
+            </linearGradient>
+          </defs>
+          <polygon points="10,5 15,5 15,30 24,30 24,35 10,35" fill="#F4F7FA"/>
+          <rect x="17" y="5" width="4" height="4" fill="#6FA8DC"/>
+          <polygon points="17,10 21,10 21,22 30,22 30,27 17,27" fill="url(#logoGradFooter)"/>
+          <rect x="30" y="21" width="4.2" height="7" fill="#6FA8DC"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-word">LEVEGHIN</span>
+          <span class="logo-sub">Contabilidade</span>
+        </div>
+      </div>
+      <p>Contabilidade simples e estratégica, feita para pequenas empresas optantes pelo Simples Nacional.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Atendimento</h4>
+      <a href="https://wa.me/5598981380905" target="_blank" rel="noopener">(98) 98138-0905</a>
+      <a href="mailto:contato@leveghincontabilidade.com.br">contato@leveghincontabilidade.com.br</a>
+      <span>São Luís · MA</span>
+    </div>
+    <div class="footer-col">
+      <h4>Links rápidos</h4>
+      <a href="#servicos">Serviços</a>
+      <a href="servicos/planos.html">Planos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="servicos/conteudo.html">Conteúdo</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
     <span>© <span id="year"></span> Leveghin Contabilidade · CRC/MA 012172/O-9 · São Luís, MA</span>
   </div>
 </footer>
