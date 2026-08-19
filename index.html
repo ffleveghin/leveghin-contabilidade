@@ -3,12 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leveghin Contabilidade | Contabilidade para Pequenas Empresas</title>
-<meta name="description" content="Leveghin Contabilidade — contabilidade simples e estratégica para pequenas empresas optantes pelo Simples Nacional, em São Luís, MA e todo o Brasil.">
+<title>Leveghin Contabilidade | Contabilidade, Tributação e Controladoria</title>
+<meta name="description" content="Contabilidade, planejamento tributário e controladoria para empresas que querem crescer com controle. Atendimento em São Luís, MA e todo o Brasil.">
+<link rel="canonical" href="https://leveghincontabilidade.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Leveghin Contabilidade">
+<meta property="og:title" content="Leveghin Contabilidade | Contabilidade, Tributação e Controladoria">
+<meta property="og:description" content="Contabilidade, planejamento tributário e controladoria para empresas que querem crescer com controle.">
+<meta property="og:url" content="https://leveghincontabilidade.com.br/">
+<meta property="og:image" content="https://leveghincontabilidade.com.br/assets/fadrick-leveghin.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Leveghin Contabilidade",
+  "founder": {
+    "@type": "Person",
+    "name": "Fadrick F. Leveghin",
+    "jobTitle": "Contador",
+    "identifier": "CRC/MA 012172/O-9"
+  },
+  "areaServed": ["São Luís", "Maranhão", "Brasil"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "São Luís",
+    "addressRegion": "MA",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5598981380905",
+  "url": "https://leveghincontabilidade.com.br/",
+  "priceRange": "$$"
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='17' y1='10' x2='30' y2='27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23CBD3DA'/%3E%3Cstop offset='0.55' stop-color='%238FADC9'/%3E%3Cstop offset='1' stop-color='%233A72AD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpolygon points='10,5 15,5 15,30 24,30 24,35 10,35' fill='%230B1B2E'/%3E%3Crect x='17' y='5' width='4' height='4' fill='%232F7FE0'/%3E%3Cpolygon points='17,10 21,10 21,22 30,22 30,27 17,27' fill='url(%23g)'/%3E%3Crect x='30' y='21' width='4.2' height='7' fill='%232F7FE0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!--
+  RASTREAMENTO (não configurado ainda — preencher quando houver conta):
+  1) Google Analytics 4 — crie a propriedade em analytics.google.com e troque G-XXXXXXX abaixo.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  2) Meta Pixel — crie em business.facebook.com e troque XXXXXXXXXXXXXXX abaixo.
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXX');
+    fbq('track', 'PageView');
+  </script>
+
+  3) Google Search Console — verificação por tag <meta name="google-site-verification" content="...">
+     ou por arquivo HTML enviado à raiz do site.
+-->
+
 <style>
   :root{
     --navy: #0B2A4D;
@@ -201,6 +260,63 @@
   .fg-caption{font-family:var(--mono); font-size:0.7rem; color:#8FA5C0; letter-spacing:0.05em;}
 
   /* ---------- Services ---------- */
+  /* ---------- Problema ---------- */
+  .problem{background:var(--white); border-bottom:1px solid var(--gray-line);}
+  .problem-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px 32px;}
+  .problem-item{
+    display:flex; align-items:flex-start; gap:12px; font-size:0.98rem; color:var(--ink);
+    padding:14px 0; border-bottom:1px dashed var(--gray-line);
+  }
+  .problem-item .pi-mark{color:var(--blue); font-weight:700; flex-shrink:0;}
+
+  /* ---------- Diferencial ---------- */
+  .differentiator{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .diff-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .diff-card{background:var(--white); border:1px solid var(--gray-line); border-radius:8px; padding:26px; display:block; transition:transform 0.2s, box-shadow 0.2s;}
+  a.diff-card:hover{transform:translateY(-2px); box-shadow:0 16px 32px -22px rgba(11,42,77,0.25);}
+  .diff-num{font-family:var(--mono); font-size:0.78rem; color:var(--blue-light); letter-spacing:0.06em;}
+  .diff-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.08rem; margin:10px 0 8px;}
+  .diff-card p{color:var(--gray); font-size:0.9rem;}
+
+  /* ---------- Comparação ---------- */
+  .compare{background:var(--white); border-bottom:1px solid var(--gray-line);}
+  .compare-table{border:1px solid var(--gray-line); border-radius:8px; overflow:hidden;}
+  .compare-row{display:grid; grid-template-columns:1fr 1fr;}
+  .compare-row > div{padding:16px 24px; font-size:0.95rem; border-bottom:1px solid var(--gray-line);}
+  .compare-row:last-child > div{border-bottom:none;}
+  .compare-row > div:first-child{color:var(--gray); border-right:1px solid var(--gray-line);}
+  .compare-row > div:last-child{color:var(--navy); font-weight:600; background:#F6F9FC;}
+  .compare-head > div{
+    font-family:var(--mono); font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase;
+    background:var(--navy); color:#fff; font-weight:600; border:none;
+  }
+  .compare-head > div:first-child{border-right:1px solid rgba(255,255,255,0.15);}
+  .compare-head > div:last-child{background:var(--navy); color:#fff;}
+
+  /* ---------- Metodologia ---------- */
+  .method{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .method-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
+  .method-step{padding:20px 0; border-top:2px solid var(--blue-light);}
+  .ms-num{font-family:var(--mono); font-size:0.9rem; color:var(--blue); font-weight:600;}
+  .method-step h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1rem; margin:10px 0 6px;}
+  .method-step p{color:var(--gray); font-size:0.86rem;}
+
+  /* ---------- Ofertas de entrada ---------- */
+  .offers{background:var(--white); border-bottom:1px solid var(--gray-line);}
+  .offers-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .offer-card{background:var(--bg); border:1px solid var(--gray-line); border-radius:8px; padding:28px;}
+  .offer-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.1rem; margin-bottom:10px;}
+  .offer-card p{color:var(--gray); font-size:0.92rem; margin-bottom:18px;}
+  .offer-link{font-size:0.88rem; font-weight:600; color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px;}
+  .offer-link:hover{color:var(--navy);}
+
+  /* ---------- Prova social ---------- */
+  .social-proof{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .proof-placeholder{
+    border:1.5px dashed var(--gray-line); border-radius:8px; padding:48px 24px;
+    text-align:center; color:var(--gray); font-size:0.92rem; background:var(--white);
+  }
+
   .services{background:var(--white); border-bottom:1px solid var(--gray-line);}
   .services-head-row{
     display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;
@@ -346,6 +462,11 @@
   @media (max-width: 880px){
     .hero-inner, .about-inner, .focus-inner, .cta-final-inner{grid-template-columns:1fr; gap:40px;}
     .services-head-row{grid-template-columns:1fr; gap:32px;}
+    .problem-grid{grid-template-columns:1fr;}
+    .diff-grid{grid-template-columns:1fr 1fr;}
+    .method-grid{grid-template-columns:1fr 1fr;}
+    .offers-grid{grid-template-columns:1fr;}
+    .compare-row > div{padding:12px 16px; font-size:0.86rem;}
     .service-grid{grid-template-columns:repeat(2,1fr);}
     .focus-icons{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}
@@ -419,6 +540,7 @@
             <a href="servicos/folha-de-pagamento.html">Folha de Pagamento</a>
             <a href="servicos/migrar-mei-para-me.html">Migrar de MEI para ME</a>
             <a href="servicos/troca-de-contador.html">Troca de Contador</a>
+            <a href="servicos/controladoria.html">Controladoria</a>
             <a href="servicos/calculos-judiciais.html">Cálculos Judiciais</a>
             <div class="dropdown-divider"></div>
             <a href="servicos/irpf.html">Imposto de Renda Pessoa Física</a>
@@ -440,17 +562,105 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <p class="eyebrow">Contabilidade para pequenas empresas</p>
-      <h1>Contabilidade simples e estratégica para pequenas empresas.</h1>
-      <p class="lead">Ajudamos você a pagar menos impostos dentro da lei, manter sua empresa regularizada e tomar decisões com segurança — sem burocracia e sem termos difíceis.</p>
+      <p class="eyebrow">Contabilidade · Tributação · Controladoria</p>
+      <h1>Sua empresa cresceu. Sua contabilidade acompanhou?</h1>
+      <p class="lead">Contabilidade, planejamento tributário e controladoria para empresas que querem crescer com controle — não só cumprir obrigações.</p>
       <div class="hero-ctas">
-        <a class="cta-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Falar com Especialista</a>
-        <a class="cta-btn ghost" href="#servicos">Ver serviços</a>
+        <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20minha%20empresa." target="_blank" rel="noopener">Quero conversar sobre minha empresa</a>
+        <a class="cta-btn ghost" href="#diferencial">Conhecer a LEVEGHIN</a>
       </div>
       <p class="hero-location">Atendimento presencial em São Luís/MA e remoto em todo o Brasil.</p>
     </div>
     <div class="hero-photo-wrap reveal">
       <img src="assets/fadrick-leveghin.jpg" alt="Fadrick F. Leveghin, contador da Leveghin Contabilidade" class="hero-photo">
+    </div>
+  </div>
+</section>
+
+<section class="problem" id="problema">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:780px;">
+      <p class="eyebrow">O problema</p>
+      <h2>Seu contador entrega as guias, mas você sabe quanto sua empresa realmente ganha?</h2>
+      <p>A maioria dos empresários descobre tarde demais que faturar mais não é o mesmo que lucrar mais. Alguns sinais de que sua contabilidade parou no básico:</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Não saber a margem real de cada venda ou serviço</div>
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Não saber quanto realmente sobra no negócio no fim do mês</div>
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Pagar impostos sem entender por que paga aquele valor</div>
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Confundir resultado (lucro) com saldo em caixa</div>
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Crescer em faturamento sem crescer em lucro</div>
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Não ter uma DRE gerencial para basear decisões</div>
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Não acompanhar indicadores do próprio negócio</div>
+      <div class="problem-item reveal"><span class="pi-mark">—</span>Não saber se o regime tributário atual ainda é o mais vantajoso</div>
+    </div>
+  </div>
+</section>
+
+<section class="differentiator" id="diferencial">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:780px;">
+      <p class="eyebrow">O diferencial</p>
+      <h2>Mais do que cumprir obrigações. Entender o negócio.</h2>
+      <p>A LEVEGHIN combina quatro frentes que, juntas, dão uma visão completa da sua empresa — não só da parte fiscal.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <span class="diff-num">01</span>
+        <h3>Contabilidade</h3>
+        <p>Informação contábil confiável, com escrituração correta e obrigações em dia.</p>
+      </div>
+      <div class="diff-card reveal">
+        <span class="diff-num">02</span>
+        <h3>Fiscal e Tributário</h3>
+        <p>Análise e acompanhamento da tributação, não apenas apuração automática de guias.</p>
+      </div>
+      <a class="diff-card reveal" href="servicos/controladoria.html">
+        <span class="diff-num">03</span>
+        <h3>Controladoria</h3>
+        <p>Indicadores, DRE gerencial, orçamento e acompanhamento de desempenho.</p>
+      </a>
+      <div class="diff-card reveal">
+        <span class="diff-num">04</span>
+        <h3>Gestão</h3>
+        <p>Informações organizadas para apoiar as decisões que só você, empresário, pode tomar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:780px;">
+      <p class="eyebrow">Por que a LEVEGHIN</p>
+      <h2>Uma forma diferente de olhar para os números da sua empresa.</h2>
+    </div>
+    <div class="compare-table reveal">
+      <div class="compare-row compare-head">
+        <div>Contabilidade tradicional</div>
+        <div>LEVEGHIN</div>
+      </div>
+      <div class="compare-row"><div>Apura impostos</div><div>Analisa a tributação</div></div>
+      <div class="compare-row"><div>Fecha a contabilidade</div><div>Interpreta os números</div></div>
+      <div class="compare-row"><div>Entrega relatórios</div><div>Explica os indicadores</div></div>
+      <div class="compare-row"><div>Cumpre obrigações</div><div>Identifica riscos</div></div>
+      <div class="compare-row"><div>Informa o resultado</div><div>Ajuda na tomada de decisão</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:780px;">
+      <p class="eyebrow">Como trabalhamos</p>
+      <h2>Um processo simples, do primeiro diagnóstico à decisão.</h2>
+    </div>
+    <div class="method-grid">
+      <div class="method-step reveal"><span class="ms-num">01</span><h3>Diagnóstico</h3><p>Entendemos o cenário atual da sua empresa.</p></div>
+      <div class="method-step reveal"><span class="ms-num">02</span><h3>Organização</h3><p>Organizamos as informações contábeis, fiscais e financeiras.</p></div>
+      <div class="method-step reveal"><span class="ms-num">03</span><h3>Análise</h3><p>Transformamos dados em informações gerenciais.</p></div>
+      <div class="method-step reveal"><span class="ms-num">04</span><h3>Acompanhamento</h3><p>Monitoramos indicadores e resultados ao longo do tempo.</p></div>
+      <div class="method-step reveal"><span class="ms-num">05</span><h3>Decisão</h3><p>Ajudamos você a usar os números para decidir com mais segurança.</p></div>
     </div>
   </div>
 </section>
@@ -607,8 +817,9 @@
     <div class="about-text reveal">
       <p class="eyebrow">Sobre mim</p>
       <h2>Fadrick F. Leveghin — Contador</h2>
-      <p>Ajudo pequenas empresas a terem uma contabilidade simples, econômica e estratégica. Meu compromisso é cuidar dos números para que você tenha mais tempo, segurança e lucro no seu negócio.</p>
-      <p>Sediado em São Luís, Maranhão, atendo empresas em todo o Brasil, sempre buscando reduzir a distância entre "ter os números" e "entender o que eles significam".</p>
+      <p>Minha experiência foi construída acompanhando a empresa por dentro: orçamento, resultado, indicadores, custos, planejamento e tomada de decisão em Controladoria e FP&amp;A.</p>
+      <p>A LEVEGHIN nasceu para levar essa mesma visão de gestão para pequenas e médias empresas — não só cumprir obrigações, mas ajudar você a entender e decidir com mais segurança.</p>
+      <p>Sediado em São Luís, Maranhão, atendo empresas em todo o Brasil.</p>
       <ul class="credentials">
         <li>Ciências Contábeis</li>
         <li>Pós-graduação em Auditoria</li>
@@ -616,6 +827,46 @@
         <li>MBA em Controladoria, Auditoria e Finanças</li>
         <li>CRC/MA 012172/O-9</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="offers">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:780px;">
+      <p class="eyebrow">Primeiro passo</p>
+      <h2>Não precisa contratar nada para começar a conversa.</h2>
+      <p>Três formas simples de dar o primeiro passo, de acordo com a sua necessidade agora.</p>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card reveal">
+        <h3>Diagnóstico Tributário</h3>
+        <p>Descubra se sua empresa está no regime tributário adequado.</p>
+        <a class="offer-link" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20an%C3%A1lise%20tribut%C3%A1ria%20da%20minha%20empresa." target="_blank" rel="noopener">Quero analisar minha tributação →</a>
+      </div>
+      <div class="offer-card reveal">
+        <h3>Diagnóstico Financeiro</h3>
+        <p>Entenda onde sua empresa está perdendo margem, caixa ou rentabilidade.</p>
+        <a class="offer-link" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Gostaria%20de%20uma%20an%C3%A1lise%20financeira%20da%20minha%20empresa." target="_blank" rel="noopener">Quero analisar minha empresa →</a>
+      </div>
+      <div class="offer-card reveal">
+        <h3>Troca de Contador</h3>
+        <p>Está insatisfeito com sua contabilidade? Nós cuidamos da transição.</p>
+        <a class="offer-link" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20trocar%20de%20contador." target="_blank" rel="noopener">Quero trocar de contador →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="social-proof">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:780px;">
+      <p class="eyebrow">Clientes</p>
+      <h2>Depoimentos e cases</h2>
+      <p>Em breve, empresários atendidos pela LEVEGHIN vão compartilhar aqui os resultados da parceria.</p>
+    </div>
+    <div class="proof-placeholder reveal">
+      <span>Espaço reservado para depoimentos e cases reais — atualizado conforme forem coletados.</span>
     </div>
   </div>
 </section>
@@ -706,6 +957,19 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Rastreamento de cliques em CTAs de WhatsApp — dispara automaticamente
+  // assim que Google Analytics (gtag) e/ou Meta Pixel (fbq) forem configurados no <head>.
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', { link_text: link.textContent.trim() });
+      }
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'WhatsAppClick', { link_text: link.textContent.trim() });
+      }
+    });
+  });
 
   const showMoreBtn = document.getElementById('showMoreBtn');
   const showMoreLabel = document.getElementById('showMoreLabel');

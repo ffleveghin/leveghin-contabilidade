@@ -222,6 +222,7 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   display:block; text-align:center; padding:13px; border-radius:4px;
   background:var(--navy); color:#fff; font-weight:600; font-size:0.9rem;
   border:1px solid var(--navy); transition:background 0.2s;
+  font-family:inherit; cursor:pointer; width:100%;
 }
 .plan-btn:hover{background:var(--blue);}
 .plans-note{
@@ -242,7 +243,7 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
 }
 .judicial-card h3{font-family:var(--serif); font-weight:600; font-size:1.15rem; color:var(--navy); margin-bottom:10px;}
 .judicial-card p{color:var(--gray); font-size:0.94rem; flex:1; margin-bottom:20px; text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;}
-.judicial-card .plan-btn{align-self:flex-start; padding:11px 24px;}
+.judicial-card .plan-btn{align-self:flex-start; padding:11px 24px; width:auto;}
 
 @media (max-width: 880px){
   .plans-grid{grid-template-columns:1fr;}
