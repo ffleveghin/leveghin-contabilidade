@@ -264,8 +264,20 @@
   .fg-caption{font-family:var(--mono); font-size:0.7rem; color:#8FA5C0; letter-spacing:0.05em;}
 
   /* ---------- Services ---------- */
-  /* ---------- Problema ---------- */
+  /* ---------- Trust bar ---------- */
+  .trust-bar{background:var(--navy); padding:20px 0; border-bottom:1px solid var(--gray-line);}
+  .trust-bar-inner{
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+    gap:14px; row-gap:8px;
+  }
+  .trust-item{font-family:var(--mono); font-size:0.78rem; letter-spacing:0.03em; color:#D8E3F0;}
+  .trust-item strong{color:#fff; font-weight:600;}
+  .trust-sep{width:4px; height:4px; border-radius:50%; background:#5D7EA3; flex-shrink:0;}
+
+  /* ---------- Problema (grid) ---------- */
   .problem{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .problem-grid-4{grid-template-columns:repeat(2,1fr);}
+  .problem-cta{margin-top:32px; text-align:center;}
   .problem-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
   .problem-item{
     display:flex; align-items:flex-start; gap:14px; font-size:0.96rem; color:var(--ink);
@@ -274,7 +286,7 @@
   }
   .problem-item:hover{transform:translateY(-2px); box-shadow:0 16px 32px -22px rgba(11,42,77,0.2);}
   .problem-item .pi-icon{flex-shrink:0; margin-top:1px;}
-  .problem-item span{line-height:1.5;}
+  .problem-item span{line-height:1.5; font-weight:600; color:var(--navy);}
 
   /* ---------- Diferencial ---------- */
   .differentiator{background:var(--bg); border-bottom:1px solid var(--gray-line);}
@@ -284,6 +296,7 @@
   .diff-num{font-family:var(--mono); font-size:0.78rem; color:var(--blue-light); letter-spacing:0.06em;}
   .diff-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.08rem; margin:10px 0 8px;}
   .diff-card p{color:var(--gray); font-size:0.9rem;}
+  .diff-note{margin-top:24px; font-size:0.88rem; color:var(--gray); max-width:760px; text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;}
 
   /* ---------- Comparação ---------- */
   .compare{background:var(--white); border-bottom:1px solid var(--gray-line);}
@@ -319,10 +332,33 @@
 
   /* ---------- Prova social ---------- */
   .social-proof{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .authority-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .authority-item{
+    background:var(--white); border:1px solid var(--gray-line); border-radius:8px;
+    padding:24px; display:flex; flex-direction:column; gap:4px;
+  }
+  .authority-item .tag{
+    display:inline-block; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--blue); margin-bottom:6px;
+  }
+  .authority-item strong{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.02rem;}
+  .authority-item .detail{color:var(--gray); font-size:0.86rem;}
   .proof-placeholder{
     border:1.5px dashed var(--gray-line); border-radius:8px; padding:48px 24px;
     text-align:center; color:var(--gray); font-size:0.92rem; background:var(--white);
   }
+
+  /* ---------- Três portas de entrada ---------- */
+  .entry-doors{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .doors-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .door-card{
+    background:var(--white); border:1px solid var(--gray-line); border-radius:8px;
+    padding:28px; display:block; transition:transform 0.2s, box-shadow 0.2s;
+  }
+  .door-card:hover{transform:translateY(-2px); box-shadow:0 16px 32px -22px rgba(11,42,77,0.25);}
+  .door-tag{font-family:var(--mono); font-size:0.78rem; color:var(--blue-light); letter-spacing:0.06em;}
+  .door-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.08rem; margin:10px 0 8px;}
+  .door-card p{color:var(--gray); font-size:0.9rem; margin-bottom:14px;}
 
   .services{background:var(--white); border-bottom:1px solid var(--gray-line);}
   .services-head-row{
@@ -367,6 +403,12 @@
   .show-more-btn[aria-expanded="true"] svg{transform:rotate(180deg);}
 
   /* ---------- About ---------- */
+  /* ---------- O que você recebe ---------- */
+  .you-get{background:var(--bg); border-bottom:1px solid var(--gray-line);}
+  .you-get-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 32px;}
+  .yg-item{display:flex; align-items:flex-start; gap:12px; font-size:0.96rem; color:var(--navy); font-weight:500;}
+  .yg-check{color:var(--blue); font-weight:700; flex-shrink:0;}
+
   .about-inner{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:start;}
   .monogram{
     width:100%; aspect-ratio:1/1.1; background:var(--navy);
@@ -475,6 +517,10 @@
     .offers-grid{grid-template-columns:1fr;}
     .compare-row > div{padding:12px 16px; font-size:0.86rem;}
     .service-grid{grid-template-columns:repeat(2,1fr);}
+    .doors-grid{grid-template-columns:1fr;}
+    .you-get-grid{grid-template-columns:1fr;}
+    .authority-grid{grid-template-columns:1fr 1fr;}
+    .trust-bar-inner{gap:10px;}
     .focus-icons{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr; gap:32px;}
@@ -505,6 +551,11 @@
     section{padding:64px 0;}
     .wrap{padding:0 20px;}
     .header-inner{padding:14px 20px;}
+    .problem-grid-4{grid-template-columns:1fr;}
+    .authority-grid{grid-template-columns:1fr;}
+    .doors-grid{grid-template-columns:1fr;}
+    .trust-bar-inner{flex-direction:column; gap:6px;}
+    .trust-sep{display:none;}
   }
 </style>
 </head>
@@ -538,22 +589,24 @@
       <ul>
         <li><a href="index.html">Início</a></li>
         <li class="has-dropdown">
-          <button class="nav-drop-toggle" id="servicosDropToggle" aria-expanded="false">Serviços <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <button class="nav-drop-toggle" id="servicosDropToggle" aria-expanded="false">Soluções <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="dropdown-panel" id="servicosDropPanel">
-            <span class="dropdown-title">Serviços de contabilidade</span>
+            <span class="dropdown-title">Soluções</span>
+            <a href="servicos/assessoria-contabil.html">Contabilidade</a>
+            <a href="servicos/simples-nacional.html">Simples Nacional</a>
+            <a href="servicos/planejamento-tributario.html">Planejamento Tributário</a>
+            <a href="servicos/troca-de-contador.html">Troca de Contador</a>
+            <a href="servicos/controladoria.html">Controladoria</a>
+            <a href="servicos/consultoria.html">Consultoria Empresarial</a>
+            <div class="dropdown-divider"></div>
+            <span class="dropdown-title" style="margin-top:2px;">Outros serviços</span>
             <a href="servicos/abertura-de-empresa.html">Abertura de Empresa</a>
-            <a href="servicos/assessoria-contabil.html">Assessoria Contábil</a>
             <a href="servicos/assessoria-fiscal.html">Assessoria Fiscal</a>
             <a href="servicos/folha-de-pagamento.html">Folha de Pagamento</a>
             <a href="servicos/migrar-mei-para-me.html">Migrar de MEI para ME</a>
-            <a href="servicos/troca-de-contador.html">Troca de Contador</a>
-            <a href="servicos/controladoria.html">Controladoria</a>
             <a href="servicos/orcamento.html">Orçamento</a>
-            <a href="servicos/planejamento-tributario.html">Planejamento Tributário</a>
             <a href="servicos/auditoria.html">Auditoria</a>
-            <a href="servicos/consultoria.html">Consultoria</a>
             <a href="servicos/calculos-judiciais.html">Cálculos Judiciais</a>
-            <div class="dropdown-divider"></div>
             <a href="servicos/irpf.html">Imposto de Renda Pessoa Física</a>
           </div>
         </li>
@@ -575,7 +628,7 @@
     <div>
       <p class="eyebrow">Contabilidade · Tributação · Controladoria</p>
       <h1>Sua empresa cresceu. Sua contabilidade acompanhou?</h1>
-      <p class="lead">Contabilidade, planejamento tributário e controladoria para empresas que querem crescer com controle — não só cumprir obrigações.</p>
+      <p class="lead">Contabilidade para pequenas empresas com visão de Controladoria, FP&amp;A e gestão.</p>
       <div class="hero-ctas">
         <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20minha%20empresa." target="_blank" rel="noopener">Quero conversar sobre minha empresa</a>
         <a class="cta-btn ghost" href="#diferencial">Conhecer a LEVEGHIN</a>
@@ -588,22 +641,34 @@
   </div>
 </section>
 
+<section class="trust-bar reveal">
+  <div class="wrap trust-bar-inner">
+    <span class="trust-item"><strong>LEVEGHIN Contabilidade</strong></span>
+    <span class="trust-sep" aria-hidden="true"></span>
+    <span class="trust-item">CRC/MA 012172/O-9</span>
+    <span class="trust-sep" aria-hidden="true"></span>
+    <span class="trust-item">São Luís — Maranhão</span>
+    <span class="trust-sep" aria-hidden="true"></span>
+    <span class="trust-item">Atendimento presencial e remoto</span>
+    <span class="trust-sep" aria-hidden="true"></span>
+    <span class="trust-item">Atendimento direto com o contador</span>
+  </div>
+</section>
+
 <section class="problem" id="problema">
   <div class="wrap">
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">O problema</p>
       <h2>Seu contador entrega as guias, mas você sabe quanto sua empresa realmente ganha?</h2>
-      <p>A maioria dos empresários descobre tarde demais que faturar mais não é o mesmo que lucrar mais. Alguns sinais de que sua contabilidade parou no básico:</p>
     </div>
-    <div class="problem-grid">
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Não saber a margem real de cada venda ou serviço</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Não saber quanto realmente sobra no negócio no fim do mês</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Pagar impostos sem entender por que paga aquele valor</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Confundir resultado (lucro) com saldo em caixa</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Crescer em faturamento sem crescer em lucro</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Não ter uma DRE gerencial para basear decisões</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Não acompanhar indicadores do próprio negócio</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Não saber se o regime tributário atual ainda é o mais vantajoso</span></div>
+    <div class="problem-grid problem-grid-4">
+      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Quanto sua empresa realmente lucra?</span></div>
+      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Se está pagando os impostos corretamente?</span></div>
+      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Onde está perdendo margem?</span></div>
+      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Se sua contabilidade ajuda na gestão ou só cumpre obrigações?</span></div>
+    </div>
+    <div class="problem-cta reveal">
+      <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20entender%20minha%20empresa." target="_blank" rel="noopener">Quero entender minha empresa</a>
     </div>
   </div>
 </section>
@@ -612,8 +677,8 @@
   <div class="wrap">
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">O diferencial</p>
-      <h2>Mais do que cumprir obrigações. Entender o negócio.</h2>
-      <p>A LEVEGHIN combina quatro frentes que, juntas, dão uma visão completa da sua empresa — não só da parte fiscal.</p>
+      <h2>Uma contabilidade com visão de gestão.</h2>
+      <p>A LEVEGHIN combina contabilidade e tributação com experiência prática em Controladoria e em FP&amp;A — Planejamento e Análise Financeira. Isso significa que, além de manter sua empresa em dia, buscamos transformar os números em informações que você consiga usar para tomar decisões melhores.</p>
     </div>
     <div class="diff-grid">
       <div class="diff-card reveal">
@@ -623,20 +688,21 @@
       </div>
       <div class="diff-card reveal">
         <span class="diff-num">02</span>
-        <h3>Fiscal e Tributário</h3>
+        <h3>Tributação</h3>
         <p>Análise e acompanhamento da tributação, não apenas apuração automática de guias.</p>
       </div>
       <a class="diff-card reveal" href="servicos/controladoria.html">
         <span class="diff-num">03</span>
         <h3>Controladoria</h3>
-        <p>Indicadores, DRE gerencial, orçamento e acompanhamento de desempenho.</p>
+        <p>DRE gerencial, indicadores, orçamento e acompanhamento de desempenho.</p>
       </a>
-      <div class="diff-card reveal">
+      <a class="diff-card reveal" href="servicos/consultoria.html">
         <span class="diff-num">04</span>
-        <h3>Gestão</h3>
-        <p>Informações organizadas para apoiar as decisões que só você, empresário, pode tomar.</p>
-      </div>
+        <h3>FP&amp;A</h3>
+        <p>Planejamento e análise financeira: projeções, cenários e acompanhamento do realizado.</p>
+      </a>
     </div>
+    <p class="diff-note reveal">Controladoria e FP&amp;A são diferenciais que fazem parte da forma como trabalhamos — e podem ser aprofundados conforme a necessidade e o estágio da sua empresa, não um pacote fechado igual para todos os clientes.</p>
   </div>
 </section>
 
@@ -701,12 +767,12 @@
         <div class="fg-bar" style="height:56%"></div>
         <div class="fg-bar" style="height:70%"></div>
       </div>
-      <span class="fg-caption">Apuração mensal</span>
+      <span class="fg-caption">Apuração mensal · exemplo ilustrativo</span>
     </div>
     <div class="focus-text reveal">
-      <p class="eyebrow">Do Simples Nacional ao Lucro Real</p>
-      <h2>Soluções contábeis para cada estágio da sua empresa.</h2>
-      <p>Atendemos desde pequenas empresas optantes pelo Simples Nacional até negócios em estágio de Lucro Presumido ou Lucro Real que já precisam de Controladoria, orçamento e planejamento tributário mais estruturados — cada um com o nível de acompanhamento que faz sentido para o seu momento.</p>
+      <p class="eyebrow">Foco em pequenas empresas</p>
+      <h2>Soluções contábeis para quem quer crescer com tranquilidade.</h2>
+      <p>Atendemos empresas de pequeno porte, principalmente optantes pelo Simples Nacional, que buscam organização, economia e segurança para focar no que realmente importa: fazer o negócio crescer. Para quem já cresceu e precisa de mais controle, aprofundamos com Controladoria e planejamento tributário.</p>
       <div class="focus-icons">
         <div class="focus-icon">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="#2E6FB0" stroke-width="1.6"/><path d="M9 8h6M9 12h6M9 16h3" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -729,6 +795,35 @@
   </div>
 </section>
 
+<section class="entry-doors">
+  <div class="wrap">
+    <div class="section-head reveal section-head-wide">
+      <p class="eyebrow">Por onde você começa</p>
+      <h2>Encontre o caminho certo para o momento da sua empresa.</h2>
+    </div>
+    <div class="doors-grid">
+      <a class="door-card reveal" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Estou%20abrindo%20minha%20empresa%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">
+        <span class="door-tag">01</span>
+        <h3>Estou abrindo minha empresa</h3>
+        <p>Abertura e estruturação, do enquadramento ao registro nos órgãos competentes.</p>
+        <span class="card-arrow">Falar sobre isso →</span>
+      </a>
+      <a class="door-card reveal" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20J%C3%A1%20tenho%20uma%20empresa%20e%20quero%20organizar%20minha%20contabilidade." target="_blank" rel="noopener">
+        <span class="door-tag">02</span>
+        <h3>Já tenho uma empresa</h3>
+        <p>Contabilidade e tributação em dia, com orientação clara sobre o que você paga e por quê.</p>
+        <span class="card-arrow">Falar sobre isso →</span>
+      </a>
+      <a class="door-card reveal" href="servicos/controladoria.html">
+        <span class="door-tag">03</span>
+        <h3>Minha empresa cresceu e preciso de mais controle</h3>
+        <p>Contabilidade com Controladoria e FP&amp;A: DRE gerencial, orçamento e indicadores.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="services" id="servicos">
   <div class="wrap">
     <div class="services-head-row">
@@ -742,52 +837,70 @@
       </div>
     </div>
     <div class="service-grid" id="serviceGrid">
-      <a class="service-card reveal" href="servicos/abertura-de-empresa.html">
+      <a class="service-card reveal" href="servicos/assessoria-contabil.html">
+        <span class="tag">01</span>
+        <h3>Contabilidade</h3>
+        <p>Escrituração contábil completa do seu negócio, com informações confiáveis para decisões de gestão e obrigações em dia.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/simples-nacional.html">
+        <span class="tag">02</span>
+        <h3>Simples Nacional</h3>
+        <p>Enquadramento, apuração e revisão do Simples Nacional para você não pagar mais imposto do que deveria.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/planejamento-tributario.html">
+        <span class="tag">03</span>
+        <h3>Planejamento Tributário</h3>
+        <p>Análise do regime tributário e simulações para reduzir a carga fiscal dentro da legalidade.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/troca-de-contador.html">
+        <span class="tag">04</span>
+        <h3>Troca de Contador</h3>
+        <p>Migração para a LEVEGHIN sem dor de cabeça, com revisão do histórico recente.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/controladoria.html">
+        <span class="tag">05</span>
+        <h3>Controladoria</h3>
+        <p>DRE gerencial, indicadores, orçamento e acompanhamento de desempenho.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal" href="servicos/consultoria.html">
+        <span class="tag">06</span>
+        <h3>Consultoria Empresarial</h3>
+        <p>Consultoria financeira estratégica para decisões de médio e longo prazo, com visão de Controladoria e FP&amp;A.</p>
+        <span class="card-arrow">Saiba mais →</span>
+      </a>
+      <a class="service-card reveal extra-card" href="servicos/abertura-de-empresa.html">
         <span class="tag">Constituição</span>
         <h3>Abertura de Empresa</h3>
         <p>Todo o processo de constituição da sua empresa, do enquadramento ao registro nos órgãos competentes.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
-      <a class="service-card reveal" href="servicos/assessoria-contabil.html">
-        <span class="tag">Escrituração</span>
-        <h3>Assessoria Contábil</h3>
-        <p>Escrituração contábil completa do seu negócio, com informações confiáveis para decisões de gestão e obrigações em dia.</p>
-        <span class="card-arrow">Saiba mais →</span>
-      </a>
-      <a class="service-card reveal" href="servicos/assessoria-fiscal.html">
+      <a class="service-card reveal extra-card" href="servicos/assessoria-fiscal.html">
         <span class="tag">Compliance fiscal</span>
         <h3>Assessoria Fiscal</h3>
-        <p>Planejamento e revisão do regime tributário para reduzir riscos e carga fiscal dentro da legalidade.</p>
+        <p>Apuração e obrigações fiscais do dia a dia, em dia com o Fisco.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
-      <a class="service-card reveal" href="servicos/folha-de-pagamento.html">
+      <a class="service-card reveal extra-card" href="servicos/folha-de-pagamento.html">
         <span class="tag">Departamento pessoal</span>
         <h3>Folha de Pagamento</h3>
         <p>Processamento completo da folha, com encargos, benefícios e obrigações trabalhistas em dia.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
-      <a class="service-card reveal" href="servicos/irpf.html">
+      <a class="service-card reveal extra-card" href="servicos/irpf.html">
         <span class="tag">IRPF</span>
         <h3>Imposto de Renda Pessoa Física</h3>
         <p>Declaração do IRPF com revisão de deduções, bens e rendimentos, buscando a opção mais vantajosa dentro da lei.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
-      <a class="service-card reveal" href="servicos/migrar-mei-para-me.html">
+      <a class="service-card reveal extra-card" href="servicos/migrar-mei-para-me.html">
         <span class="tag">Transição</span>
         <h3>Migrar de MEI para ME</h3>
         <p>Apoio na transição de MEI para Microempresa, com toda a regularização societária e fiscal.</p>
-        <span class="card-arrow">Saiba mais →</span>
-      </a>
-      <a class="service-card reveal extra-card" href="servicos/troca-de-contador.html">
-        <span class="tag">Transição</span>
-        <h3>Troca de Contador</h3>
-        <p>Migração para a LEVEGHIN sem dor de cabeça, com revisão do histórico recente.</p>
-        <span class="card-arrow">Saiba mais →</span>
-      </a>
-      <a class="service-card reveal extra-card" href="servicos/controladoria.html">
-        <span class="tag">Gestão</span>
-        <h3>Controladoria</h3>
-        <p>Estruturação de controles internos, indicadores e rotinas que dão visibilidade real sobre a operação.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
       <a class="service-card reveal extra-card" href="servicos/orcamento.html">
@@ -796,30 +909,43 @@
         <p>Elaboração e acompanhamento de orçado × realizado, com análise de desvios e planos de ação claros.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
-      <a class="service-card reveal extra-card" href="servicos/planejamento-tributario.html">
-        <span class="tag">Compliance fiscal</span>
-        <h3>Tributação</h3>
-        <p>Planejamento e revisão de regime tributário para reduzir carga fiscal dentro da legalidade.</p>
-        <span class="card-arrow">Saiba mais →</span>
-      </a>
       <a class="service-card reveal extra-card" href="servicos/auditoria.html">
         <span class="tag">Revisão</span>
         <h3>Auditoria</h3>
         <p>Auditoria interna e revisão de processos para identificar riscos antes que se tornem problemas.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
-      <a class="service-card reveal extra-card" href="servicos/consultoria.html">
-        <span class="tag">Estratégia</span>
-        <h3>Consultoria</h3>
-        <p>Consultoria financeira estratégica para crescimento sustentável, com visão de longo prazo.</p>
+      <a class="service-card reveal extra-card" href="servicos/calculos-judiciais.html">
+        <span class="tag">Perícia</span>
+        <h3>Cálculos Judiciais</h3>
+        <p>Cálculos de liquidação para processos trabalhistas e cíveis.</p>
         <span class="card-arrow">Saiba mais →</span>
       </a>
     </div>
     <div class="show-more-wrap">
       <button class="show-more-btn" id="showMoreBtn" aria-expanded="false" aria-controls="serviceGrid">
-        <span id="showMoreLabel">Mostrar mais serviços</span>
+        <span id="showMoreLabel">Ver outros serviços</span>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg>
       </button>
+    </div>
+  </div>
+</section>
+
+<section class="you-get">
+  <div class="wrap">
+    <div class="section-head reveal section-head-wide">
+      <p class="eyebrow">O que você recebe</p>
+      <h2>Mais do que uma contabilidade.</h2>
+    </div>
+    <div class="you-get-grid">
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Contabilidade organizada e em dia</span></div>
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Obrigações fiscais acompanhadas de perto</span></div>
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Orientação tributária clara, sem jargão</span></div>
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Atendimento direto com o contador</span></div>
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Informações contábeis que você entende</span></div>
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Visão clara sobre o resultado do seu negócio</span></div>
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Indicadores, quando aplicável ao seu momento</span></div>
+      <div class="yg-item reveal"><span class="yg-check">✓</span><span>Apoio real para a gestão da empresa</span></div>
     </div>
   </div>
 </section>
@@ -833,7 +959,7 @@
     <div class="about-text reveal">
       <p class="eyebrow">Sobre mim</p>
       <h2>Fadrick F. Leveghin — Contador</h2>
-      <p>Minha experiência foi construída acompanhando a empresa por dentro: orçamento, resultado, indicadores, custos, planejamento e tomada de decisão em Controladoria e FP&amp;A.</p>
+      <p>Minha experiência foi construída acompanhando a empresa por dentro: orçamento, resultado, indicadores, custos, planejamento e tomada de decisão em Controladoria e FP&amp;A — Planejamento e Análise Financeira.</p>
       <p>A LEVEGHIN nasceu para levar essa mesma visão de gestão para pequenas e médias empresas — não só cumprir obrigações, mas ajudar você a entender e decidir com mais segurança.</p>
       <p>Sediado em São Luís, Maranhão, atendo empresas em todo o Brasil.</p>
       <ul class="credentials">
@@ -877,12 +1003,30 @@
 <section class="social-proof">
   <div class="wrap">
     <div class="section-head reveal section-head-wide">
-      <p class="eyebrow">Clientes</p>
-      <h2>Depoimentos e cases</h2>
-      <p>Em breve, empresários atendidos pela LEVEGHIN vão compartilhar aqui os resultados da parceria.</p>
+      <p class="eyebrow">Autoridade</p>
+      <h2>Experiência que vai além da contabilidade</h2>
     </div>
-    <div class="proof-placeholder reveal">
-      <span>Espaço reservado para depoimentos e cases reais — atualizado conforme forem coletados.</span>
+    <div class="authority-grid">
+      <div class="authority-item reveal">
+        <span class="tag">Registro</span>
+        <strong>CRC/MA 012172/O-9</strong>
+        <span class="detail">Contador registrado, em atuação em São Luís/MA</span>
+      </div>
+      <div class="authority-item reveal">
+        <span class="tag">Formação</span>
+        <strong>Ciências Contábeis</strong>
+        <span class="detail">Pós-graduação em Auditoria</span>
+      </div>
+      <div class="authority-item reveal">
+        <span class="tag">Especialização</span>
+        <strong>MBA em Tributação Empresarial</strong>
+        <span class="detail">MBA em Controladoria, Auditoria e Finanças</span>
+      </div>
+      <div class="authority-item reveal">
+        <span class="tag">Prática</span>
+        <strong>Controladoria &amp; FP&amp;A</strong>
+        <span class="detail">Orçamento, indicadores e análise de resultados aplicados no dia a dia</span>
+      </div>
     </div>
   </div>
 </section>
@@ -891,8 +1035,8 @@
   <div class="wrap">
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">Vamos conversar?</p>
-      <h2>Entenda o cenário da sua empresa e descubra oportunidades para pagar menos impostos.</h2>
-      <p>Uma conversa rápida pode gerar economia e mais tranquilidade para você e seu negócio.</p>
+      <h2>Quer entender melhor os números da sua empresa?</h2>
+      <p>Converse diretamente com um contador e explique o seu cenário — sem compromisso.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card reveal">
@@ -942,7 +1086,7 @@
           <span class="logo-sub">Contabilidade</span>
         </div>
       </div>
-      <p>Contabilidade, tributação e controladoria para empresas em qualquer estágio — do Simples Nacional ao Lucro Real.</p>
+      <p>Contabilidade para pequenas empresas, com visão de Controladoria e FP&amp;A.</p>
     </div>
     <div class="footer-col">
       <h4>Atendimento</h4>
@@ -994,7 +1138,7 @@
     showMoreBtn.addEventListener('click', () => {
       const expanded = serviceGrid.classList.toggle('show-all');
       showMoreBtn.setAttribute('aria-expanded', expanded);
-      showMoreLabel.textContent = expanded ? 'Mostrar menos' : 'Mostrar mais serviços';
+      showMoreLabel.textContent = expanded ? 'Ver menos' : 'Ver outros serviços';
       if (!expanded) {
         serviceGrid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
