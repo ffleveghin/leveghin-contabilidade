@@ -230,6 +230,25 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   border-left:3px solid var(--blue-light); border-radius:4px; font-size:0.88rem; color:var(--gray);
   text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;
 }
+.plan-card-wide{
+  grid-column:1 / -1; flex-direction:row; align-items:center; gap:32px;
+  background:var(--navy); border-color:var(--navy);
+}
+.plan-card-wide .plan-name, .plan-card-wide .plan-price .value{color:#fff;}
+.plan-card-wide .plan-features{
+  display:grid; grid-template-columns:repeat(2, 1fr); gap:6px 24px; margin-bottom:0; flex:2;
+}
+.plan-card-wide .plan-features li{color:#E7EDF5;}
+.plan-card-wide .plan-features li::before{color:var(--blue-light);}
+.plan-card-wide .plan-btn{
+  flex:0 0 220px; width:220px; background:var(--blue); border-color:var(--blue);
+}
+.plan-card-wide .plan-btn:hover{background:#5D97CC;}
+@media (max-width: 880px){
+  .plan-card-wide{flex-direction:column; align-items:stretch; gap:20px;}
+  .plan-card-wide .plan-features{grid-template-columns:1fr;}
+  .plan-card-wide .plan-btn{width:100%;}
+}
 
 /* ---------- Judicial calc cards ---------- */
 .judicial-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; margin:40px 0;}
