@@ -51,8 +51,12 @@ header.site{
 .cta-btn:hover{background:var(--blue);}
 .cta-btn.ghost{background:transparent; color:var(--navy); border:1px solid var(--navy);}
 .cta-btn.ghost:hover{background:var(--navy); color:var(--white);}
-.cta-btn.highlight{background:var(--blue); color:var(--white); border:1px solid var(--blue);}
-.cta-btn.highlight:hover{background:var(--navy); border-color:var(--navy);}
+.cta-btn.highlight{
+  background:var(--blue); color:var(--white); border:1px solid var(--blue);
+  padding:11px 22px; border-radius:24px; box-shadow:0 6px 16px -4px rgba(46,111,176,0.5);
+  font-weight:700;
+}
+.cta-btn.highlight:hover{background:var(--navy); border-color:var(--navy); box-shadow:0 6px 16px -4px rgba(11,42,77,0.5);}
 
 /* nav */
 nav.main-nav ul{display:flex; gap:28px; align-items:center;}
@@ -83,6 +87,11 @@ nav.main-nav a:hover{border-color:var(--blue-light);}
   z-index:70;
 }
 .dropdown-panel.open{opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0);}
+.dropdown-panel.two-col{
+  display:grid; grid-template-columns:1fr 1fr; gap:8px 36px;
+  padding:22px 26px; min-width:460px;
+}
+.dropdown-col{display:flex; flex-direction:column; gap:2px;}
 .dropdown-title{
   font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase;
   color:var(--blue); margin-bottom:8px;
@@ -186,9 +195,9 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
 /* wa float */
 .wa-float{
   position:fixed; bottom:24px; right:24px; z-index:60;
-  background:#25D366; color:#fff; width:56px; height:56px; border-radius:50%;
+  background:#25D366; color:#fff; width:58px; height:58px; border-radius:50%;
   display:flex; align-items:center; justify-content:center;
-  box-shadow:0 10px 24px -6px rgba(0,0,0,0.4); transition:transform 0.2s;
+  box-shadow:0 12px 28px -6px rgba(0,0,0,0.5), 0 0 0 3px rgba(255,255,255,0.9); transition:transform 0.2s;
 }
 .wa-float:hover{transform:scale(1.08);}
 
@@ -229,25 +238,6 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   margin-top:8px; padding:16px 18px; background:var(--bg); border:1px solid var(--gray-line);
   border-left:3px solid var(--blue-light); border-radius:4px; font-size:0.88rem; color:var(--gray);
   text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;
-}
-.plan-card-wide{
-  grid-column:1 / -1; flex-direction:row; align-items:center; gap:32px;
-  background:var(--navy); border-color:var(--navy);
-}
-.plan-card-wide .plan-name, .plan-card-wide .plan-price .value{color:#fff;}
-.plan-card-wide .plan-features{
-  display:grid; grid-template-columns:repeat(2, 1fr); gap:6px 24px; margin-bottom:0; flex:2;
-}
-.plan-card-wide .plan-features li{color:#E7EDF5;}
-.plan-card-wide .plan-features li::before{color:var(--blue-light);}
-.plan-card-wide .plan-btn{
-  flex:0 0 220px; width:220px; background:var(--blue); border-color:var(--blue);
-}
-.plan-card-wide .plan-btn:hover{background:#5D97CC;}
-@media (max-width: 880px){
-  .plan-card-wide{flex-direction:column; align-items:stretch; gap:20px;}
-  .plan-card-wide .plan-features{grid-template-columns:1fr;}
-  .plan-card-wide .plan-btn{width:100%;}
 }
 
 /* ---------- Judicial calc cards ---------- */
@@ -325,7 +315,8 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
     max-height:0; padding:0 4px; opacity:1; visibility:visible; overflow:hidden;
     transition:max-height 0.25s ease, padding 0.25s ease;
   }
-  .dropdown-panel.open{max-height:400px; padding:14px 16px; transform:none;}
+  .dropdown-panel.two-col{grid-template-columns:1fr; gap:4px;}
+  .dropdown-panel.open{max-height:640px; padding:14px 16px; transform:none; overflow-y:auto;}
 }
 @media (max-width: 560px){
   .wrap{padding:0 20px;}
