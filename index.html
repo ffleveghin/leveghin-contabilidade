@@ -19,6 +19,7 @@
   "@context": "https://schema.org",
   "@type": "AccountingService",
   "name": "Leveghin Contabilidade",
+  "image": "https://leveghincontabilidade.com.br/assets/fadrick-leveghin.jpg",
   "founder": {
     "@type": "Person",
     "name": "Fadrick F. Leveghin",
@@ -121,11 +122,11 @@
     font-family:var(--mono); font-size:0.7rem; letter-spacing:0.12em;
     color:var(--gray); text-transform:uppercase; margin-top:2px;
   }
-  nav.main-nav ul{display:flex; gap:28px; align-items:center;}
+  nav.main-nav ul{display:flex; gap:20px; align-items:center; white-space:nowrap;}
   nav.main-nav a{
-    font-size:0.92rem; font-weight:500; color:var(--navy);
+    font-size:0.88rem; font-weight:500; color:var(--navy);
     padding:6px 2px; border-bottom:2px solid transparent;
-    transition:border-color 0.2s;
+    transition:border-color 0.2s; white-space:nowrap;
   }
   nav.main-nav a:hover{border-color:var(--blue-light);}
 
@@ -133,9 +134,9 @@
   .has-dropdown{position:relative;}
   .nav-drop-toggle{
     display:flex; align-items:center; gap:6px;
-    font-family:var(--sans); font-size:0.92rem; font-weight:500; color:var(--navy);
+    font-family:var(--sans); font-size:0.88rem; font-weight:500; color:var(--navy);
     background:none; border:none; cursor:pointer; padding:6px 2px;
-    border-bottom:2px solid transparent; transition:border-color 0.2s;
+    border-bottom:2px solid transparent; transition:border-color 0.2s; white-space:nowrap;
   }
   .nav-drop-toggle svg{transition:transform 0.2s; color:var(--blue-light);}
   .has-dropdown:hover .nav-drop-toggle, .nav-drop-toggle[aria-expanded="true"]{border-color:var(--blue-light);}
@@ -290,6 +291,12 @@
   .diff-num{font-family:var(--mono); font-size:0.78rem; color:var(--blue-light); letter-spacing:0.06em;}
   .diff-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.08rem; margin:10px 0 8px;}
   .diff-card p{color:var(--gray); font-size:0.9rem;}
+  .diff-note{
+    margin-top:24px; padding:16px 20px; background:var(--white); border:1px solid var(--gray-line);
+    border-left:3px solid var(--blue-light); border-radius:4px; font-size:0.88rem; color:var(--gray);
+    text-align:justify; text-justify:inter-word;
+  }
+  .diff-note strong{color:var(--navy);}
 
   /* ---------- Comparação ---------- */
   .compare{background:var(--white); border-bottom:1px solid var(--gray-line);}
@@ -316,7 +323,7 @@
 
   /* ---------- Ofertas de entrada ---------- */
   .offers{background:var(--white); border-bottom:1px solid var(--gray-line);}
-  .offers-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .offers-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
   .offer-card{background:var(--bg); border:1px solid var(--gray-line); border-radius:8px; padding:28px;}
   .offer-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.1rem; margin-bottom:10px;}
   .offer-card p{color:var(--gray); font-size:0.92rem; margin-bottom:18px;}
@@ -491,7 +498,7 @@
     .problem-grid{grid-template-columns:1fr;}
     .diff-grid{grid-template-columns:1fr 1fr;}
     .method-grid{grid-template-columns:1fr 1fr;}
-    .offers-grid{grid-template-columns:1fr;}
+    .offers-grid{grid-template-columns:1fr 1fr;}
     .compare-row > div{padding:12px 16px; font-size:0.86rem;}
     .service-grid{grid-template-columns:repeat(2,1fr);}
     .focus-icons{grid-template-columns:1fr;}
@@ -557,19 +564,22 @@
     <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="index.html">Início</a></li>
+        <li><a href="servicos/simples-nacional.html">Simples Nacional</a></li>
         <li class="has-dropdown">
           <button class="nav-drop-toggle" id="servicosDropToggle" aria-expanded="false">Soluções <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="dropdown-panel two-col" id="servicosDropPanel">
             <div class="dropdown-col">
               <span class="dropdown-title">Soluções</span>
-              <a href="servicos/assessoria-contabil.html">Assessoria Contábil</a>
-              <a href="servicos/assessoria-fiscal.html">Assessoria Fiscal</a>
+              <a href="servicos/pequenas-empresas.html">Contabilidade p/ Pequenas Empresas</a>
               <a href="servicos/controladoria.html">Controladoria</a>
+              <a href="servicos/fpa.html">Planejamento e Análise Financeira</a>
               <a href="servicos/troca-de-contador.html">Troca de Contador</a>
             </div>
             <div class="dropdown-col">
               <span class="dropdown-title">Outros serviços</span>
               <a href="servicos/abertura-de-empresa.html">Abertura de Empresa</a>
+              <a href="servicos/assessoria-contabil.html">Assessoria Contábil</a>
+              <a href="servicos/assessoria-fiscal.html">Assessoria Fiscal</a>
               <a href="servicos/folha-de-pagamento.html">Folha de Pagamento</a>
               <a href="servicos/migrar-mei-para-me.html">Migrar de MEI para ME</a>
               <a href="servicos/calculos-judiciais.html">Cálculos Judiciais</a>
@@ -577,11 +587,11 @@
             </div>
           </div>
         </li>
-        <li><a href="servicos/planos.html">Planos</a></li>
+        <li><a href="servicos/planos.html">Diagnóstico</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="servicos/conteudo.html">Conteúdo</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a class="cta-btn highlight" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Falar com Especialista</a></li>
+        <li><a class="cta-btn highlight" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20contador." target="_blank" rel="noopener">Falar com um Contador</a></li>
       </ul>
     </nav>
   </div>
@@ -590,11 +600,11 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <p class="eyebrow">Contabilidade · Tributação · Controladoria</p>
-      <h1>Sua empresa cresceu. Sua contabilidade acompanhou?</h1>
-      <p class="lead">Contabilidade, planejamento tributário e controladoria para empresas que querem crescer com controle — não só cumprir obrigações.</p>
+      <p class="eyebrow">Contabilidade para o Simples Nacional</p>
+      <h1>Sua empresa é pequena. Sua gestão não precisa ser.</h1>
+      <p class="lead">Contabilidade para pequenas empresas do Simples Nacional, com visão de Controladoria e Planejamento e Análise Financeira — para você entender os números da sua empresa e tomar decisões melhores.</p>
       <div class="hero-ctas">
-        <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20minha%20empresa." target="_blank" rel="noopener">Quero conversar sobre minha empresa</a>
+        <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20contador." target="_blank" rel="noopener">Falar com um Contador</a>
         <a class="cta-btn ghost" href="#diferencial">Conhecer a LEVEGHIN</a>
       </div>
       <p class="hero-location">Atendimento presencial em São Luís/MA e remoto em todo o Brasil.</p>
@@ -633,27 +643,28 @@
       <p>A LEVEGHIN combina quatro frentes que, juntas, dão uma visão completa da sua empresa — não só da parte fiscal.</p>
     </div>
     <div class="diff-grid">
-      <div class="diff-card reveal">
+      <a class="diff-card reveal" href="servicos/assessoria-contabil.html">
         <span class="diff-num">01</span>
         <h3>Contabilidade</h3>
         <p>Informação contábil confiável, com escrituração correta e obrigações em dia.</p>
-      </div>
-      <div class="diff-card reveal">
+      </a>
+      <a class="diff-card reveal" href="servicos/assessoria-fiscal.html">
         <span class="diff-num">02</span>
-        <h3>Fiscal e Tributário</h3>
-        <p>Análise e acompanhamento da tributação, não apenas apuração automática de guias.</p>
-      </div>
+        <h3>Tributação</h3>
+        <p>Análise e planejamento para buscar eficiência tributária dentro da legislação — não apenas apuração automática de guias.</p>
+      </a>
       <a class="diff-card reveal" href="servicos/controladoria.html">
         <span class="diff-num">03</span>
         <h3>Controladoria</h3>
-        <p>Indicadores, DRE gerencial, orçamento e acompanhamento de desempenho.</p>
+        <p>Indicadores, DRE gerencial, margens, custos e acompanhamento de resultados.</p>
       </a>
-      <div class="diff-card reveal">
+      <a class="diff-card reveal" href="servicos/fpa.html">
         <span class="diff-num">04</span>
-        <h3>Gestão</h3>
-        <p>Informações organizadas para apoiar as decisões que só você, empresário, pode tomar.</p>
-      </div>
+        <h3>Planejamento Financeiro (FP&amp;A)</h3>
+        <p>Orçamento, projeções, comparação entre realizado e planejado, e apoio à tomada de decisão.</p>
+      </a>
     </div>
+    <p class="diff-note">* <strong>FP&amp;A</strong> significa Planejamento e Análise Financeira: planejar receitas e despesas, acompanhar o orçamento e comparar o que foi planejado com o que realmente aconteceu — para você decidir com mais segurança.</p>
   </div>
 </section>
 
@@ -864,23 +875,28 @@
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">Primeiro passo</p>
       <h2>Não precisa contratar nada para começar a conversa.</h2>
-      <p>Três formas simples de dar o primeiro passo, de acordo com a sua necessidade agora.</p>
+      <p>Formas simples de dar o primeiro passo, de acordo com a sua necessidade agora.</p>
     </div>
     <div class="offers-grid">
       <div class="offer-card reveal">
-        <h3>Diagnóstico Tributário</h3>
-        <p>Descubra se sua empresa está no regime tributário adequado.</p>
-        <a class="offer-link" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20an%C3%A1lise%20tribut%C3%A1ria%20da%20minha%20empresa." target="_blank" rel="noopener">Quero analisar minha tributação →</a>
+        <h3>Simples Nacional</h3>
+        <p>Entenda o regime, o Fator R e quando revisar o enquadramento da sua empresa.</p>
+        <a class="offer-link" href="servicos/simples-nacional.html">Conhecer o Simples Nacional →</a>
       </div>
       <div class="offer-card reveal">
-        <h3>Diagnóstico Financeiro</h3>
+        <h3>Pré-análise Tributária</h3>
+        <p>Descubra, com um contador de verdade, se sua empresa está no regime adequado.</p>
+        <a class="offer-link" href="servicos/simulador-simples-nacional.html">Solicitar pré-análise →</a>
+      </div>
+      <div class="offer-card reveal">
+        <h3>Planejamento Financeiro (FP&amp;A)</h3>
         <p>Entenda onde sua empresa está perdendo margem, caixa ou rentabilidade.</p>
-        <a class="offer-link" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Gostaria%20de%20uma%20an%C3%A1lise%20financeira%20da%20minha%20empresa." target="_blank" rel="noopener">Quero analisar minha empresa →</a>
+        <a class="offer-link" href="servicos/fpa.html">Conhecer o FP&amp;A →</a>
       </div>
       <div class="offer-card reveal">
         <h3>Troca de Contador</h3>
         <p>Está insatisfeito com sua contabilidade? Nós cuidamos da transição.</p>
-        <a class="offer-link" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20trocar%20de%20contador." target="_blank" rel="noopener">Quero trocar de contador →</a>
+        <a class="offer-link" href="servicos/troca-de-contador.html">Quero trocar de contador →</a>
       </div>
     </div>
   </div>
