@@ -214,6 +214,7 @@
   }
   .hero p.lead{
     font-size:1.08rem; color:var(--gray); max-width:480px; margin-bottom:32px;
+    text-align:justify; text-justify:inter-word;
   }
   .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
   .hero-location{
@@ -236,6 +237,7 @@
   .section-head h2{
     font-family:var(--serif); font-weight:600; color:var(--navy);
     font-size:clamp(1.7rem, 3vw, 2.2rem); margin-bottom:14px;
+    text-align:justify; text-justify:inter-word;
   }
   .section-head p{color:var(--gray); font-size:1.02rem;}
 
@@ -324,10 +326,10 @@
   /* ---------- Ofertas de entrada ---------- */
   .offers{background:var(--white); border-bottom:1px solid var(--gray-line);}
   .offers-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
-  .offer-card{background:var(--bg); border:1px solid var(--gray-line); border-radius:8px; padding:28px;}
+  .offer-card{background:var(--bg); border:1px solid var(--gray-line); border-radius:8px; padding:28px; display:flex; flex-direction:column;}
   .offer-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.1rem; margin-bottom:10px;}
   .offer-card p{color:var(--gray); font-size:0.92rem; margin-bottom:18px;}
-  .offer-link{font-size:0.88rem; font-weight:600; color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px;}
+  .offer-link{font-size:0.88rem; font-weight:600; color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px; margin-top:auto; align-self:flex-start;}
   .offer-link:hover{color:var(--navy);}
 
   /* ---------- Prova social ---------- */
@@ -881,7 +883,7 @@
       <div class="offer-card reveal">
         <h3>Simples Nacional</h3>
         <p>Entenda o regime, o Fator R e quando revisar o enquadramento da sua empresa.</p>
-        <a class="offer-link" href="servicos/simples-nacional.html">Conhecer o Simples Nacional →</a>
+        <a class="offer-link" href="servicos/simples-nacional.html">Saiba mais →</a>
       </div>
       <div class="offer-card reveal">
         <h3>Pré-análise Tributária</h3>
