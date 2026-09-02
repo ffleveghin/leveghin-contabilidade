@@ -100,6 +100,11 @@ nav.main-nav a:hover{border-color:var(--blue-light);}
   font-size:0.9rem; color:var(--ink); padding:8px 4px; border-bottom:1px solid var(--gray-line); border-radius:0;
 }
 .dropdown-panel a:last-child{border-bottom:none;}
+.dropdown-all-link{
+  grid-column:1 / -1; margin-top:12px; padding-top:14px; border-top:1px solid var(--gray-line);
+  font-size:0.86rem; font-weight:600; color:var(--blue); text-align:center;
+}
+.dropdown-all-link:hover{color:var(--navy);}
 .dropdown-divider{height:1px; background:var(--gray-line); margin:6px 0;}
 .dropdown-panel a:hover{color:var(--blue); border-bottom-color:var(--gray-line);}
 .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
@@ -340,4 +345,29 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   .field-row{grid-template-columns:1fr;}
   .page-hero{padding:40px 0 16px;}
   .service-content{padding:16px 0 64px;}
+}
+
+/* ---------- Página de Serviços (categorias) ---------- */
+.category-block{margin-bottom:48px;}
+.category-block:last-of-type{margin-bottom:0;}
+.category-title-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+.category-title{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.25rem; margin-bottom:6px;}
+.category-desc{color:var(--gray); font-size:0.92rem; margin-bottom:20px; max-width:640px;}
+.category-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:16px;}
+.category-card{
+  background:var(--white); border:1px solid var(--gray-line); border-radius:8px;
+  padding:22px; display:block; transition:transform 0.2s, box-shadow 0.2s;
+}
+.category-card:hover{transform:translateY(-2px); box-shadow:0 16px 32px -22px rgba(11,42,77,0.25);}
+.category-card h3{font-family:var(--serif); font-weight:600; font-size:1.02rem; color:var(--navy); margin-bottom:8px;}
+.category-card p{color:var(--gray); font-size:0.88rem; margin-bottom:14px;}
+.category-card-add{border-style:dashed; background:var(--bg);}
+.category-link{font-size:0.84rem; font-weight:600; color:var(--blue);}
+.diff-badge{
+  display:inline-block; background:var(--blue); color:#fff;
+  font-family:var(--mono); font-size:0.62rem; letter-spacing:0.05em; text-transform:uppercase;
+  padding:4px 10px; border-radius:20px;
+}
+@media (max-width: 720px){
+  .category-grid{grid-template-columns:1fr;}
 }
