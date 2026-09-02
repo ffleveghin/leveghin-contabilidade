@@ -312,6 +312,8 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
 
 @media (max-width: 880px){
   .content-grid{grid-template-columns:1fr;}
+}
+@media (max-width: 1150px){
   nav.main-nav{
     position:fixed; top:65px; left:0; right:0; background:var(--white);
     border-bottom:1px solid var(--gray-line); padding:20px 32px;
