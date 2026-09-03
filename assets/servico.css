@@ -119,9 +119,9 @@ nav.main-nav a:hover{border-color:var(--blue-light);}
 }
 .eyebrow::before{content:''; width:22px; height:2px; background:var(--blue-light); display:inline-block;}
 .page-hero h1{
-  font-family:var(--serif); font-weight:600; font-size:clamp(1.9rem, 3.6vw, 2.6rem);
-  color:var(--navy); line-height:1.18; margin-bottom:18px;
-  text-align:justify; text-justify:inter-word;
+  font-family:var(--serif); font-weight:600; font-size:clamp(1.8rem, 3.2vw, 2.4rem);
+  color:var(--navy); line-height:1.22; margin-bottom:18px;
+  text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;
 }
 .page-hero .lead{font-size:1.04rem; color:var(--gray); text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;}
 
@@ -347,6 +347,7 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   .field-row{grid-template-columns:1fr;}
   .page-hero{padding:40px 0 16px;}
   .service-content{padding:16px 0 64px;}
+  .page-hero h1{text-align:left;}
 }
 
 /* ---------- Página de Serviços (categorias) ---------- */
