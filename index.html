@@ -41,7 +41,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='17' y1='10' x2='30' y2='27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23CBD3DA'/%3E%3Cstop offset='0.55' stop-color='%238FADC9'/%3E%3Cstop offset='1' stop-color='%233A72AD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpolygon points='10,5 15,5 15,30 24,30 24,35 10,35' fill='%230B1B2E'/%3E%3Crect x='17' y='5' width='4' height='4' fill='%232F7FE0'/%3E%3Cpolygon points='17,10 21,10 21,22 30,22 30,27 17,27' fill='url(%23g)'/%3E%3Crect x='30' y='21' width='4.2' height='7' fill='%232F7FE0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=optional" rel="stylesheet">
 
 <!--
   RASTREAMENTO (não configurado ainda — preencher quando houver conta):
@@ -262,6 +262,8 @@
     background:var(--navy); border-radius:12px; padding:28px;
     box-shadow:0 32px 56px -28px rgba(11,42,77,0.4);
   }
+  .focus-graphic.focus-photo{padding:0; overflow:hidden; background:transparent;}
+  .focus-photo img{width:100%; height:100%; object-fit:cover; object-position:15% 30%; display:block; aspect-ratio:4/2.7;}
   .fg-head{
     display:flex; justify-content:space-between; align-items:center;
     font-family:var(--mono); font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
@@ -623,7 +625,7 @@
       </div>
       <p class="hero-location">Atendimento presencial em São Luís/MA e remoto em todo o Brasil.</p>
     </div>
-    <div class="hero-photo-wrap reveal">
+    <div class="hero-photo-wrap">
       <img src="assets/fadrick-leveghin.jpg" alt="Fadrick F. Leveghin, contador da Leveghin Contabilidade" class="hero-photo">
     </div>
   </div>
@@ -631,30 +633,8 @@
 
 <section class="focus" id="abordagem">
   <div class="wrap focus-inner">
-    <div class="focus-graphic reveal">
-      <div class="fg-head">
-        <span>Simples Nacional</span>
-        <span class="fg-dot"></span>
-      </div>
-      <div class="fg-row">
-        <div class="fg-block">
-          <span class="fg-label">Receita bruta</span>
-          <span class="fg-value">R$ 28.750,00</span>
-        </div>
-        <div class="fg-block">
-          <span class="fg-label">Impostos (DAS)</span>
-          <span class="fg-value fg-highlight">R$ 1.286,38</span>
-        </div>
-      </div>
-      <div class="fg-chart" aria-hidden="true">
-        <div class="fg-bar" style="height:38%"></div>
-        <div class="fg-bar" style="height:62%"></div>
-        <div class="fg-bar" style="height:45%"></div>
-        <div class="fg-bar" style="height:80%"></div>
-        <div class="fg-bar" style="height:56%"></div>
-        <div class="fg-bar" style="height:70%"></div>
-      </div>
-      <span class="fg-caption">Apuração mensal</span>
+    <div class="focus-graphic focus-photo reveal">
+      <img src="assets/foto-simples-nacional.jpg" alt="Simulação do Simples Nacional em notebook, mostrando receita bruta e valor do DAS a pagar">
     </div>
     <div class="focus-text reveal">
       <p class="eyebrow">Foco em pequenas empresas</p>

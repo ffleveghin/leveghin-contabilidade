@@ -119,7 +119,7 @@ nav.main-nav a:hover{border-color:var(--blue-light);}
 .eyebrow::before{content:''; width:22px; height:2px; background:var(--blue-light); display:inline-block;}
 .page-hero h1{
   font-family:var(--serif); font-weight:600; font-size:clamp(1.9rem, 3.6vw, 2.6rem);
-  color:var(--navy); line-height:1.18; margin-bottom:18px; max-width:680px;
+  color:var(--navy); line-height:1.18; margin-bottom:18px;
 }
 .page-hero .lead{font-size:1.04rem; color:var(--gray); text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;}
 
