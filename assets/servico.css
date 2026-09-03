@@ -67,10 +67,11 @@ nav.main-nav a{
 nav.main-nav a:hover{border-color:var(--blue-light);}
 .has-dropdown{position:relative;}
 .nav-drop-toggle{
-  display:flex; align-items:center; gap:6px;
+  display:inline-flex; align-items:center; height:29px; position:relative; top:1.7px;
   font-family:var(--sans); font-size:0.86rem; font-weight:500; color:var(--navy);
-  background:none; border:none; cursor:pointer; padding:6px 2px;
+  background:none; border:none; cursor:pointer; padding:0 2px; margin:0;
   border-bottom:2px solid transparent; transition:border-color 0.2s; white-space:nowrap;
+  appearance:none; -webkit-appearance:none;
 }
 .nav-drop-toggle svg{transition:transform 0.2s; color:var(--blue-light);}
 .has-dropdown:hover .nav-drop-toggle, .nav-drop-toggle[aria-expanded="true"]{border-color:var(--blue-light);}
@@ -329,7 +330,7 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   .nav-toggle{display:block;}
   .header-inner > .cta-btn.ghost{display:none;}
   .has-dropdown{width:100%;}
-  .nav-drop-toggle{width:100%; justify-content:space-between;}
+  .nav-drop-toggle{display:block; width:100%; text-align:left;}
   .dropdown-panel{
     position:static; transform:none; box-shadow:none; border:none;
     background:var(--bg); margin-top:8px; width:100%; min-width:0;
