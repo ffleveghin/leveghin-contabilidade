@@ -39,9 +39,6 @@
 }
 </script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='17' y1='10' x2='30' y2='27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23CBD3DA'/%3E%3Cstop offset='0.55' stop-color='%238FADC9'/%3E%3Cstop offset='1' stop-color='%233A72AD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpolygon points='10,5 15,5 15,30 24,30 24,35 10,35' fill='%230B1B2E'/%3E%3Crect x='17' y='5' width='4' height='4' fill='%232F7FE0'/%3E%3Cpolygon points='17,10 21,10 21,22 30,22 30,27 17,27' fill='url(%23g)'/%3E%3Crect x='30' y='21' width='4.2' height='7' fill='%232F7FE0'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!--
   RASTREAMENTO (não configurado ainda — preencher quando houver conta):
@@ -69,6 +66,10 @@
      ou por arquivo HTML enviado à raiz do site.
 -->
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
 <style>
   :root{
     --navy: #0B2A4D;
@@ -576,13 +577,14 @@
   }
   .contact-card:hover{border-color:var(--blue-light); background:rgba(255,255,255,0.07);}
   .contact-note{
-    margin-top:20px; font-size:0.82rem; color:#7E90A8; max-width:640px;
+    margin-top:20px; font-size:0.82rem; color:#7E90A8;
+    max-width:none; text-align:justify; text-justify:inter-word;
   }
   .contact-card .tag{
     font-family:var(--mono); font-size:0.75rem; color:var(--blue-light);
     letter-spacing:0.08em; margin-bottom:14px; display:block; text-transform:uppercase;
   }
-  .contact-card strong{display:block; font-size:0.98rem; margin-bottom:6px; overflow-wrap:anywhere;}
+  .contact-card strong{display:block; font-size:0.92rem; margin-bottom:6px; overflow-wrap:anywhere;}
   .contact-card span.detail{display:block; color:#B9C7DA; font-size:0.92rem;}
   .contact-card a.card-link{
     margin-top:16px; display:inline-flex; align-items:center; gap:6px;
@@ -769,7 +771,7 @@
         <li><a href="servicos/conteudo.html">Conteúdo</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a class="cta-btn highlight" href="#contato">Falar com um contador</a></li>
+        <li><a class="cta-btn highlight" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um Especialista</a></li>
       </ul>
     </nav>
   </div>
@@ -1303,7 +1305,7 @@
           <span class="logo-sub">Contabilidade</span>
         </div>
       </div>
-      <p>Contabilidade simples e estratégica para pequenas empresas, com especialização em Simples Nacional.</p>
+      <p>Contabilidade, Tributação e Gestão para pequenas empresas que querem crescer com clareza e controle.</p>
     </div>
     <div class="footer-col">
       <h4>Atendimento</h4>
