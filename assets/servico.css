@@ -10,9 +10,9 @@
   --ink: #101820;
   --radius: 4px;
   --maxw: 1140px;
-  --serif: 'IBM Plex Serif', Georgia, serif;
+  --serif: 'IBM Plex Sans', -apple-system, Segoe UI, sans-serif;
   --sans: 'IBM Plex Sans', -apple-system, Segoe UI, sans-serif;
-  --mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --mono: 'IBM Plex Sans', -apple-system, Segoe UI, sans-serif;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html{overflow-x:hidden;}

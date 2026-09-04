@@ -41,7 +41,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='17' y1='10' x2='30' y2='27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23CBD3DA'/%3E%3Cstop offset='0.55' stop-color='%238FADC9'/%3E%3Cstop offset='1' stop-color='%233A72AD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpolygon points='10,5 15,5 15,30 24,30 24,35 10,35' fill='%230B1B2E'/%3E%3Crect x='17' y='5' width='4' height='4' fill='%232F7FE0'/%3E%3Cpolygon points='17,10 21,10 21,22 30,22 30,27 17,27' fill='url(%23g)'/%3E%3Crect x='30' y='21' width='4.2' height='7' fill='%232F7FE0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!--
   RASTREAMENTO (não configurado ainda — preencher quando houver conta):
@@ -82,9 +82,9 @@
     --ink: #101820;
     --radius: 4px;
     --maxw: 1140px;
-    --serif: 'IBM Plex Serif', Georgia, serif;
+    --serif: 'IBM Plex Sans', -apple-system, Segoe UI, sans-serif;
     --sans: 'IBM Plex Sans', -apple-system, Segoe UI, sans-serif;
-    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --mono: 'IBM Plex Sans', -apple-system, Segoe UI, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth; overflow-x:hidden;}
@@ -388,7 +388,7 @@
 
   /* ---------- Ofertas de entrada ---------- */
   .offers{background:var(--white); border-bottom:1px solid var(--gray-line);}
-  .offers-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
+  .offers-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:14px;}
   .offer-card{background:var(--bg); border:1px solid var(--gray-line); border-radius:8px; padding:28px; display:flex; flex-direction:column;}
   .offer-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.1rem; margin-bottom:10px;}
   .offer-card p{color:var(--gray); font-size:0.92rem; margin-bottom:18px;}
@@ -506,9 +506,7 @@
   }
   .contact-card:hover{border-color:var(--blue-light); background:rgba(255,255,255,0.07);}
   .contact-note{
-    margin-top:24px; padding:16px 20px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.14);
-    border-left:3px solid var(--blue-light); border-radius:4px; font-size:0.88rem; color:#B9C7DA;
-    text-align:justify; text-justify:inter-word;
+    margin-top:20px; font-size:0.82rem; color:#7E90A8; max-width:640px;
   }
   .contact-card .tag{
     font-family:var(--mono); font-size:0.7rem; color:var(--blue-light);
@@ -525,7 +523,7 @@
     margin-top:48px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.14);
     display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
   }
-  .contact-cta p{font-family:var(--serif); font-size:1.2rem; max-width:440px;}
+  .contact-cta p{font-family:var(--serif); font-size:1.2rem; white-space:nowrap;}
 
   /* ---------- Footer ---------- */
   footer.site{background:#081F38; color:#8FA5C0; padding:56px 0 0;}
@@ -615,6 +613,7 @@
     }
   }
   @media (max-width: 560px){
+    .contact-cta p{white-space:normal;}
     .service-grid{grid-template-columns:1fr;}
     .service-grid-4{grid-template-columns:1fr;}
     .diff-grid-2{grid-template-columns:1fr;}
@@ -687,7 +686,7 @@
         <li><a href="servicos/conteudo.html">Conteúdo</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a class="cta-btn highlight" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20contador." target="_blank" rel="noopener">Falar com um Contador</a></li>
+        <li><a class="cta-btn highlight" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20contador." target="_blank" rel="noopener">Falar com um Especialista</a></li>
       </ul>
     </nav>
   </div>
@@ -1030,7 +1029,7 @@
     <div class="about-text reveal">
       <p class="eyebrow">Sobre mim</p>
       <h2>Fadrick F. Leveghin — Contador</h2>
-      <p>Sou contador desde 2010, com mais de 17 anos de experiência prática em gestão empresarial — não só na teoria, mas no dia a dia de acompanhar empresas por dentro.</p>
+      <p>Atuo na contabilidade e na gestão empresarial desde 2010 — não só na teoria, mas no dia a dia de acompanhar empresas por dentro.</p>
       <p>Ao longo da carreira, trabalhei diretamente com orçamento, DRE, indicadores, custos, planejamento e tomada de decisão em Controladoria e FP&amp;A. Foi essa vivência, unida à formação contábil, que deu origem à LEVEGHIN.</p>
       <p>É esse olhar de gestão — e não só de obrigação cumprida — que aplico na contabilidade de cada cliente que atendo.</p>
       <ul class="credentials">
@@ -1094,6 +1093,11 @@
         <p>Sua empresa cresceu e você quer mais controle sobre os números?</p>
         <a class="offer-link" href="servicos/controladoria.html">Conhecer a Controladoria →</a>
       </div>
+      <div class="offer-card reveal">
+        <h3>Gestão Empresarial</h3>
+        <p>Para empresas que querem acompanhar resultado, margem, indicadores e orçamento.</p>
+        <a class="offer-link" href="#diferencial">Conhecer a LEVEGHIN Gestão →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1103,7 +1107,7 @@
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">Diagnóstico Empresarial</p>
       <h2>Diagnóstico Empresarial LEVEGHIN</h2>
-      <p>Antes de contratar qualquer serviço, vamos entender o momento da sua empresa. Uma conversa inicial para identificar onde a LEVEGHIN pode ajudar — em Contabilidade, Tributação, Resultado, Margens, Organização Financeira, Indicadores, Planejamento ou Controladoria.</p>
+      <p>Antes de contratar qualquer serviço, vamos entender o momento da sua empresa. Uma primeira conversa para entender o cenário da sua empresa e indicar o caminho mais adequado — em Contabilidade, Tributação, Resultado, Margens, Organização Financeira, Indicadores, Planejamento ou Controladoria.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card reveal">
@@ -1154,7 +1158,7 @@
           <span class="logo-sub">Contabilidade</span>
         </div>
       </div>
-      <p>Contabilidade simples e estratégica, feita para pequenas empresas optantes pelo Simples Nacional.</p>
+      <p>Contabilidade simples e estratégica para pequenas empresas, com especialização em Simples Nacional.</p>
     </div>
     <div class="footer-col">
       <h4>Atendimento</h4>
