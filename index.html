@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contabilidade para Pequenas Empresas e Simples Nacional | Leveghin | São Luís, MA</title>
-<meta name="description" content="Contabilidade para pequenas empresas do Simples Nacional em São Luís, MA, com atendimento remoto em todo o Brasil. Tributação, Controladoria e FP&A num só lugar.">
+<title>Contabilidade e Gestão para Pequenas Empresas | Simples Nacional | Leveghin — São Luís/MA</title>
+<meta name="description" content="Contabilidade, Tributação e Gestão para pequenas empresas do Simples Nacional. Contador com experiência prática em Controladoria e Planejamento Financeiro (FP&A). São Luís/MA e atendimento remoto em todo o Brasil.">
 <link rel="canonical" href="https://leveghincontabilidade.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Leveghin Contabilidade">
-<meta property="og:title" content="Leveghin Contabilidade | Contabilidade, Tributação e Controladoria">
-<meta property="og:description" content="Contabilidade, planejamento tributário e controladoria para empresas que querem crescer com controle.">
+<meta property="og:title" content="Leveghin Contabilidade | Contabilidade, Tributação e Gestão">
+<meta property="og:description" content="Sua empresa não precisa de um contador que apenas entregue guias. Contabilidade, Tributação e Gestão para pequenas empresas.">
 <meta property="og:url" content="https://leveghincontabilidade.com.br/">
 <meta property="og:image" content="https://leveghincontabilidade.com.br/assets/fadrick-leveghin.jpg">
 <meta property="og:locale" content="pt_BR">
@@ -88,6 +88,7 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth; overflow-x:hidden;}
+  section[id]{scroll-margin-top:80px;}
   body{
     font-family:var(--sans);
     color:var(--ink);
@@ -119,7 +120,7 @@
     color:var(--navy); letter-spacing:0.02em; white-space:nowrap;
   }
   .logo-sub{
-    font-family:var(--mono); font-size:0.7rem; letter-spacing:0.12em;
+    font-family:var(--mono); font-size:0.75rem; letter-spacing:0.12em;
     color:var(--gray); text-transform:uppercase; margin-top:2px; white-space:nowrap;
   }
   nav.main-nav ul{display:flex; gap:18px; align-items:center; white-space:nowrap;}
@@ -162,7 +163,7 @@
   }
   .dropdown-col{display:flex; flex-direction:column; gap:2px;}
   .dropdown-title{
-    font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase;
+    font-family:var(--mono); font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase;
     color:var(--blue); margin-bottom:8px;
   }
   .dropdown-panel a{
@@ -233,6 +234,66 @@
   .hero-photo-wrap{position:relative; border-radius:12px; overflow:hidden; box-shadow:0 32px 56px -28px rgba(11,42,77,0.35); max-width:420px; margin:0 auto;}
   .hero-photo{width:100%; height:100%; object-fit:cover; aspect-ratio:3/4; object-position:center 15%; display:block;}
 
+  /* ---------- Faixa de autoridade (logo abaixo do Hero) ---------- */
+  .authority{
+    background:var(--navy); color:#fff; padding:28px 0; border-bottom:1px solid var(--navy);
+  }
+  .authority-inner{
+    display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;
+  }
+  .authority-title{
+    font-weight:600; font-size:1.06rem; line-height:1.3; color:#fff;
+    border-left:3px solid var(--blue-light); padding-left:16px; white-space:nowrap;
+  }
+  .authority-text{
+    font-size:0.95rem; line-height:1.55; color:#D3DEEA; text-align:left; margin:0;
+  }
+  .authority-text strong{color:#fff; font-weight:600;}
+
+  /* ---------- Formulário de contato ---------- */
+  .lead-form-card{
+    background:var(--white); border:1px solid var(--gray-line); border-radius:12px;
+    padding:32px; max-width:720px; margin:0 auto 40px;
+    box-shadow:0 20px 44px -32px rgba(11,42,77,0.28);
+  }
+  .lead-form-card h3{
+    font-family:var(--serif); font-weight:600; font-size:1.2rem; color:var(--navy); margin-bottom:6px;
+  }
+  .lead-form-sub{font-size:0.92rem; color:var(--gray); margin-bottom:24px; text-align:left;}
+  .lf-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .lf-field{display:flex; flex-direction:column; margin-bottom:16px;}
+  .lf-field label{
+    font-size:0.8rem; font-weight:600; color:var(--navy); margin-bottom:6px; letter-spacing:0.01em;
+  }
+  .lf-field input, .lf-field select, .lf-field textarea{
+    font-family:var(--sans); font-size:0.95rem; color:var(--ink);
+    border:1px solid var(--gray-line); border-radius:6px; padding:12px 14px;
+    background:var(--white); width:100%; min-height:46px;
+  }
+  .lf-field textarea{min-height:92px; resize:vertical; line-height:1.45;}
+  .lf-field input:focus, .lf-field select:focus, .lf-field textarea:focus{
+    outline:none; border-color:var(--blue); box-shadow:0 0 0 3px rgba(46,111,176,0.14);
+  }
+  .lf-optional{font-weight:400; color:var(--gray);}
+  .lf-submit{
+    width:100%; min-height:52px; margin-top:6px; cursor:pointer;
+    font-family:var(--sans); font-size:0.95rem; font-weight:700; letter-spacing:0.02em;
+    background:var(--navy); color:#fff; border:1px solid var(--navy); border-radius:6px;
+    transition:background 0.2s, border-color 0.2s;
+  }
+  .lf-submit:hover:not(:disabled){background:var(--blue); border-color:var(--blue);}
+  .lf-submit:disabled{opacity:0.65; cursor:default;}
+  .lf-hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+  .lf-msg{
+    display:none; margin-top:16px; padding:14px 16px; border-radius:6px;
+    font-size:0.92rem; line-height:1.5; text-align:left;
+  }
+  .lf-msg.show{display:block;}
+  .lf-msg-ok{background:#EEF6EF; border:1px solid #BEDCC2; color:#1F5B2C;}
+  .lf-msg-err{background:#FDF1EF; border:1px solid #EFC9C2; color:#8A2D1B;}
+  .lf-msg-err a{color:#8A2D1B; font-weight:600; text-decoration:underline;}
+  .lf-privacy{font-size:0.78rem; color:var(--gray); margin-top:14px; text-align:left;}
+
   /* ---------- Section shell ---------- */
   section{padding:88px 0;}
   .section-head{margin-bottom:48px; max-width:640px;}
@@ -275,12 +336,12 @@
   .fg-dot{width:8px; height:8px; border-radius:50%; background:#4ADE80;}
   .fg-row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;}
   .fg-block{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; padding:16px;}
-  .fg-label{display:block; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.05em; color:#8FA5C0; margin-bottom:8px; text-transform:uppercase;}
+  .fg-label{display:block; font-family:var(--mono); font-size:0.75rem; letter-spacing:0.05em; color:#8FA5C0; margin-bottom:8px; text-transform:uppercase;}
   .fg-value{display:block; font-family:var(--serif); font-weight:600; font-size:1.3rem; color:#fff;}
   .fg-value.fg-highlight{color:#6FA8DC;}
   .fg-chart{display:flex; align-items:flex-end; gap:8px; height:90px; margin-bottom:14px;}
   .fg-bar{flex:1; background:linear-gradient(180deg, #6FA8DC, #2E6FB0); border-radius:3px 3px 0 0;}
-  .fg-caption{font-family:var(--mono); font-size:0.7rem; color:#8FA5C0; letter-spacing:0.05em;}
+  .fg-caption{font-family:var(--mono); font-size:0.75rem; color:#8FA5C0; letter-spacing:0.05em;}
 
   /* ---------- Services ---------- */
   /* ---------- Problema ---------- */
@@ -324,28 +385,29 @@
     box-shadow:0 32px 56px -28px rgba(11,42,77,0.4);
   }
   .fg-row-3{grid-template-columns:repeat(3,1fr);}
-  .fg-value small{font-size:0.72rem; font-weight:400; color:#8FA5C0; font-family:var(--sans);}
+  .fg-value small{font-size:0.75rem; font-weight:400; color:#8FA5C0; font-family:var(--sans);}
 
-  /* ---------- Antes x Depois ---------- */
+  /* ---------- Antes x Depois (contraste de percepção) ---------- */
   .ba{background:var(--white); border-bottom:1px solid var(--gray-line);}
-  .ba-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px;}
-  .ba-col{background:var(--bg); border:1px solid var(--gray-line); border-radius:12px; padding:32px;}
-  .ba-col-title{font-family:var(--serif); font-weight:600; font-size:1.15rem; color:var(--navy); margin-bottom:20px;}
-  .ba-list li{position:relative; padding-left:28px; font-size:0.95rem; margin-bottom:16px; line-height:1.4;}
-  .ba-list li:last-child{margin-bottom:0;}
-  .ba-list-neutral li{color:var(--gray);}
-  .ba-list-neutral li::before{
-    content:''; position:absolute; left:2px; top:9px; width:12px; height:2px; background:var(--gray-line);
+  .shift-list{border-top:1px solid var(--gray-line);}
+  .shift-row{
+    display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center;
+    padding:22px 0; border-bottom:1px solid var(--gray-line);
   }
-  .ba-list-check li{color:var(--ink); font-weight:500;}
-  .ba-list-check li::before{
-    content:''; position:absolute; left:0; top:1px; width:18px; height:18px; border-radius:50%;
-    background:var(--blue); box-shadow:0 0 0 1px var(--blue);
+  .shift-before, .shift-after{margin:0; font-size:1.02rem; line-height:1.4; text-align:left;}
+  .shift-before{color:var(--gray);}
+  .shift-after{
+    color:var(--navy); font-weight:600; position:relative; padding-left:26px;
   }
-  .ba-list-check li::after{
-    content:''; position:absolute; left:5px; top:5px; width:8px; height:5px;
-    border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg);
+  .shift-after::before{
+    content:''; position:absolute; left:0; top:0.62em; width:14px; height:1px; background:var(--blue-light);
   }
+  .shift-head{padding:0 0 10px;}
+  .shift-head .shift-before, .shift-head .shift-after{
+    font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:600;
+    color:var(--blue-light); padding-left:0;
+  }
+  .shift-head .shift-after::before{display:none;}
   .diff-card-add{border-style:dashed; background:var(--bg);}
   .diff-badge{
     display:inline-block; background:var(--blue); color:#fff;
@@ -362,6 +424,13 @@
     text-align:justify; text-justify:inter-word;
   }
   .diff-note strong{color:var(--navy);}
+  .diff-note a{color:var(--blue); font-weight:600; border-bottom:1px solid var(--blue-light);}
+  .gestao-thesis{
+    font-size:1.1rem; line-height:1.5; color:var(--navy); font-weight:600;
+    border-left:3px solid var(--blue-light); padding-left:16px; margin-bottom:18px;
+    text-align:left; hyphens:manual;
+  }
+  .gestao-thesis em{font-style:italic;}
 
   /* ---------- Comparação ---------- */
   .compare{background:var(--white); border-bottom:1px solid var(--gray-line);}
@@ -372,7 +441,7 @@
   .compare-row > div:first-child{color:var(--gray); border-right:1px solid var(--gray-line);}
   .compare-row > div:last-child{color:var(--navy); font-weight:600; background:#F6F9FC;}
   .compare-head > div{
-    font-family:var(--mono); font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase;
+    font-family:var(--mono); font-size:0.75rem; letter-spacing:0.06em; text-transform:uppercase;
     background:var(--navy); color:#fff; font-weight:600; border:none;
   }
   .compare-head > div:first-child{border-right:1px solid rgba(255,255,255,0.15);}
@@ -419,7 +488,7 @@
   }
   .service-card:hover{background:#F6F9FC;}
   .service-card .tag{
-    font-family:var(--mono); font-size:0.7rem; color:var(--blue-light);
+    font-family:var(--mono); font-size:0.75rem; color:var(--blue-light);
     letter-spacing:0.08em; margin-bottom:16px; display:block;
   }
   .service-card h3{
@@ -448,7 +517,7 @@
     display:flex; flex-wrap:wrap; align-items:center; gap:14px 20px;
   }
   .business-services-label{
-    font-family:var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
+    font-family:var(--mono); font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase;
     color:var(--gray); white-space:nowrap;
   }
   .business-services-list{display:flex; flex-wrap:wrap; gap:10px 20px;}
@@ -470,7 +539,7 @@
   .monogram .cred{
     position:absolute; bottom:0; left:0; right:0; padding:18px 22px;
     background:rgba(11,42,77,0.92); border-top:1px solid rgba(255,255,255,0.15);
-    font-family:var(--mono); font-size:0.72rem; color:#BFD4EA; letter-spacing:0.04em;
+    font-family:var(--mono); font-size:0.75rem; color:#BFD4EA; letter-spacing:0.04em;
   }
   .about-text h2{
     font-family:var(--serif); font-weight:600; color:var(--navy);
@@ -500,6 +569,7 @@
   .contact .section-head p{color:#B9C7DA;}
   .contact .eyebrow{color:var(--blue-light);}
   .contact-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px;}
+  .contact-grid > *{min-width:0;}
   .contact-card{
     background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.14);
     border-radius:6px; padding:28px; transition:border-color 0.2s, background 0.2s;
@@ -509,11 +579,11 @@
     margin-top:20px; font-size:0.82rem; color:#7E90A8; max-width:640px;
   }
   .contact-card .tag{
-    font-family:var(--mono); font-size:0.7rem; color:var(--blue-light);
+    font-family:var(--mono); font-size:0.75rem; color:var(--blue-light);
     letter-spacing:0.08em; margin-bottom:14px; display:block; text-transform:uppercase;
   }
-  .contact-card strong{display:block; font-size:1.05rem; margin-bottom:6px;}
-  .contact-card span.detail{color:#B9C7DA; font-size:0.92rem;}
+  .contact-card strong{display:block; font-size:0.98rem; margin-bottom:6px; overflow-wrap:anywhere;}
+  .contact-card span.detail{display:block; color:#B9C7DA; font-size:0.92rem;}
   .contact-card a.card-link{
     margin-top:16px; display:inline-flex; align-items:center; gap:6px;
     font-size:0.86rem; font-weight:600; color:var(--white);
@@ -535,7 +605,7 @@
     color:#DCE7F3; font-family:var(--serif); font-weight:600; font-size:0.95rem; margin-bottom:16px;
   }
   .footer-col{display:flex; flex-direction:column; gap:10px;}
-  .footer-col a, .footer-col span{font-size:0.88rem; color:#8FA5C0;}
+  .footer-col a, .footer-col span{overflow-wrap:anywhere; font-size:0.88rem; color:#8FA5C0;}
   .footer-col a:hover{color:#DCE7F3;}
   .footer-bottom{
     border-top:1px solid rgba(255,255,255,0.1); padding:20px 0; font-size:0.8rem;
@@ -574,6 +644,10 @@
   /* ---------- Responsive ---------- */
   @media (max-width: 880px){
     .hero-inner, .about-inner, .focus-inner, .cta-final-inner{grid-template-columns:1fr; gap:40px;}
+    .authority-inner{grid-template-columns:1fr; gap:14px;}
+    .authority-title{white-space:normal;}
+    .lf-row{grid-template-columns:1fr; gap:0;}
+    .lead-form-card{padding:24px 20px;}
     .services-head-row{grid-template-columns:1fr; gap:32px;}
     .problem-grid{grid-template-columns:1fr;}
     .diff-grid{grid-template-columns:1fr 1fr;}
@@ -588,6 +662,13 @@
     .focus-icons{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr; gap:32px;}
+    /* area de toque confortavel para links de texto isolados no celular */
+    .business-services-list a, .offer-link, .contact-card a.card-link,
+    .service-card .card-arrow, .footer-col a, .dropdown-panel a, nav.main-nav a{
+      min-height:44px; display:inline-flex; align-items:center;
+    }
+    .business-services-list{gap:2px;}
+    .hero-ctas .cta-btn, .contact-cta .cta-btn{min-height:48px; justify-content:center;}
   }
   @media (max-width: 1150px){
     nav.main-nav{
@@ -619,7 +700,7 @@
     .diff-grid-2{grid-template-columns:1fr;}
     .fg-row-3{grid-template-columns:1fr;}
     .gestao-demo{padding:20px;}
-    .ba-grid{grid-template-columns:1fr;}
+    .shift-row{grid-template-columns:1fr; gap:8px; padding:18px 0;}
     .service-category-highlight{padding:20px;}
     .business-services{flex-direction:column; align-items:flex-start; gap:12px;}
     .hero{padding:56px 0 64px;}
@@ -627,6 +708,8 @@
     .wrap{padding:0 20px;}
     .header-inner{padding:14px 20px;}
     .hero h1, .focus-text h2, .about-text h2, .section-head h2{text-align:left;}
+    /* coluna estreita: justificar abre vaos entre as palavras */
+    .hero p.lead, .hero-location, .authority-text{text-align:left;}
   }
 </style>
 </head>
@@ -686,7 +769,7 @@
         <li><a href="servicos/conteudo.html">Conteúdo</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a class="cta-btn highlight" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20contador." target="_blank" rel="noopener">Falar com um Especialista</a></li>
+        <li><a class="cta-btn highlight" href="#contato">Falar com um contador</a></li>
       </ul>
     </nav>
   </div>
@@ -695,18 +778,25 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <p class="eyebrow">Contabilidade empresarial</p>
-      <h1>Contabilidade para pequenas empresas.<br>Gestão para empresas que querem crescer.</h1>
-      <p class="lead">Contabilidade, Tributação e Controladoria para empresas do Simples Nacional que querem mais do que apenas pagar impostos e receber guias.</p>
+      <p class="eyebrow">Contador com visão de gestor</p>
+      <h1>Sua empresa não precisa de um contador que apenas entregue guias.</h1>
+      <p class="lead">Precisa entender quanto ganha, quanto paga de impostos e para onde está indo o dinheiro.</p>
       <div class="hero-ctas">
-        <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20entender%20minha%20empresa." target="_blank" rel="noopener">Quero entender minha empresa</a>
-        <a class="cta-btn ghost" href="#servicos">Conhecer os Serviços</a>
+        <a class="cta-btn" href="#contato">Quero falar com um contador</a>
+        <a class="cta-btn ghost" href="#servicos">Conhecer os serviços</a>
       </div>
-      <p class="hero-location">Atendimento presencial em São Luís/MA e remoto em todo o Brasil.</p>
+      <p class="hero-location">Contabilidade, Tributação e Gestão para pequenas empresas — São Luís/MA e todo o Brasil.</p>
     </div>
     <div class="hero-photo-wrap">
       <img src="assets/fadrick-leveghin.jpg" alt="Fadrick F. Leveghin, contador da Leveghin Contabilidade" class="hero-photo">
     </div>
+  </div>
+</section>
+
+<section class="authority">
+  <div class="wrap authority-inner">
+    <p class="authority-title">Contabilidade com visão de gestão</p>
+    <p class="authority-text">Experiência prática em <strong>Controladoria</strong>, <strong>Planejamento Financeiro (FP&amp;A)</strong>, orçamento, DRE, indicadores e tributação empresarial — aplicada à realidade das pequenas empresas.</p>
   </div>
 </section>
 
@@ -849,7 +939,7 @@
           <span class="card-arrow">Saiba mais →</span>
         </a>
         <a class="service-card" href="servicos/fpa.html">
-          <span class="tag">FP&amp;A</span>
+          <span class="tag">Planejamento</span>
           <h3>Planejamento Financeiro (FP&amp;A)</h3>
           <p>Orçamento, realizado × orçado e forecast para decisões com mais segurança.</p>
           <span class="card-arrow">Saiba mais →</span>
@@ -875,7 +965,8 @@
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">LEVEGHIN Gestão</p>
       <h2>Você não precisa ser uma empresa grande para ter uma gestão profissional.</h2>
-      <p>LEVEGHIN Gestão reúne Controladoria e Planejamento Financeiro (FP&amp;A) num único acompanhamento — a mesma prática de gestão que empresas maiores já usam, levada para a realidade da sua pequena empresa. Não é uma consultoria à parte: é a continuação natural da contabilidade que já cuidamos, unindo Contabilidade, Tributação, Controladoria e FP&amp;A num só lugar. Sua empresa é pequena. Sua gestão não precisa ser.</p>
+      <p class="gestao-thesis">A contabilidade mostra o que aconteceu. A gestão ajuda a entender <em>por que</em> aconteceu — e o que fazer a seguir.</p>
+      <p>LEVEGHIN Gestão reúne Controladoria e Planejamento Financeiro (FP&amp;A) num único acompanhamento. Não é uma consultoria à parte nem mais um serviço na lista: é a continuação natural da contabilidade que já cuidamos. Sua empresa é pequena. Sua gestão não precisa ser.</p>
     </div>
 
     <div class="gestao-meta">
@@ -950,19 +1041,7 @@
       <span class="fg-caption">Realizado × Orçado, últimos 6 meses · dados ilustrativos, não representam resultados reais de clientes</span>
     </div>
 
-    <div class="diff-grid diff-grid-2">
-      <a class="diff-card reveal" href="servicos/controladoria.html">
-        <span class="diff-num">01</span>
-        <h3>Controladoria</h3>
-        <p>Indicadores, DRE gerencial, margens, custos e acompanhamento de resultados.</p>
-      </a>
-      <a class="diff-card reveal" href="servicos/fpa.html">
-        <span class="diff-num">02</span>
-        <h3>Planejamento Financeiro (FP&amp;A)</h3>
-        <p>Orçamento, projeções, comparação entre realizado e planejado, e apoio à tomada de decisão.</p>
-      </a>
-    </div>
-    <p class="diff-note">* <strong>FP&amp;A</strong> significa Planejamento e Análise Financeira: transformamos os números da empresa em informação para planejar, acompanhar resultados e decidir com mais segurança. É um passo além da contabilidade, não um substituto dela.</p>
+    <p class="diff-note"><strong>Planejamento Financeiro (FP&amp;A)</strong> é a sigla usada no mercado para Planejamento e Análise Financeira: transformar os números da empresa em informação para planejar, acompanhar e decidir. Veja os dois serviços em <a href="servicos/controladoria.html">Controladoria</a> e <a href="servicos/fpa.html">Planejamento Financeiro (FP&amp;A)</a>.</p>
   </div>
 </section>
 
@@ -971,6 +1050,7 @@
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">Por que a LEVEGHIN</p>
       <h2>Uma forma diferente de olhar para os números da sua empresa.</h2>
+      <p>A comparação abaixo é sobre escopo de trabalho, não sobre qualidade profissional. Toda contabilidade precisa apurar, entregar e cumprir obrigações — a LEVEGHIN faz isso e segue um passo adiante.</p>
     </div>
     <div class="compare-table reveal">
       <div class="compare-row compare-head">
@@ -992,29 +1072,26 @@
       <p class="eyebrow">Antes × Depois</p>
       <h2>O que muda quando você começa a enxergar os números.</h2>
     </div>
-    <div class="ba-grid">
-      <div class="ba-col reveal">
-        <h3 class="ba-col-title">Sem gestão</h3>
-        <ul class="ba-list ba-list-neutral">
-          <li>Olha apenas o saldo bancário</li>
-          <li>Descobre o lucro no fechamento</li>
-          <li>Não conhece claramente as margens</li>
-          <li>Faz orçamento de maneira informal</li>
-          <li>Decide com base em percepção</li>
-          <li>Recebe informações, mas não necessariamente interpreta</li>
-        </ul>
+    <div class="shift-list">
+      <div class="shift-row shift-head">
+        <p class="shift-before">Antes</p>
+        <p class="shift-after">Depois</p>
       </div>
-      <div class="ba-col reveal">
-        <h3 class="ba-col-title">Com LEVEGHIN</h3>
-        <ul class="ba-list ba-list-check">
-          <li>Acompanha resultado</li>
-          <li>Entende lucro e margem</li>
-          <li>Acompanha indicadores</li>
-          <li>Possui orçamento</li>
-          <li>Compara realizado x orçado</li>
-          <li>Identifica desvios</li>
-          <li>Usa informações para tomar decisões</li>
-        </ul>
+      <div class="shift-row reveal">
+        <p class="shift-before">“Quanto tem no banco?”</p>
+        <p class="shift-after">“Quanto a empresa realmente gera de resultado?”</p>
+      </div>
+      <div class="shift-row reveal">
+        <p class="shift-before">“O faturamento aumentou.”</p>
+        <p class="shift-after">“O faturamento aumentou, mas a margem melhorou?”</p>
+      </div>
+      <div class="shift-row reveal">
+        <p class="shift-before">“Paguei o imposto.”</p>
+        <p class="shift-after">“Estou pagando o imposto correto?”</p>
+      </div>
+      <div class="shift-row reveal">
+        <p class="shift-before">“Acho que esse mês foi bom.”</p>
+        <p class="shift-after">“Foi melhor ou pior do que eu tinha planejado?”</p>
       </div>
     </div>
   </div>
@@ -1030,7 +1107,7 @@
       <p class="eyebrow">Sobre mim</p>
       <h2>Fadrick F. Leveghin — Contador</h2>
       <p>Atuo na contabilidade e na gestão empresarial desde 2010 — não só na teoria, mas no dia a dia de acompanhar empresas por dentro.</p>
-      <p>Ao longo da carreira, trabalhei diretamente com orçamento, DRE, indicadores, custos, planejamento e tomada de decisão em Controladoria e FP&amp;A. Foi essa vivência, unida à formação contábil, que deu origem à LEVEGHIN.</p>
+      <p>Essa experiência veio de dentro das empresas, em rotinas de Controladoria e Planejamento Financeiro (FP&amp;A) — acompanhando resultado, custos e planejamento mês a mês, e não apenas fechando obrigações. Unida à formação contábil, foi ela que deu origem à LEVEGHIN.</p>
       <p>É esse olhar de gestão — e não só de obrigação cumprida — que aplico na contabilidade de cada cliente que atendo.</p>
       <ul class="credentials">
         <li>Ciências Contábeis</li>
@@ -1076,7 +1153,7 @@
       <div class="offer-card reveal">
         <h3>Regimes Tributários</h3>
         <p>Não sabe se o Simples é o melhor regime? Avalie com um contador.</p>
-        <a class="offer-link" href="servicos/regimes-tributarios.html">Quero avaliar minha empresa →</a>
+        <a class="offer-link" href="servicos/regimes-tributarios.html">Ver regimes tributários →</a>
       </div>
       <div class="offer-card reveal">
         <h3>Conhecer os Serviços</h3>
@@ -1086,7 +1163,7 @@
       <div class="offer-card reveal">
         <h3>Troca de Contador</h3>
         <p>Está insatisfeito com sua contabilidade? Nós cuidamos da transição.</p>
-        <a class="offer-link" href="servicos/troca-de-contador.html">Quero trocar de contador →</a>
+        <a class="offer-link" href="servicos/troca-de-contador.html">Ver como funciona →</a>
       </div>
       <div class="offer-card reveal">
         <h3>Controladoria</h3>
@@ -1107,13 +1184,81 @@
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">Diagnóstico Empresarial</p>
       <h2>Diagnóstico Empresarial LEVEGHIN</h2>
-      <p>Antes de contratar qualquer serviço, vamos entender o momento da sua empresa. Uma primeira conversa para entender o cenário da sua empresa e indicar o caminho mais adequado — em Contabilidade, Tributação, Resultado, Margens, Organização Financeira, Indicadores, Planejamento ou Controladoria.</p>
+      <p class="gestao-thesis">Sua empresa pode estar faturando mais sem estar ganhando mais. Vamos entender os números do seu negócio.</p>
+      <p>Antes de contratar qualquer serviço, uma primeira conversa para entender o momento da sua empresa e indicar o caminho mais adequado — em Contabilidade, Tributação ou Gestão.</p>
     </div>
+    <div class="lead-form-card reveal">
+      <h3>Quero falar com um contador</h3>
+      <p class="lead-form-sub">Preencha os dados abaixo. O retorno é feito diretamente pelo contador responsável.</p>
+      <form id="leadForm" action="https://formspree.io/f/mrpglkyy" method="POST" novalidate>
+        <div class="lf-field">
+          <label for="lf-nome">Nome*</label>
+          <input type="text" id="lf-nome" name="nome" autocomplete="name" placeholder="Seu nome" required>
+        </div>
+        <div class="lf-row">
+          <div class="lf-field">
+            <label for="lf-whatsapp">WhatsApp*</label>
+            <input type="tel" id="lf-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(98) 90000-0000" required>
+          </div>
+          <div class="lf-field">
+            <label for="lf-email">E-mail*</label>
+            <input type="email" id="lf-email" name="email" autocomplete="email" inputmode="email" placeholder="voce@suaempresa.com.br" required>
+          </div>
+        </div>
+        <div class="lf-row">
+          <div class="lf-field">
+            <label for="lf-empresa">Empresa*</label>
+            <input type="text" id="lf-empresa" name="empresa" autocomplete="organization" placeholder="Nome da sua empresa" required>
+          </div>
+          <div class="lf-field">
+            <label for="lf-faturamento">Faturamento aproximado <span class="lf-optional">(opcional)</span></label>
+            <select id="lf-faturamento" name="faturamento">
+              <option value="" selected>Prefiro não informar</option>
+              <option>Ainda não faturo / estou abrindo</option>
+              <option>Até R$ 30 mil por mês</option>
+              <option>De R$ 30 mil a R$ 100 mil por mês</option>
+              <option>De R$ 100 mil a R$ 400 mil por mês</option>
+              <option>Acima de R$ 400 mil por mês</option>
+            </select>
+          </div>
+        </div>
+        <div class="lf-field">
+          <label for="lf-necessidade">Necessidade principal*</label>
+          <select id="lf-necessidade" name="necessidade" required>
+            <option value="" selected disabled>Selecione</option>
+            <option>Contabilidade mensal para minha empresa</option>
+            <option>Trocar de contador</option>
+            <option>Abrir empresa</option>
+            <option>Migrar de MEI para ME</option>
+            <option>Simples Nacional (enquadramento, Fator R, revisão)</option>
+            <option>Avaliar o regime tributário</option>
+            <option>Folha de pagamento</option>
+            <option>Controladoria / Gestão (DRE, margens, indicadores)</option>
+            <option>Planejamento Financeiro (FP&amp;A) — orçamento e forecast</option>
+            <option>Imposto de Renda Pessoa Física</option>
+            <option>Outro assunto</option>
+          </select>
+        </div>
+        <div class="lf-field">
+          <label for="lf-mensagem">Quer contar um pouco mais? <span class="lf-optional">(opcional)</span></label>
+          <textarea id="lf-mensagem" name="detalhes" placeholder="Ex.: tenho uma loja no Simples, faturamento cresceu mas não sei se o lucro acompanhou."></textarea>
+        </div>
+        <div class="lf-hp" aria-hidden="true">
+          <label for="lf-site">Não preencha este campo</label>
+          <input type="text" id="lf-site" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="lf-submit" id="lfSubmit">Quero falar com um contador</button>
+        <div class="lf-msg lf-msg-ok" id="lfOk" role="status" aria-live="polite">Recebemos seus dados e retornamos em breve pelo WhatsApp ou e-mail informado.</div>
+        <div class="lf-msg lf-msg-err" id="lfErr" role="alert">Não foi possível enviar agora. Fale direto pelo <a href="https://wa.me/5598981380905" target="_blank" rel="noopener">WhatsApp (98) 98138-0905</a> ou por <a href="mailto:contato@leveghincontabilidade.com.br">contato@leveghincontabilidade.com.br</a>.</div>
+        <p class="lf-privacy">Seus dados são usados apenas para retornar o contato. Não são compartilhados com terceiros.</p>
+      </form>
+    </div>
+
     <div class="contact-grid">
       <div class="contact-card reveal">
         <span class="tag">WhatsApp</span>
         <strong>(98) 98138-0905</strong>
-        <span class="detail">Atendimento rápido, direto comigo.</span>
+        <span class="detail">Atendimento direto com o contador responsável.</span>
         <a class="card-link" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Iniciar conversa →</a>
       </div>
       <div class="contact-card reveal">
@@ -1130,8 +1275,8 @@
     </div>
     <div class="contact-note reveal">Isso não é uma consultoria gratuita extensa nem uma análise completa do seu negócio — é uma primeira conversa para entender o cenário da sua empresa e indicar o caminho certo.</div>
     <div class="contact-cta reveal">
-      <p>Pronto para simplificar a contabilidade do seu&nbsp;negócio?</p>
-      <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20minha%20empresa." target="_blank" rel="noopener" style="background:var(--blue); border-color:var(--blue);">Quero conversar sobre minha empresa</a>
+      <p>Prefere conversar direto pelo WhatsApp?</p>
+      <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20contador." target="_blank" rel="noopener" style="background:var(--blue); border-color:var(--blue);">Quero falar com um contador</a>
     </div>
   </div>
 </section>
@@ -1201,6 +1346,55 @@
       }
     });
   });
+
+  // ---------- Formulário de lead (Formspree via fetch, sem sair da página) ----------
+  (function () {
+    const form = document.getElementById('leadForm');
+    if (!form) return;
+    const btn = document.getElementById('lfSubmit');
+    const okBox = document.getElementById('lfOk');
+    const errBox = document.getElementById('lfErr');
+    const rotuloBtn = btn.textContent;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      okBox.classList.remove('show');
+      errBox.classList.remove('show');
+
+      // Validação nativa: mostra a mensagem do navegador no primeiro campo inválido.
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const dados = new FormData(form);
+      const necessidade = dados.get('necessidade') || 'Contato pelo site';
+      dados.append('_subject', 'Site LEVEGHIN — ' + necessidade);
+      dados.append('origem', 'Página inicial (leveghincontabilidade.com.br)');
+
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: dados,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        if (!r.ok) throw new Error('Falha no envio');
+        form.reset();
+        okBox.classList.add('show');
+        okBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'formulario_site' }); }
+        if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+      }).catch(function () {
+        errBox.classList.add('show');
+        errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }).finally(function () {
+        btn.disabled = false;
+        btn.textContent = rotuloBtn;
+      });
+    });
+  })();
 
   const dropToggle = document.getElementById('servicosDropToggle');
   const dropPanel = document.getElementById('servicosDropPanel');

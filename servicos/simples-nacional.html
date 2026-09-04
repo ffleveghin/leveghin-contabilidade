@@ -158,8 +158,10 @@
             <label class="radio-option"><input type="radio" name="contato" value="E-mail"> E-mail</label>
           </div>
         </div>
+        <div class="lf-hp" aria-hidden="true"><label for="hp-site">Não preencha este campo</label><input type="text" id="hp-site" name="_gotcha" tabindex="-1" autocomplete="off"></div>
         <button type="submit" class="submit-btn">FALAR COM ESPECIALISTA</button>
-        <div class="form-success" id="formSuccess">Recebemos seus dados e retornamos em breve.</div>
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">Recebemos seus dados e retornamos em breve.</div>
+        <div class="form-error" id="formError" role="alert">Não foi possível enviar agora. Fale direto pelo <a href="https://wa.me/5598981380905" target="_blank" rel="noopener">WhatsApp (98) 98138-0905</a> ou por <a href="mailto:contato@leveghincontabilidade.com.br">contato@leveghincontabilidade.com.br</a>.</div>
       </form>
     </div>
   </div>
@@ -237,11 +239,11 @@
 
   const form = document.getElementById('leadForm');
   const successBox = document.getElementById('formSuccess');
-  let enviando = false;
+  const errorBox = document.getElementById('formError');
+  const submitBtn = form.querySelector('.submit-btn');
+  const submitLabel = submitBtn ? submitBtn.textContent : '';
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    if (enviando) return;
-    enviando = true;
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
     const telefone = document.getElementById('telefone').value.trim();
@@ -275,21 +277,25 @@
     dados.append('origem', 'Página de Simples Nacional');
     dados.append('mensagem', mensagem);
 
-    const mailtoFallback = function () {
-      window.location.href = 'mailto:contato@leveghincontabilidade.com.br?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(mensagem);
-    };
+
+    successBox.classList.remove('show');
+    errorBox.classList.remove('show');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando…'; }
 
     fetch(form.action, {
       method: 'POST',
       body: dados,
       headers: { 'Accept': 'application/json' }
     }).then(function (resposta) {
-      if (resposta.ok) {
-        successBox.classList.add('show');
-      } else {
-        mailtoFallback();
-      }
-    }).catch(mailtoFallback).finally(function () { enviando = false; });
+      if (!resposta.ok) throw new Error('Falha no envio');
+      successBox.classList.add('show');
+      if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'formulario_site' }); }
+      if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+    }).catch(function () {
+      errorBox.classList.add('show');
+    }).finally(function () {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
+    });
   });
 </script>
 </body>

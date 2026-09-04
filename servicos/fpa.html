@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planejamento e Análise Financeira (FP&A) | Leveghin Contabilidade</title>
-<meta name="description" content="Planejar antes de gastar. Acompanhar antes de decidir. Entenda o que é FP&A e quando faz sentido para sua empresa.">
+<meta name="description" content="Planejar antes de gastar. Acompanhar antes de decidir. Entenda o que é Planejamento Financeiro (FP&A) e quando faz sentido para sua empresa.">
 <link rel="canonical" href="https://leveghincontabilidade.com.br/servicos/fpa.html">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='17' y1='10' x2='30' y2='27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23CBD3DA'/%3E%3Cstop offset='0.55' stop-color='%238FADC9'/%3E%3Cstop offset='1' stop-color='%233A72AD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='40' height='40' rx='6' fill='%23FFFFFF'/%3E%3Cpolygon points='10,5 15,5 15,30 24,30 24,35 10,35' fill='%230B1B2E'/%3E%3Crect x='17' y='5' width='4' height='4' fill='%232F7FE0'/%3E%3Cpolygon points='17,10 21,10 21,22 30,22 30,27 17,27' fill='url(%23g)'/%3E%3Crect x='30' y='21' width='4.2' height='7' fill='%232F7FE0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,7 +97,7 @@
         <li>Projeção de cenários para apoiar decisões (contratações, investimentos, expansão)</li>
         <li>Indicadores financeiros acompanhados periodicamente</li>
       </ul>
-      <div class="info-note">As informações acima têm caráter geral. O FP&A é uma solução mais aprofundada de gestão financeira — vamos conversar para entender se e quando ela faz sentido para o momento da sua empresa.</div>
+      <div class="info-note">As informações acima têm caráter geral. O Planejamento Financeiro (FP&amp;A) é uma solução mais aprofundada de gestão financeira — vamos conversar para entender se e quando ela faz sentido para o momento da sua empresa.</div>
     </div>
     <div class="form-card">
       <h3>Falar com um especialista</h3>
@@ -154,8 +154,10 @@
             <label class="radio-option"><input type="radio" name="contato" value="E-mail"> E-mail</label>
           </div>
         </div>
+        <div class="lf-hp" aria-hidden="true"><label for="hp-site">Não preencha este campo</label><input type="text" id="hp-site" name="_gotcha" tabindex="-1" autocomplete="off"></div>
         <button type="submit" class="submit-btn">FALAR COM ESPECIALISTA</button>
-        <div class="form-success" id="formSuccess">Recebemos seus dados e retornamos em breve.</div>
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">Recebemos seus dados e retornamos em breve.</div>
+        <div class="form-error" id="formError" role="alert">Não foi possível enviar agora. Fale direto pelo <a href="https://wa.me/5598981380905" target="_blank" rel="noopener">WhatsApp (98) 98138-0905</a> ou por <a href="mailto:contato@leveghincontabilidade.com.br">contato@leveghincontabilidade.com.br</a>.</div>
       </form>
     </div>
   </div>
@@ -180,11 +182,11 @@
 
   const form = document.getElementById('leadForm');
   const successBox = document.getElementById('formSuccess');
-  let enviando = false;
+  const errorBox = document.getElementById('formError');
+  const submitBtn = form.querySelector('.submit-btn');
+  const submitLabel = submitBtn ? submitBtn.textContent : '';
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    if (enviando) return;
-    enviando = true;
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
     const telefone = document.getElementById('telefone').value.trim();
@@ -218,21 +220,25 @@
     dados.append('origem', 'Página de Planejamento e Análise Financeira (FP&A)');
     dados.append('mensagem', mensagem);
 
-    const mailtoFallback = function () {
-      window.location.href = 'mailto:contato@leveghincontabilidade.com.br?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(mensagem);
-    };
+
+    successBox.classList.remove('show');
+    errorBox.classList.remove('show');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando…'; }
 
     fetch(form.action, {
       method: 'POST',
       body: dados,
       headers: { 'Accept': 'application/json' }
     }).then(function (resposta) {
-      if (resposta.ok) {
-        successBox.classList.add('show');
-      } else {
-        mailtoFallback();
-      }
-    }).catch(mailtoFallback).finally(function () { enviando = false; });
+      if (!resposta.ok) throw new Error('Falha no envio');
+      successBox.classList.add('show');
+      if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'formulario_site' }); }
+      if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+    }).catch(function () {
+      errorBox.classList.add('show');
+    }).finally(function () {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
+    });
   });
 </script>
 </body>
