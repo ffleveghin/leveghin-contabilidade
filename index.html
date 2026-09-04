@@ -217,7 +217,7 @@
   .hero h1{
     font-family:var(--serif); font-weight:600; font-size:clamp(1.9rem, 3.2vw, 2.6rem);
     color:var(--navy); line-height:1.2; margin-bottom:22px;
-    text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;
+    text-align:left; text-wrap:balance; hyphens:manual; -webkit-hyphens:manual;
   }
   .hero p.lead{
     font-size:1.08rem; color:var(--gray); max-width:480px; margin-bottom:32px;
@@ -388,7 +388,7 @@
 
   /* ---------- Ofertas de entrada ---------- */
   .offers{background:var(--white); border-bottom:1px solid var(--gray-line);}
-  .offers-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:14px;}
+  .offers-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
   .offer-card{background:var(--bg); border:1px solid var(--gray-line); border-radius:8px; padding:28px; display:flex; flex-direction:column;}
   .offer-card h3{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.1rem; margin-bottom:10px;}
   .offer-card p{color:var(--gray); font-size:0.92rem; margin-bottom:18px;}
