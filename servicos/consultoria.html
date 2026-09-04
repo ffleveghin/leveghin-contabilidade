@@ -101,7 +101,7 @@
     <div class="form-card">
       <h3>Falar com um especialista</h3>
       <p class="form-sub">Preencha os dados abaixo e retornamos pelo canal que você preferir.</p>
-      <form id="leadForm">
+      <form id="leadForm" action="https://formspree.io/f/mrpglkyy" method="POST">
         <div class="field">
           <label for="nome">Nome*</label>
           <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -172,7 +172,7 @@
           </div>
         </div>
         <button type="submit" class="submit-btn">FALAR COM ESPECIALISTA</button>
-        <div class="form-success" id="formSuccess">Prontinho! Vamos abrir o WhatsApp ou seu e-mail com os dados preenchidos.</div>
+        <div class="form-success" id="formSuccess">Recebemos seus dados e retornamos em breve.</div>
       </form>
     </div>
   </div>
@@ -243,16 +243,33 @@
     ];
     const mensagem = linhas.join('\n');
 
-    successBox.classList.add('show');
-
+    // Preferencia do lead: se escolheu WhatsApp, abre a conversa (mesmo gesto do clique).
     if (contato === 'WhatsApp') {
-      const url = 'https://wa.me/5598981380905?text=' + encodeURIComponent(mensagem);
-      window.open(url, '_blank');
-    } else {
-      const subject = encodeURIComponent('Solicitação de proposta - ' + servico);
-      const body = encodeURIComponent(mensagem);
-      window.location.href = 'mailto:contato@leveghincontabilidade.com.br?subject=' + subject + '&body=' + body;
+      window.open('https://wa.me/5598981380905?text=' + encodeURIComponent(mensagem), '_blank');
     }
+
+    // Envio dos dados para o Formspree (e-mail).
+    const assunto = 'Solicitação de proposta - ' + servico;
+    const dados = new FormData(form);
+    dados.append('_subject', assunto);
+    dados.append('origem', 'Página de Consultoria');
+    dados.append('mensagem', mensagem);
+
+    const mailtoFallback = function () {
+      window.location.href = 'mailto:contato@leveghincontabilidade.com.br?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(mensagem);
+    };
+
+    fetch(form.action, {
+      method: 'POST',
+      body: dados,
+      headers: { 'Accept': 'application/json' }
+    }).then(function (resposta) {
+      if (resposta.ok) {
+        successBox.classList.add('show');
+      } else {
+        mailtoFallback();
+      }
+    }).catch(mailtoFallback);
   });
 </script>
 </body>
