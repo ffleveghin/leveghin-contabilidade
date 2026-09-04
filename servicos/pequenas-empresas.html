@@ -178,8 +178,11 @@
 
   const form = document.getElementById('leadForm');
   const successBox = document.getElementById('formSuccess');
+  let enviando = false;
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    if (enviando) return;
+    enviando = true;
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
     const telefone = document.getElementById('telefone').value.trim();
@@ -227,7 +230,7 @@
       } else {
         mailtoFallback();
       }
-    }).catch(mailtoFallback);
+    }).catch(mailtoFallback).finally(function () { enviando = false; });
   });
 </script>
 </body>
