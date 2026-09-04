@@ -236,6 +236,7 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:20px;
 }
 .plan-name{font-family:var(--serif); font-weight:600; font-size:1.25rem; color:var(--navy); margin-bottom:6px;}
+.diff-num{display:block; font-family:var(--mono); font-size:0.78rem; color:var(--blue-light); letter-spacing:0.06em; margin-bottom:10px;}
 .plan-desc{color:var(--gray); font-size:0.92rem; margin-bottom:18px;}
 .plan-price{margin-bottom:20px;}
 .plan-price .value{font-family:var(--serif); font-weight:600; font-size:2rem; color:var(--navy);}
