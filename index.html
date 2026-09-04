@@ -256,7 +256,7 @@
     font-size:clamp(1.5rem, 2.4vw, 1.85rem); margin-bottom:16px; line-height:1.25;
     text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;
   }
-  .focus-text p{color:var(--gray); margin-bottom:28px; max-width:520px;}
+  .focus-text p{color:var(--gray); margin-bottom:28px;}
   .focus-icons{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
   .focus-icon{display:flex; align-items:flex-start; gap:12px; font-size:0.92rem; color:var(--navy); font-weight:500;}
   .focus-icon svg{flex-shrink:0; margin-top:1px;}
@@ -305,6 +305,20 @@
   .gestao-meta-item p{color:var(--gray); font-size:0.9rem;}
   .gestao-tracking-label{font-family:var(--mono); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--blue); margin-bottom:16px;}
   .gestao-tracking{margin-bottom:36px;}
+  .gestao-tracking .problem-item{position:relative; cursor:help; outline:none;}
+  .gestao-tracking .problem-item::after{
+    content:attr(data-tip);
+    position:absolute; left:0; right:16px; bottom:calc(100% + 10px);
+    background:var(--navy); color:#fff; padding:12px 14px; border-radius:8px;
+    font-size:0.82rem; line-height:1.45; text-align:left; font-weight:400;
+    box-shadow:0 12px 24px -8px rgba(11,42,77,0.35);
+    opacity:0; visibility:hidden; transform:translateY(4px); transition:opacity 0.2s, transform 0.2s;
+    z-index:5; pointer-events:none;
+  }
+  .gestao-tracking .problem-item:hover::after,
+  .gestao-tracking .problem-item:focus::after{
+    opacity:1; visibility:visible; transform:translateY(0);
+  }
   .gestao-demo{
     background:var(--navy); border-radius:12px; padding:28px; margin-bottom:36px;
     box-shadow:0 32px 56px -28px rgba(11,42,77,0.4);
@@ -401,7 +415,7 @@
   }
   .service-card{
     background:var(--white); padding:32px 28px; position:relative;
-    transition:background 0.2s; display:block;
+    transition:background 0.2s; display:flex; flex-direction:column;
   }
   .service-card:hover{background:#F6F9FC;}
   .service-card .tag{
@@ -413,7 +427,7 @@
   }
   .service-card p{font-size:0.92rem; color:var(--gray);}
   .service-card .card-arrow{
-    display:inline-block; margin-top:14px; font-size:0.84rem; font-weight:600;
+    display:inline-block; margin-top:auto; align-self:flex-start; padding-top:14px; font-size:0.84rem; font-weight:600;
     color:var(--blue); border-bottom:1px solid var(--blue-light); padding-bottom:2px;
   }
   a.service-card:hover .card-arrow{color:var(--navy);}
@@ -463,7 +477,7 @@
     font-size:clamp(1.5rem,2.4vw,1.85rem); margin-bottom:20px; line-height:1.25;
     text-align:justify; text-justify:inter-word; hyphens:auto; -webkit-hyphens:auto;
   }
-  .about-text p{color:var(--ink); margin-bottom:16px; max-width:560px;}
+  .about-text p{color:var(--ink); margin-bottom:16px; max-width:560px; hyphens:none; -webkit-hyphens:none;}
   .about-text p.muted{color:var(--gray); font-size:0.92rem;}
   .credentials{
     display:flex; flex-direction:column; gap:12px; margin-top:24px;
@@ -494,7 +508,7 @@
   .contact-note{
     margin-top:24px; padding:16px 20px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.14);
     border-left:3px solid var(--blue-light); border-radius:4px; font-size:0.88rem; color:#B9C7DA;
-    text-align:justify; text-justify:inter-word; max-width:760px;
+    text-align:justify; text-justify:inter-word;
   }
   .contact-card .tag{
     font-family:var(--mono); font-size:0.7rem; color:var(--blue-light);
@@ -683,8 +697,8 @@
   <div class="wrap hero-inner">
     <div>
       <p class="eyebrow">Contabilidade empresarial</p>
-      <h1>Contabilidade para pequenas empresas. Gestão para empresas que querem crescer.</h1>
-      <p class="lead">Contabilidade, tributação e Controladoria para empresas do Simples Nacional que querem mais do que apenas pagar impostos e receber guias.</p>
+      <h1>Contabilidade para pequenas empresas.<br>Gestão para empresas que querem crescer.</h1>
+      <p class="lead">Contabilidade, Tributação e Controladoria para empresas do Simples Nacional que querem mais do que apenas pagar impostos e receber guias.</p>
       <div class="hero-ctas">
         <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20entender%20minha%20empresa." target="_blank" rel="noopener">Quero entender minha empresa</a>
         <a class="cta-btn ghost" href="#servicos">Conhecer os Serviços</a>
@@ -754,7 +768,7 @@
       <div class="section-head reveal" style="margin-bottom:0;">
         <p class="eyebrow">O que fazemos</p>
         <h2>Frentes de atuação, com a mesma exigência: números em que se pode confiar.</h2>
-        <p>Cada serviço pode ser contratado isoladamente ou combinado num acompanhamento contínuo — conforme o estágio e a complexidade da sua empresa.</p>
+        <p>Cada serviço pode ser contratado isoladamente ou combinado em um acompanhamento contínuo — conforme o estágio e a complexidade da sua empresa.</p>
       </div>
       <div class="services-photo reveal">
         <img src="assets/foto-trabalhando.jpg" alt="Fadrick F. Leveghin trabalhando em seu escritório">
@@ -882,16 +896,16 @@
 
     <p class="gestao-tracking-label">O que você passa a acompanhar:</p>
     <div class="problem-grid gestao-tracking">
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>DRE Gerencial</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Indicadores de desempenho</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Análise de receita</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Análise de custos</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Margens</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>EBITDA</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Orçamento empresarial</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Realizado x Orçado</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Forecast</span></div>
-      <div class="problem-item reveal"><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Análise de desvios</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Demonstração de resultado organizada para decisão, separando o que é operacional do que é eventual."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>DRE Gerencial</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Números acompanhados regularmente para medir a saúde do negócio ao longo do tempo."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Indicadores de desempenho</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Entendimento de onde vem o faturamento e como ele varia mês a mês."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Análise de receita</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Detalhamento de quanto cada parte da operação consome de recursos."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Análise de custos</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Percentual que sobra da venda depois de descontar os custos envolvidos."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Margens</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Lucro antes de juros, impostos, depreciação e amortização — mede a geração de caixa da operação."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>EBITDA</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Planejamento de receitas e despesas para um período futuro."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Orçamento empresarial</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Comparação entre o que foi planejado e o que realmente aconteceu no período."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Realizado x Orçado</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Projeção atualizada do resultado esperado, considerando o que já aconteceu no período."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Forecast</span></div>
+      <div class="problem-item reveal" tabindex="0" data-tip="Identificação dos motivos pelos quais o realizado ficou diferente do planejado."><svg class="pi-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2E6FB0" stroke-width="1.6"/><path d="M12 8v5" stroke="#2E6FB0" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16" r="0.9" fill="#2E6FB0"/></svg><span>Análise de desvios</span></div>
     </div>
 
     <p class="gestao-tracking-label">O que você passa a enxergar:</p>
@@ -1016,7 +1030,7 @@
     <div class="about-text reveal">
       <p class="eyebrow">Sobre mim</p>
       <h2>Fadrick F. Leveghin — Contador</h2>
-      <p>Sou contador com experiência prática em gestão empresarial — não só na teoria, mas no dia a dia de acompanhar empresas por dentro.</p>
+      <p>Sou contador desde 2010, com mais de 17 anos de experiência prática em gestão empresarial — não só na teoria, mas no dia a dia de acompanhar empresas por dentro.</p>
       <p>Ao longo da carreira, trabalhei diretamente com orçamento, DRE, indicadores, custos, planejamento e tomada de decisão em Controladoria e FP&amp;A. Foi essa vivência, unida à formação contábil, que deu origem à LEVEGHIN.</p>
       <p>É esse olhar de gestão — e não só de obrigação cumprida — que aplico na contabilidade de cada cliente que atendo.</p>
       <ul class="credentials">
@@ -1089,7 +1103,7 @@
     <div class="section-head reveal section-head-wide">
       <p class="eyebrow">Diagnóstico Empresarial</p>
       <h2>Diagnóstico Empresarial LEVEGHIN</h2>
-      <p>Antes de contratar qualquer serviço, vamos entender o momento da sua empresa. Uma conversa inicial para identificar onde a LEVEGHIN pode ajudar — em Contabilidade, Tributação, Resultado, Margens, Organização financeira, Indicadores, Planejamento ou Controladoria.</p>
+      <p>Antes de contratar qualquer serviço, vamos entender o momento da sua empresa. Uma conversa inicial para identificar onde a LEVEGHIN pode ajudar — em Contabilidade, Tributação, Resultado, Margens, Organização Financeira, Indicadores, Planejamento ou Controladoria.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card reveal">
@@ -1112,7 +1126,7 @@
     </div>
     <div class="contact-note reveal">Isso não é uma consultoria gratuita extensa nem uma análise completa do seu negócio — é uma primeira conversa para entender o cenário da sua empresa e indicar o caminho certo.</div>
     <div class="contact-cta reveal">
-      <p>Pronto para simplificar a contabilidade do seu negócio?</p>
+      <p>Pronto para simplificar a contabilidade do seu&nbsp;negócio?</p>
       <a class="cta-btn" href="https://wa.me/5598981380905?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20minha%20empresa." target="_blank" rel="noopener" style="background:var(--blue); border-color:var(--blue);">Quero conversar sobre minha empresa</a>
     </div>
   </div>
