@@ -9,7 +9,8 @@
      sobrevive mesmo se este script não carregar.
    - Sem JavaScript o formulário ainda funciona: faz POST nativo
      e o _next devolve o visitante para /obrigado.html.
-   - O WhatsApp só abre DEPOIS da confirmação de envio.
+   - O WhatsApp só abre por clique do visitante, DEPOIS da
+     confirmação de envio — nunca automaticamente.
    ============================================================ */
 (function () {
   'use strict';
@@ -74,14 +75,13 @@
           }
         }
 
-        // WhatsApp somente após a confirmação de envio.
-        // O botão fica visível na caixa de sucesso porque o navegador
-        // costuma bloquear janelas abertas fora de um clique do usuário.
+        // WhatsApp somente após a confirmação de envio, e somente por clique.
+        // Abrir a janela automaticamente roubava o foco e o visitante nunca
+        // via a mensagem de agradecimento — além de ser bloqueado por popup blocker.
         if (querWhats && waBox) {
           var a = waBox.querySelector('a');
           if (a) { a.href = link; }
           waBox.hidden = false;
-          try { window.open(link, '_blank', 'noopener'); } catch (err) { /* o botão cobre o caso */ }
         }
 
         form.reset();
