@@ -43,26 +43,43 @@
       <ul>
         <li><a href="../index.html">Início</a></li>
         <li class="has-dropdown">
-          <button class="nav-drop-toggle" id="servicosDropToggle" aria-expanded="false">Serviços</button>
-          <div class="dropdown-panel two-col" id="servicosDropPanel">
+          <button class="nav-drop-toggle" id="servicosDropToggle" aria-expanded="false">Serviços <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="dropdown-panel four-col" id="servicosDropPanel">
             <div class="dropdown-col">
-              <span class="dropdown-title">Serviços</span>
+              <span class="dropdown-title">Contabilidade</span>
               <a href="pequenas-empresas.html">Contabilidade p/ Pequenas Empresas</a>
               <a href="assessoria-contabil.html">Assessoria Contábil</a>
               <a href="assessoria-fiscal.html">Assessoria Fiscal</a>
               <a href="folha-de-pagamento.html">Folha de Pagamento</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-title">Tributação</span>
+              <a href="simples-nacional.html">Simples Nacional</a>
+              <a href="simulador-simples-nacional.html">Simulador do Simples</a>
               <a href="regimes-tributarios.html">Regimes Tributários</a>
+              <a href="planejamento-tributario.html">Planejamento Tributário</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-title">Gestão</span>
+              <a href="../index.html#diferencial">LEVEGHIN Gestão</a>
               <a href="controladoria.html">Controladoria</a>
+              <a href="fpa.html">Planejamento Financeiro (FP&amp;A)</a>
+              <a href="orcamento.html">Orçamento Empresarial</a>
+              <a href="consultoria.html">Consultoria Empresarial</a>
+              <a href="auditoria.html">Auditoria</a>
             </div>
             <div class="dropdown-col">
               <span class="dropdown-title">Serviços Empresariais</span>
               <a href="abertura-de-empresa.html">Abertura de Empresa</a>
-              <a href="calculos-judiciais.html">Cálculos Judiciais</a>
-              <a href="irpf.html">Imposto de Renda Pessoa Física</a>
               <a href="migrar-mei-para-me.html">Migrar de MEI para ME</a>
               <a href="troca-de-contador.html">Troca de Contador</a>
+              <a href="irpf.html">Imposto de Renda PF</a>
+              <a href="calculos-judiciais.html">Cálculos Judiciais</a>
             </div>
-            <a href="servicos.html" class="dropdown-all-link">Ver todos os serviços →</a>
+            <div class="dropdown-foot">
+              <a href="planos.html" class="dropdown-foot-plans">Planos</a>
+              <a href="servicos.html" class="dropdown-foot-all">Ver todos os serviços →</a>
+            </div>
           </div>
         </li>
         <li><a href="simples-nacional.html">Simples Nacional</a></li>
@@ -101,26 +118,37 @@
     <div class="form-card">
       <h3>Falar com um especialista</h3>
       <p class="form-sub">Preencha os dados abaixo e retornamos pelo canal que você preferir.</p>
-      <form id="leadForm" action="https://formspree.io/f/mrpglkyy" method="POST">
+      <form id="leadForm" data-lead-form action="https://formspree.io/f/mrpglkyy" method="POST">
+        <!-- Identificação do lead: campos hidden no HTML, funcionam mesmo sem JavaScript. -->
+        <input type="hidden" name="origem_pagina" value="Folha de Pagamento">
+        <input type="hidden" name="interesse" value="Folha de Pagamento">
+        <input type="hidden" name="_subject" value="LEVEGHIN — Novo lead — Folha de Pagamento">
+        <input type="hidden" name="origem_url" value="https://leveghincontabilidade.com.br/servicos/folha-de-pagamento.html">
+        <input type="hidden" name="_next" value="https://leveghincontabilidade.com.br/obrigado.html">
+
         <div class="field">
           <label for="nome">Nome*</label>
-          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+          <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome" required>
         </div>
         <div class="field-row">
           <div class="field">
             <label for="email">E-mail*</label>
-            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="voce@suaempresa.com.br" required>
           </div>
           <div class="field">
-            <label for="telefone">Telefone*</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-000" required>
+            <label for="telefone">Telefone / WhatsApp*</label>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(98) 90000-0000" required>
           </div>
+        </div>
+        <div class="field">
+          <label for="empresa">Empresa <span class="field-opt">(se já tiver)</span></label>
+          <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Nome da sua empresa">
         </div>
         <div class="field-row">
           <div class="field">
             <label for="estado">Estado*</label>
             <select id="estado" name="estado" required>
-              <option value="" selected disabled>Selecione</option>
+              <option value="" disabled>Selecione</option>
               <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
               <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
               <option>GO</option><option selected>MA</option><option>MT</option><option>MS</option>
@@ -132,21 +160,8 @@
           </div>
           <div class="field">
             <label for="cidade">Cidade*</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+            <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
           </div>
-        </div>
-        <div class="field">
-          <label for="servico">Qual serviço deseja?*</label>
-          <select id="servico" name="servico" required>
-            <option>Abertura de Empresa</option>
-            <option>Assessoria Contábil</option>
-            <option>Assessoria Fiscal</option>
-            <option selected>Folha de Pagamento</option>
-            <option>Migrar de MEI para ME</option>
-            <option>Troca de Contador</option>
-            <option>Controladoria</option>
-            <option>Imposto de Renda Pessoa Física</option>
-          </select>
         </div>
         <div class="field">
           <label for="negocio">Qual é o tipo do seu negócio?*</label>
@@ -155,21 +170,37 @@
             <option>Comércio</option>
             <option>Comércio e Serviço</option>
             <option>Indústria</option>
-            <option>Pessoa Física</option>
             <option>Serviço</option>
+            <option>Pessoa Física</option>
           </select>
+        </div>
+        <div class="field">
+          <label for="detalhes">Quer contar um pouco mais? <span class="field-opt">(opcional)</span></label>
+          <textarea id="detalhes" name="detalhes" rows="3" placeholder="Conte em uma linha o que motivou o contato."></textarea>
         </div>
         <div class="field">
           <label>Como prefere que entremos em contato com você?*</label>
           <div class="radio-group">
-            <label class="radio-option"><input type="radio" name="contato" value="WhatsApp" checked> WhatsApp</label>
-            <label class="radio-option"><input type="radio" name="contato" value="E-mail"> E-mail</label>
+            <label class="radio-option"><input type="radio" name="contato_preferido" value="WhatsApp" checked> WhatsApp</label>
+            <label class="radio-option"><input type="radio" name="contato_preferido" value="E-mail"> E-mail</label>
           </div>
         </div>
+        <div class="field consent-field">
+          <label class="consent-option">
+            <input type="checkbox" id="consentimento" name="consentimento" value="Sim" required>
+            <span>Concordo que a LEVEGHIN utilize os dados acima para entrar em contato comigo. Leia a <a href="../politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.*</span>
+          </label>
+        </div>
         <div class="lf-hp" aria-hidden="true"><label for="hp-site">Não preencha este campo</label><input type="text" id="hp-site" name="_gotcha" tabindex="-1" autocomplete="off"></div>
-        <button type="submit" class="submit-btn">FALAR COM ESPECIALISTA</button>
-        <div class="form-success" id="formSuccess" role="status" aria-live="polite">Recebemos seus dados e retornamos em breve.</div>
-        <div class="form-error" id="formError" role="alert">Não foi possível enviar agora. Fale direto pelo <a href="https://wa.me/5598981380905" target="_blank" rel="noopener">WhatsApp (98) 98138-0905</a> ou por <a href="mailto:contato@leveghincontabilidade.com.br">contato@leveghincontabilidade.com.br</a>.</div>
+        <button type="submit" class="submit-btn">FALAR COM UM ESPECIALISTA</button>
+        <div class="form-success" data-lead="sucesso" role="status" aria-live="polite">
+          <strong>Recebemos seus dados.</strong> O retorno é feito diretamente pelo contador responsável, pelo canal que você indicou.
+          <span class="form-wa" data-lead="whatsapp" hidden>
+            <a class="form-wa-btn" href="https://wa.me/5598981380905" target="_blank" rel="noopener">Abrir conversa no WhatsApp →</a>
+          </span>
+        </div>
+        <div class="form-error" data-lead="erro" role="alert">Não foi possível enviar agora. Fale direto pelo <a href="https://wa.me/5598981380905" target="_blank" rel="noopener">WhatsApp (98) 98138-0905</a> ou por <a href="mailto:contato@leveghincontabilidade.com.br">contato@leveghincontabilidade.com.br</a>.</div>
+        <p class="form-legal">Seus dados são usados apenas para retornar o contato e não são compartilhados com terceiros para fins comerciais.</p>
       </form>
     </div>
   </div>
@@ -194,7 +225,7 @@
 <footer class="site">
   <div class="wrap footer-inner">
     <span class="logo-word">LEVEGHIN CONTABILIDADE</span>
-    <span>&copy; <span id="year"></span> Leveghin Contabilidade &middot; CRC/MA 012172/O-9 &middot; São Luís, MA</span>
+    <span>&copy; <span id="year"></span> Leveghin Contabilidade &middot; CRC/MA 012172/O-9 &middot; São Luís, MA &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></span>
   </div>
 </footer>
 
@@ -205,70 +236,10 @@
 </a>
 
 <script src="../assets/nav.js"></script>
+<script src="../assets/lead-form.js" defer></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  const form = document.getElementById('leadForm');
-  const successBox = document.getElementById('formSuccess');
-  const errorBox = document.getElementById('formError');
-  const submitBtn = form.querySelector('.submit-btn');
-  const submitLabel = submitBtn ? submitBtn.textContent : '';
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const telefone = document.getElementById('telefone').value.trim();
-    const estado = document.getElementById('estado').value;
-    const cidade = document.getElementById('cidade').value.trim();
-    const servico = document.getElementById('servico').value;
-    const negocio = document.getElementById('negocio').value;
-    const contato = form.querySelector('input[name="contato"]:checked').value;
-
-    const linhas = [
-      'Solicitação de proposta - Leveghin Contabilidade',
-      'Origem: Página de Folha de Pagamento',
-      'Nome: ' + nome,
-      'E-mail: ' + email,
-      'Telefone: ' + telefone,
-      'Cidade/Estado: ' + cidade + ' / ' + estado,
-      'Serviço desejado: ' + servico,
-      'Tipo de negócio: ' + negocio,
-      'Contato preferido: ' + contato
-    ];
-    const mensagem = linhas.join('\n');
-
-    // Preferencia do lead: se escolheu WhatsApp, abre a conversa (mesmo gesto do clique).
-    if (contato === 'WhatsApp') {
-      window.open('https://wa.me/5598981380905?text=' + encodeURIComponent(mensagem), '_blank');
-    }
-
-    // Envio dos dados para o Formspree (e-mail).
-    const assunto = 'Solicitação de proposta - ' + servico;
-    const dados = new FormData(form);
-    dados.append('_subject', assunto);
-    dados.append('origem', 'Página de Folha de Pagamento');
-    dados.append('mensagem', mensagem);
-
-
-    successBox.classList.remove('show');
-    errorBox.classList.remove('show');
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando…'; }
-
-    fetch(form.action, {
-      method: 'POST',
-      body: dados,
-      headers: { 'Accept': 'application/json' }
-    }).then(function (resposta) {
-      if (!resposta.ok) throw new Error('Falha no envio');
-      successBox.classList.add('show');
-      if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'formulario_site' }); }
-      if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-    }).catch(function () {
-      errorBox.classList.add('show');
-    }).finally(function () {
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
-    });
-  });
 </script>
 </body>
 </html>
