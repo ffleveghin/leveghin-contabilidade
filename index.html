@@ -708,6 +708,8 @@
       position:fixed; top:65px; left:0; right:0; background:var(--white);
       border-bottom:1px solid var(--gray-line); padding:20px 32px;
       display:none; flex-direction:column;
+      max-height:calc(100vh - 65px); max-height:calc(100dvh - 65px);
+      overflow-y:auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
     }
     nav.main-nav.open{display:flex;}
     nav.main-nav ul{flex-direction:column; align-items:flex-start; gap:16px; width:100%;}
@@ -719,20 +721,25 @@
       width:100%; text-align:left; height:auto; top:0;
     }
     .nav-drop-toggle svg{flex-shrink:0; margin-left:12px;}
-    .dropdown-panel{
-      position:static; transform:none; box-shadow:none; border:none;
-      background:var(--bg); margin-top:8px; width:100%; min-width:0;
-      max-height:0; padding:0 4px; opacity:1; visibility:visible; overflow:hidden;
-      transition:max-height 0.25s ease, padding 0.25s ease;
-    }
+    /* No celular o painel so aparece e some. Sem max-height e sem animacao:
+       a altura passa a ser a do conteudo e quem rola e o proprio menu.
+       A tecnica anterior (max-height animado) colapsava em alguns iPhones,
+       mostrando apenas o primeiro titulo do painel. */
+    .dropdown-panel,
     .dropdown-panel.four-col{
-      grid-template-columns:1fr; gap:2px; width:auto; max-width:none;
+      display:none;
+      position:static; transform:none; box-shadow:none; border:none;
+      background:var(--bg); margin-top:8px; width:100%; min-width:0; max-width:none;
+      max-height:none; overflow:visible; transition:none;
+      opacity:1; visibility:visible; pointer-events:auto; padding:0;
+    }
+    .dropdown-panel.open,
+    .dropdown-panel.four-col.open{
+      display:grid; grid-template-columns:1fr; gap:2px;
+      padding:14px 16px; transform:none;
     }
     .dropdown-panel.four-col .dropdown-col{margin-bottom:6px;}
     .dropdown-foot{flex-direction:column; align-items:flex-start; gap:2px; margin-top:8px; padding-top:10px;}
-    .dropdown-panel.open{
-      max-height:min(72vh, 900px); padding:14px 16px; transform:none; overflow-y:auto;
-    }
   }
   @media (max-width: 560px){
     .contact-cta p{white-space:normal;}
