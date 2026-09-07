@@ -714,7 +714,11 @@
     .nav-toggle{display:block;}
     .header-inner > .cta-btn.ghost{display:none;}
     .has-dropdown{width:100%;}
-    .nav-drop-toggle{display:block; width:100%; text-align:left;}
+    .nav-drop-toggle{
+      display:flex; align-items:center; justify-content:space-between;
+      width:100%; text-align:left; height:auto; top:0;
+    }
+    .nav-drop-toggle svg{flex-shrink:0; margin-left:12px;}
     .dropdown-panel{
       position:static; transform:none; box-shadow:none; border:none;
       background:var(--bg); margin-top:8px; width:100%; min-width:0;
@@ -1206,7 +1210,7 @@
       </div>
       <div class="offer-card reveal">
         <h3>Regimes Tributários</h3>
-        <p>Não sabe se o Simples é o melhor regime? Avalie com um contador.</p>
+        <p>Não sabe se o Simples é o melhor regime? A LEVEGHIN avalia o seu caso.</p>
         <a class="offer-link" href="servicos/regimes-tributarios.html">Ver regimes tributários →</a>
       </div>
       <div class="offer-card reveal">

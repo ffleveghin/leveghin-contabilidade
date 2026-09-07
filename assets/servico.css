@@ -375,7 +375,11 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   .nav-toggle{display:block;}
   .header-inner > .cta-btn.ghost{display:none;}
   .has-dropdown{width:100%;}
-  .nav-drop-toggle{display:block; width:100%; text-align:left;}
+  .nav-drop-toggle{
+    display:flex; align-items:center; justify-content:space-between;
+    width:100%; text-align:left; height:auto; top:0;
+  }
+  .nav-drop-toggle svg{flex-shrink:0; margin-left:12px;}
   .dropdown-panel{
     position:static; transform:none; box-shadow:none; border:none;
     background:var(--bg); margin-top:8px; width:100%; min-width:0;
