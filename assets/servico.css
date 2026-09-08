@@ -346,6 +346,49 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
 .article-card .ac-link:hover{color:var(--navy);}
 .article-meta{font-family:var(--mono); font-size:0.75rem; color:var(--gray); letter-spacing:0.04em; margin-bottom:8px; display:block;}
 
+/* Seções da página de Conteúdo (Destaques / Gestão) */
+.content-section + .content-section{margin-top:52px;}
+.content-section-head{
+  padding-bottom:12px; border-bottom:1px solid var(--gray-line);
+  display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+}
+.content-section-head h2{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.25rem;}
+.content-section-head p{color:var(--gray); font-size:0.9rem; margin:0;}
+.content-section .articles-grid{margin:24px 0 0;}
+
+/* Imagem de abertura dos artigos */
+.article-hero-img{
+  margin:0 0 28px; border:1px solid var(--gray-line); border-radius:8px;
+  overflow:hidden; background:var(--white);
+}
+.article-hero-img img{display:block; width:100%; height:auto;}
+.article-hero-img figcaption{
+  font-size:0.78rem; color:var(--gray); padding:10px 16px; margin:0;
+  border-top:1px solid var(--gray-line); background:var(--bg); text-align:left;
+}
+
+/* Linha do tempo (artigos da Reforma Tributária) */
+.article-page-body ul.timeline{list-style:none; margin:0 0 24px; padding:0;}
+.article-page-body ul.timeline li{
+  position:relative; padding:0 0 0 118px; margin-bottom:22px;
+}
+.article-page-body ul.timeline li::before{content:none; display:none;}
+.article-page-body ul.timeline .tl-year{
+  position:absolute; left:0; top:1px; width:100px; text-align:center;
+  font-family:var(--mono); font-size:0.75rem; font-weight:600; letter-spacing:0.01em;
+  color:#FFFFFF; background:var(--navy); border-radius:4px; padding:6px 0;
+  white-space:nowrap;
+}
+.article-page-body ul.timeline .tl-text{display:block; color:var(--gray); font-size:0.95rem; line-height:1.65; text-align:left;}
+.article-page-body ul.timeline .tl-text strong{color:var(--navy); font-weight:600;}
+
+@media (max-width: 560px){
+  .article-page-body ul.timeline li{padding:0; margin-bottom:20px;}
+  .article-page-body ul.timeline .tl-year{
+    position:static; display:inline-block; margin-bottom:8px; padding:5px 14px; width:auto;
+  }
+}
+
 .article-page-body{}
 .article-page-body h2{font-family:var(--serif); font-weight:600; color:var(--navy); font-size:1.3rem; margin:28px 0 12px;}
 .article-page-body h2:first-child{margin-top:0;}
