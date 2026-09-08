@@ -335,6 +335,10 @@ footer.site{background:#081F38; color:#8FA5C0; padding:40px 0;}
   height:140px; background:linear-gradient(135deg, var(--navy), var(--blue));
   display:flex; align-items:center; justify-content:center;
 }
+.article-card .ac-cover.has-img{padding:0; background:var(--white); display:block;}
+.article-card .ac-cover.has-img img{
+  display:block; width:100%; height:100%; object-fit:cover; object-position:center;
+}
 .article-card .ac-body{padding:24px; display:flex; flex-direction:column; flex:1;}
 .article-card .tag{
   font-family:var(--mono); font-size:0.75rem; color:var(--blue); letter-spacing:0.08em;
